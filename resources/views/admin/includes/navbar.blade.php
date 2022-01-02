@@ -5,7 +5,7 @@
                 <img src="https://avatars.githubusercontent.com/u/58408947?v=4" alt="" class="rounded-circle" style="width: 80px; height: 80px">
                 <div class="ms-3">
                     <h5 class="m-0">Hello,</h5>
-                    <h3 class="m-0 fw-bold">Fatra Dinata</h3>
+                    <h3 class="m-0 fw-bold">Kopet Asyuu</h3>
                 </div>
             </div>
             <div class="d-flex align-items-center">
