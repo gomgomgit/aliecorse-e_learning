@@ -16,10 +16,10 @@
                 </button>
             </div>
         </div>
-        <div class="py-4">
+        <div class="py-4 border-bottom border-2">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="mb-3 w-50">
-                    <h6 class="">Nama Topik</h6>
+                    <h6 class="">Topik</h6>
                     <div class="input-group input-group-outline">
                         <label class="form-label">Masukkan Nama Topik</label>
                         <input type="text" class="form-control">
@@ -90,27 +90,26 @@
                 <button type="button" class="btn fs-5" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
+                <h6 class="mt-2 mb-0">Nama</h6>
                 <div class="input-group input-group-outline">
-                    <label class="form-label">Nama</label>
+                    <label class="form-label">Masukkan Nama Video</label>
                     <input type="text" class="form-control">
                 </div>
-                <div class="input-group input-group-static my-3">
-                    <label for="exampleFormControlSelect1" class="ms-0">Masukkan Jenis Kategori</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                <h6 class="mt-2 mb-0">Tipe Video</h6>
+                <div class="input-group input-group-static">
+                    <label for="tipeVideo" class="ms-0">Pilih Tipe Video</label>
+                    <select class="form-control" id="tipeVideo">
                         <option>1</option>
                         <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
                     </select>
                 </div>
+                <h6 class="mt-2 mb-0">Video Link / Embed</h6>
                 <div class="input-group input-group-outline">
-                    <label class="form-label">Video Link / Embed</label>
+                    <label class="form-label">Masukkan Video Link / Embed</label>
                     <input type="text" class="form-control">
                 </div>
             </div>
             <div class="modal-footer mx-auto">
-                {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
                 <button type="sumbit" class="btn btn-success">
                     <i class="fas fa-plus-square"></i>
                     Tambah Video
@@ -129,20 +128,22 @@
                 <button type="button" class="btn fs-5" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
+                <h6>Nama</h6>
                 <div class="input-group input-group-outline">
-                    <label class="form-label">Nama</label>
+                    <label class="form-label">Masukkan Nama</label>
                     <input type="text" class="form-control">
                 </div>
+                <h6 class="mt-2 mb-0">Deskripsi</h6>
                 <div class="input-group input-group-dynamic">
-                    <textarea class="form-control" rows="5" placeholder="Deskripsi" spellcheck="false"></textarea>
+                    <textarea class="form-control" rows="5" placeholder="Masukkan Deskripsi" spellcheck="false"></textarea>
                 </div>
-                <div class="input-group input-group-static mt-3">
-                    <label>Upload File</label>
+                <h6 class="mt-2 mb-0">Upload File</h6>
+                <div class="input-group input-group-static">
+                    <label>Pilih File</label>
                     <input type="file" class="form-control">
                 </div>
             </div>
             <div class="modal-footer mx-auto">
-                {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
                 <button type="sumbit" class="btn btn-success">
                     <i class="fas fa-plus-square"></i>
                     Tambah File
@@ -191,10 +192,12 @@
 
                     <div class="tab-content p-2 border border-2 rounded mt-3" id="v-pills-tabContent">
                         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <h6>Nama Kuis</h6>
                             <div class="input-group input-group-outline mb-3">
-                                <label class="form-label">Nama Kuis</label>
+                                <label class="form-label">Masukkan Nama Kuis</label>
                                 <input type="text" class="form-control">
                             </div>
+                            <h6 class="mb-0">Detail Kuis</h6>
                             <div class="input-group input-group-dynamic">
                                 <textarea class="form-control" rows="5" placeholder="Detail Kuis Tulis Disini." spellcheck="false"></textarea>
                             </div>
@@ -239,10 +242,11 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                            <h6>Batas Waktu</h6>
                             <div class="d-flex justify-content-between align-items-center mb-2">
                                 <div class="w-40">
                                     <div class="input-group input-group-outline">
-                                        <label class="form-label">Batas Waktu</label>
+                                        <label class="form-label">Masukkan Batas Waktu</label>
                                         <input type="number" class="form-control" min="0">
                                     </div>
                                 </div>
@@ -256,14 +260,16 @@
                                     <label class="form-check-label m-0 ms-1" for="flexSwitchCheckDefault1">Tampilkan Batas Waktu</label>
                                 </div>
                             </div>
+                            <h6>Passing Grade</h6>
                             <div class="w-40 mb-2">
                                 <div class="input-group input-group-outline">
-                                    <label class="form-label">Passing Grade (%)</label>
+                                    <label class="form-label">Masukkan Passing Grade (%)</label>
                                     <input type="number" class="form-control" min="0">
                                 </div>
                             </div>
+                            <h6 class="mb-0">Urutan Pertanyaan</h6>
                             <div class="input-group input-group-static">
-                                <label for="urutanpertanyaan" class="ms-0">Urutan Pertanyaan</label>
+                                <label for="urutanpertanyaan" class="ms-0">Pilih Urutan Pertanyaan</label>
                                 <select class="form-control" id="urutanpertanyaan">
                                     <option>Berurutan</option>
                                     <option>Random</option>
@@ -304,19 +310,22 @@
                 </button>
             </div>
             <div class="modal-body">
+                <h6 class="mb-0">Pertanyaan</h6>
                 <div class="input-group input-group-outline">
-                    <label class="form-label">Pertanyaan</label>
+                    <label class="form-label">Masukkan Pertanyaan</label>
                     <input type="text" class="form-control">
                 </div>
-                <div class="input-group input-group-static my-3">
-                    <label for="exampleFormControlSelect1" class="ms-0">Tipe Pertanyaan</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                <h6 class="mt-2 mb-0">Tipe Pertanyaan</h6>
+                <div class="input-group input-group-static">
+                    <label for="tipePertanyaan" class="ms-0">Pilih Tipe Pertanyaan</label>
+                    <select class="form-control" id="tipePertanyaan">
                         <option>Benar / Salah</option>
                         <option>Single Choice</option>
                     </select>
                 </div>
+                <h6 class="mt-2 mb-0">Nilai Dari Pertanyaan</h6>
                 <div class="input-group input-group-outline">
-                    <label class="form-label">Nilai Dari Pertanyaan</label>
+                    <label class="form-label">Masukkan Nilai Dari Pertanyaan</label>
                     <input type="number" class="form-control" min="0">
                 </div>
                 <div class="d-flex mt-3">
@@ -375,18 +384,18 @@
                 </div>
                 
                 <div class="mt-3 border border-2 p-2 rounded">
-                    <h6>Jawaban</h6>
+                    <h6 class="mb-0">Jawaban</h6>
                     <div class="input-group input-group-outline mb-2">
-                        <label class="form-label">Jawaban</label>
+                        <label class="form-label">Masukkan Jawaban</label>
                         <input type="text" class="form-control">
                     </div>
-                    <h6>Tambah Gambar</h6>
+                    <h6 class="mt-2 mb-0">Tambah Gambar</h6>
                     <div class="d-flex">
                         <img src="https://s3.amazonaws.com/creativetim_bucket/products/50/original/material-dashboard.jpg?1634648873" alt="" class="w-50">
                         <input class="ms-4" type="file" class="form-input">
                     </div>
                     <div class="mt-4">
-                        <h6>Format Jawaban</h6>
+                        <h6 class="mb-0">Format Jawaban</h6>
                         <div class="d-flex justify-content-between">
                             <div class="d-flex">
                                 <div class="form-check ps-0">

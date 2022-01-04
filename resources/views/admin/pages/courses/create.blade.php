@@ -68,7 +68,7 @@
                             <div class="d-flex">
                                 <div class="input-group input-group-outline">
                                     <label class="form-label">Durasi Jam</label>
-                                    <input type="number" class="form-control">
+                                    <input type="number" class="form-control" min="0">
                                 </div>
                                 <div class="input-group input-group-outline mx-2">
                                     <label class="form-label">Durasi Menit</label>
@@ -84,20 +84,20 @@
                             <h6 class="">Level</h6>
                             <div class="d-flex">
                                 <div class="form-check ps-0">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="customRadio1">
-                                    <label class="custom-control-label" for="customRadio1">All Level</label>
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="allLevel">
+                                    <label class="custom-control-label" for="allLevel">All Level</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="customRadio1">
-                                    <label class="custom-control-label" for="customRadio1">Beginner</label>
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="beginner">
+                                    <label class="custom-control-label" for="beginner">Beginner</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="customRadio1">
-                                    <label class="custom-control-label" for="customRadio1">Intermediate</label>
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="intermediate">
+                                    <label class="custom-control-label" for="intermediate">Intermediate</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="customRadio1">
-                                    <label class="custom-control-label" for="customRadio1">Expert</label>
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="expert">
+                                    <label class="custom-control-label" for="expert">Expert</label>
                                 </div>
                             </div>
                         </div>

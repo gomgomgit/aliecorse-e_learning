@@ -37,4 +37,11 @@ Route::prefix('admin')->group(function () {
     Route::get('/my-courses/{id}/topic', function () {
         return view('admin.pages.courses.create-topic');
     });
+
+    Route::get('/categories', function () {
+        return view('admin.pages.categories.index');
+    });
+    Route::get('/categories/create', function () {
+        return view('admin.pages.categories.create');
+    })->name('categories.create');
 });

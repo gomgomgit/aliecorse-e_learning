@@ -14,7 +14,7 @@
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">speed</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Dashboard</span>
+                    <span class="nav-link-text ms-1 fw-bold">Beranda</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -22,7 +22,7 @@
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">person</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">My Profile</span>
+                    <span class="nav-link-text ms-1 fw-bold">Profile</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -30,15 +30,15 @@
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">school</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Endrolled Courses</span>
+                    <span class="nav-link-text ms-1 fw-bold">Kursus Saya</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark " href="./pages/virtual-reality.html">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">bookmark</i>
+                    <i class="material-icons opacity-10">shopping_cart</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Wishlist</span>
+                    <span class="nav-link-text ms-1 fw-bold">Riwayat Pembelian</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -46,15 +46,21 @@
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">star</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Reviews</span>
+                    <span class="nav-link-text ms-1 fw-bold">Sertifikat Saya</span>
                 </a>
             </li>
+            <li class="nav-item mt-2">
+            <hr>
+            </li>
+            {{-- <li class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs text-dark font-weight-bolder opacity-8">Instructor</h6>
+            </li> --}}
             <li class="nav-item">
                 <a class="nav-link text-dark " href="./pages/notifications.html">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">quiz</i>
+                    <i class="material-icons opacity-10">speed</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">My Quis Attempts</span>
+                    <span class="nav-link-text ms-1 fw-bold">Dashboard</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -62,21 +68,15 @@
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">shopping_cart</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Purchase History</span>
+                    <span class="nav-link-text ms-1 fw-bold">Kursus</span>
                 </a>
-            </li>
-            <li class="nav-item mt-2">
-            <hr>
-            </li>
-            <li class="nav-item mt-3">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs text-dark font-weight-bolder opacity-8">Instructor</h6>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark " href="{{ url('admin/my-courses') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">rocket_launch</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">My Courses</span>
+                    <span class="nav-link-text ms-1 fw-bold">Webinar</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -84,7 +84,7 @@
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">monetization_on</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Earnings</span>
+                    <span class="nav-link-text ms-1 fw-bold">Kategori</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -92,7 +92,7 @@
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">account_balance_wallet</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Withdrawal</span>
+                    <span class="nav-link-text ms-1 fw-bold">Review</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -100,7 +100,7 @@
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">quiz</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Quiz Attempts</span>
+                    <span class="nav-link-text ms-1 fw-bold">Pembelian</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -108,7 +108,7 @@
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">question_answer</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Question & Answer</span>
+                    <span class="nav-link-text ms-1 fw-bold">Pertanyaan</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -116,18 +116,34 @@
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">assignment</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Assignments</span>
+                    <span class="nav-link-text ms-1 fw-bold">Sertifikat</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark " href="./pages/sign-up.html">
+                    <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="material-icons opacity-10">person</i>
+                    </div>
+                    <span class="nav-link-text ms-1 fw-bold">User</span>
                 </a>
             </li>
             <li class="nav-item mt-2">
             <hr>
             </li>
             <li class="nav-item">
-            <a class="nav-link text-dark " href="./pages/sign-up.html">
+                <a class="nav-link text-dark " href="./pages/sign-up.html">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">settings</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Settings</span>
+                    <span class="nav-link-text ms-1 fw-bold">Pengaturan</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark " href="./pages/sign-up.html">
+                    <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="material-icons opacity-10">person</i>
+                    </div>
+                    <span class="nav-link-text ms-1 fw-bold">Profile</span>
                 </a>
             </li>
             <li class="nav-item">
