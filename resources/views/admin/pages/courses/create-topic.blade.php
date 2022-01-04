@@ -58,21 +58,21 @@
                 </div>
             </div>
             <div class="mt-4">
-                <button class="btn btn-success align-end">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <i class="fab fa-youtube"></i>
                     Tambah Video
                 </button>
-                <button class="btn btn-success align-end">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
                     <i class="fas fa-file-alt"></i>
                     Tambah File
                 </button>
-                <button class="btn btn-success align-end">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
                     <i class="fas fa-question"></i>
                     Tambah Quiz
                 </button>
             </div>
             <div class="float-end mt-5">
-                <button class="btn btn-success align-end">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
                     <i class="fas fa-plus-square"></i>
                     Tambah Topik
                 </button>
@@ -80,9 +80,353 @@
         </div>
     </div>
 </div>
+
+<!-- Modal Video -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Tambah Video</h5>
+                <button type="button" class="btn fs-5" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group input-group-outline">
+                    <label class="form-label">Nama</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group input-group-static my-3">
+                    <label for="exampleFormControlSelect1" class="ms-0">Masukkan Jenis Kategori</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="input-group input-group-outline">
+                    <label class="form-label">Video Link / Embed</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="modal-footer mx-auto">
+                {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
+                <button type="sumbit" class="btn btn-success">
+                    <i class="fas fa-plus-square"></i>
+                    Tambah Video
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal File -->
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdrop1Label">Tambah File</h5>
+                <button type="button" class="btn fs-5" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group input-group-outline">
+                    <label class="form-label">Nama</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group input-group-dynamic">
+                    <textarea class="form-control" rows="5" placeholder="Deskripsi" spellcheck="false"></textarea>
+                </div>
+                <div class="input-group input-group-static mt-3">
+                    <label>Upload File</label>
+                    <input type="file" class="form-control">
+                </div>
+            </div>
+            <div class="modal-footer mx-auto">
+                {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
+                <button type="sumbit" class="btn btn-success">
+                    <i class="fas fa-plus-square"></i>
+                    Tambah File
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Kuis -->
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop2Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdrop2Label">Tambah Kuiz</h5>
+                <button type="button" class="btn fs-5" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="nav-wrapper position-relative end-0">
+                    <ul class="nav nav-pills nav-fill p-1" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold mb-0 px-5 py-1 active" data-bs-toggle="tab" href="#v-pills-home" role="tab" aria-controls="preview" aria-selected="true">
+                                <span class="material-icons align-middle mb-1">
+                                    quiz
+                                </span>
+                                Info Kuis
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold mb-0 px-5 py-1" data-bs-toggle="tab" href="#v-pills-profile" role="tab" aria-controls="code" aria-selected="false">
+                                <span class="material-icons align-middle mb-1">
+                                    question_mark
+                                </span>
+                                Pertanyaan
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold mb-0 px-5 py-1" data-bs-toggle="tab" href="#v-pills-messages" role="tab" aria-controls="code" aria-selected="false">
+                                <span class="material-icons align-middle mb-1">
+                                    settings
+                                </span>
+                                Pengaturan
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content p-2 border border-2 rounded mt-3" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="input-group input-group-outline mb-3">
+                                <label class="form-label">Nama Kuis</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="input-group input-group-dynamic">
+                                <textarea class="form-control" rows="5" placeholder="Detail Kuis Tulis Disini." spellcheck="false"></textarea>
+                            </div>
+                            <div class="float-end mt-4">
+                                <button type="sumbit" class="btn btn-success" id="next">
+                                    <i class="fas fa-arrow-right"></i>
+                                    Lanjut
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-1">
+                                <span class="fw-bold">Soal satu</span>
+                                <div class="">
+                                    <span class="badge bg-warning">Single choice</span>
+                                    <button class="btn btn-info mb-0">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-danger mb-0">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-1">
+                                <span class="fw-bold">Soal satu</span>
+                                <div class="">
+                                    <span class="badge bg-warning">Single choice</span>
+                                    <button class="btn btn-info mb-0">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-danger mb-0">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="float-end mt-4">
+                                <button type="sumbit" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
+                                    <i class="fas fa-plus-square"></i>
+                                    Tambah Soal
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div class="w-40">
+                                    <div class="input-group input-group-outline">
+                                        <label class="form-label">Batas Waktu</label>
+                                        <input type="number" class="form-control" min="0">
+                                    </div>
+                                </div>
+                                <div class="w-25">
+                                    <select name="" id="" class="form-select">
+                                        <option value="" class="form-input">Menit</option>
+                                    </select>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input mt-1" type="checkbox" id="flexSwitchCheckDefault1">
+                                    <label class="form-check-label m-0 ms-1" for="flexSwitchCheckDefault1">Tampilkan Batas Waktu</label>
+                                </div>
+                            </div>
+                            <div class="w-40 mb-2">
+                                <div class="input-group input-group-outline">
+                                    <label class="form-label">Passing Grade (%)</label>
+                                    <input type="number" class="form-control" min="0">
+                                </div>
+                            </div>
+                            <div class="input-group input-group-static">
+                                <label for="urutanpertanyaan" class="ms-0">Urutan Pertanyaan</label>
+                                <select class="form-control" id="urutanpertanyaan">
+                                    <option>Berurutan</option>
+                                    <option>Random</option>
+                                </select>
+                            </div>
+                            <div class="float-end mt-4">
+                                <button type="sumbit" class="btn btn-success">
+                                    <i class="fas fa-save"></i>
+                                    Simpan Kuis
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
+                {{-- <button type="sumbit" class="btn btn-success" id="next">
+                    <i class="fas fa-arrow-right"></i>
+                    Lanjut
+                </button> --}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Pertanyaan -->
+<div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop4Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdrop4Label">Tambah Pertanyaan</h5>
+                {{-- <button type="button" class="btn fs-5" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button> --}}
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                    <i class="fas fa-arrow-left"></i>
+                    Kembali
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group input-group-outline">
+                    <label class="form-label">Pertanyaan</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group input-group-static my-3">
+                    <label for="exampleFormControlSelect1" class="ms-0">Tipe Pertanyaan</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Benar / Salah</option>
+                        <option>Single Choice</option>
+                    </select>
+                </div>
+                <div class="input-group input-group-outline">
+                    <label class="form-label">Nilai Dari Pertanyaan</label>
+                    <input type="number" class="form-control" min="0">
+                </div>
+                <div class="d-flex mt-3">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Harus Dijawab</label>
+                    </div>
+                    <div class="form-check form-switch ms-3">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault1">
+                        <label class="form-check-label" for="flexSwitchCheckDefault1">Acak Jawaban</label>
+                    </div>
+                    <div class="form-check form-switch ms-3">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault2">
+                        <label class="form-check-label" for="flexSwitchCheckDefault2">Tampilkan Nilai</label>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <h6>Opsi Jawaban</h6>
+                    <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-2">
+                        <span class="fw-bold">Ini jawaban benar</span>
+                        <div class="d-flex align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="customRadio1">
+                            </div>
+                            {{-- <span class="badge bg-success"><i class="fas fa-check-square"></i></span> --}}
+                            <button class="btn btn-info mb-0 mx-2">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-danger mb-0">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-2">
+                        <span class="fw-bold">Ini jawaban salah</span>
+                        <div class="d-flex align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="customRadio1">
+                            </div>
+                            {{-- <span class="badge bg-success"><i class="fas fa-check-square"></i></span> --}}
+                            <button class="btn btn-info mb-0 mx-2">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-danger mb-0">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-3 d-flex justify-content-end">
+                        <button type="sumbit" class="btn btn-success">
+                            <i class="fas fa-plus-square"></i>
+                            Tambah Jawaban
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mt-3 border border-2 p-2 rounded">
+                    <h6>Jawaban</h6>
+                    <div class="input-group input-group-outline mb-2">
+                        <label class="form-label">Jawaban</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <h6>Tambah Gambar</h6>
+                    <div class="d-flex">
+                        <img src="https://s3.amazonaws.com/creativetim_bucket/products/50/original/material-dashboard.jpg?1634648873" alt="" class="w-50">
+                        <input class="ms-4" type="file" class="form-input">
+                    </div>
+                    <div class="mt-4">
+                        <h6>Format Jawaban</h6>
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex">
+                                <div class="form-check ps-0">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="customRadio1">
+                                    <label class="custom-control-label" for="customRadio1">Text</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="customRadio2">
+                                    <label class="custom-control-label" for="customRadio2">Gambar</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="customRadio3">
+                                    <label class="custom-control-label" for="customRadio3">Keduanya</label>
+                                </div>
+                            </div>
+                            <button type="sumbit" class="btn btn-success">
+                                <i class="fas fa-save"></i>
+                                Simpan Jawaban
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            <div class="modal-footer mx-auto">
+                {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
+                {{-- <button type="sumbit" class="btn btn-success">
+                    <i class="fas fa-plus-square"></i>
+                    Tambah Video
+                </button> --}}
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @push('after-script')
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/6.0.0-beta.2/basic.css"></script> --}}
+
     <script>
         function myFunction() {
         var x = document.getElementById("myDIV");
@@ -92,5 +436,10 @@
             x.style.display = "block";
         }
         } 
+    </script>
+    <script>
+        $("#next").click(function(){
+            $("#next1").click();
+        });
     </script>
 @endpush

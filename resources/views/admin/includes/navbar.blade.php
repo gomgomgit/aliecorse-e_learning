@@ -19,10 +19,10 @@
                 <div class="px-2">
                     4.0 (120 Ratings)
                 </div>
-                <button class="border border-info border-2 px-4 py-2 rounded text-info fw-bold" style="background-color: white">
+                <a href="{{ url('admin/my-courses/create') }}" class="border border-info border-2 px-4 py-2 rounded text-info fw-bold" style="background-color: white">
                     <i class="fas fa-plus-square"></i>
                     Tambah Kursus
-                </button>
+                </a>
             </div>
         </div>
     </div>
