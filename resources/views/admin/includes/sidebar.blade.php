@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-dark active bg-gradient-info" href="./pages/dashboard.html">
+                <a class="nav-link text-dark {{ (request()->is('admin')) ? 'active bg-gradient-info' : '' }}" href="{{ route('dashboard') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">speed</i>
                     </div>
@@ -18,7 +18,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="{{ url('/a') }}">
+                <a class="nav-link text-dark {{ (request()->is('admin/profile*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('/admin/profile') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">person</i>
                     </div>
@@ -44,7 +44,7 @@
             <li class="nav-item">
                 <a class="nav-link text-dark " href="./pages/rtl.html">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">star</i>
+                    <i class="material-icons opacity-10">article</i>
                     </div>
                     <span class="nav-link-text ms-1 fw-bold">Sertifikat Saya</span>
                 </a>
@@ -64,47 +64,47 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark " href="./pages/profile.html">
+                <a class="nav-link text-dark  {{ (request()->is('admin/course*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/courses') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">shopping_cart</i>
+                    <i class="material-icons opacity-10">school</i>
                     </div>
                     <span class="nav-link-text ms-1 fw-bold">Kursus</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark " href="{{ url('admin/my-courses') }}">
+                <a class="nav-link text-dark " href="">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">rocket_launch</i>
+                    <i class="material-icons opacity-10">meeting_room</i>
                     </div>
                     <span class="nav-link-text ms-1 fw-bold">Webinar</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark " href="./pages/sign-up.html">
+                <a class="nav-link text-dark  {{ (request()->is('admin/categories*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/categories") }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">monetization_on</i>
+                    <i class="material-icons opacity-10">category</i>
                     </div>
                     <span class="nav-link-text ms-1 fw-bold">Kategori</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark " href="./pages/sign-in.html">
+                <a class="nav-link text-dark {{ (request()->is('admin/reviews*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/reviews') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">account_balance_wallet</i>
+                    <i class="material-icons opacity-10">reviews</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Review</span>
+                    <span class="nav-link-text ms-1 fw-bold">Ulasan</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark " href="./pages/sign-up.html">
+                <a class="nav-link text-dark {{ (request()->is('admin/purchases*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/purchases') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">quiz</i>
+                    <i class="material-icons opacity-10">shop</i>
                     </div>
                     <span class="nav-link-text ms-1 fw-bold">Pembelian</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark " href="./pages/sign-in.html">
+                <a class="nav-link text-dark {{ (request()->is('admin/questions*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/questions') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">question_answer</i>
                     </div>
@@ -112,7 +112,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark " href="./pages/sign-up.html">
+                <a class="nav-link text-dark {{ (request()->is('admin/sertificates*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/sertificates') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">assignment</i>
                     </div>
@@ -120,11 +120,35 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark " href="./pages/sign-up.html">
+                <a class="nav-link text-dark {{ (request()->is('admin/reports*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/reports') }}">
+                    <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="material-icons opacity-10">report</i>
+                    </div>
+                    <span class="nav-link-text ms-1 fw-bold">Laporan</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark {{ (request()->is('admin/students*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/students') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">person</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">User</span>
+                    <span class="nav-link-text ms-1 fw-bold">Siswa</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark {{ (request()->is('admin/instructors*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/instructors') }}">
+                    <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="material-icons opacity-10">cast_for_education</i>
+                    </div>
+                    <span class="nav-link-text ms-1 fw-bold">Instruktur</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark {{ (request()->is('admin/intructores*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/admins') }}">
+                    <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="material-icons opacity-10">admin_panel_settings</i>
+                    </div>
+                    <span class="nav-link-text ms-1 fw-bold">Admin</span>
                 </a>
             </li>
             <li class="nav-item mt-2">

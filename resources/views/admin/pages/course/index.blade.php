@@ -1,11 +1,11 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Kursus Saya')
+@section('title', 'Kursus')
     
 @section('content')
 <div class="container-fluid">
     <div class="py-4">
-        <h3>Kursus Saya</h3>
+        <h3>Kursus</h3>
         <div class="border border-2 p-2">
             <div class="row">
                 <div class="col-6">
