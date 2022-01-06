@@ -1,13 +1,13 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Kategori Aritkel')
+@section('title', 'Kategori Artikel')
     
 @section('content')
 <div class="container-fluid">
     <div class="py-4">
         <div class="d-flex justify-content-between">
             <div class="">
-                <h3>Kategori Aritkel</h3>
+                <h3>Kategori Artikel</h3>
             </div>
             <div class="">
                 <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -25,15 +25,12 @@
                 <div class="">
                     <button class="btn btn-success mb-0">
                         <i class="fas fa-eye"></i>
-                        Lihat
                     </button>
                     <button class="btn btn-info mb-0">
                         <i class="fas fa-edit"></i>
-                        Edit
                     </button>
                     <button class="btn btn-danger mb-0">
                         <i class="fas fa-trash"></i>
-                        Delete
                     </button>
                 </div>
             </div>
@@ -45,15 +42,12 @@
                 <div class="">
                     <button class="btn btn-success mb-0">
                         <i class="fas fa-eye"></i>
-                        Lihat
                     </button>
                     <button class="btn btn-info mb-0">
                         <i class="fas fa-edit"></i>
-                        Edit
                     </button>
                     <button class="btn btn-danger mb-0">
                         <i class="fas fa-trash"></i>
-                        Delete
                     </button>
                 </div>
             </div>
@@ -65,15 +59,12 @@
                 <div class="">
                     <button class="btn btn-success mb-0">
                         <i class="fas fa-eye"></i>
-                        Lihat
                     </button>
                     <button class="btn btn-info mb-0">
                         <i class="fas fa-edit"></i>
-                        Edit
                     </button>
                     <button class="btn btn-danger mb-0">
                         <i class="fas fa-trash"></i>
-                        Delete
                     </button>
                 </div>
             </div>

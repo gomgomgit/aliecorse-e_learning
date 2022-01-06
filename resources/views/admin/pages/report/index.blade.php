@@ -5,8 +5,8 @@
 @section('content')
 <div class="container-fluid">
     <div class="py-4">
-        <h3>Siswa</h3>
-        <div class="card p-2">
+        <h3>Laporan</h3>
+        {{-- <div class="card p-2">
             <div class="table-responsive p-0">
                 <table class="table align-items-center mb-0">
                     <thead>
@@ -119,7 +119,7 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
 @endsection

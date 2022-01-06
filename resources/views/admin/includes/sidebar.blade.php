@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark " href="./pages/billing.html">
+                <a class="nav-link text-dark {{ (request()->is('admin/my-course*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/my-course') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10 text-info">school</i>
                     </div>
@@ -42,7 +42,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark " href="./pages/rtl.html">
+                <a class="nav-link text-dark {{ (request()->is('admin/my-certificate*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/my-certificate') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10 text-info">article</i>
                     </div>
@@ -80,7 +80,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark  {{ (request()->is('admin/articles*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/articles") }}">
+                <a class="nav-link text-dark {{ (request()->is('admin/articles*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/articles") }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10 text-info">article</i>
                     </div>
@@ -88,7 +88,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark  {{ (request()->is('admin/categories*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/categories") }}">
+                <a class="nav-link text-dark {{ (request()->is('admin/categories*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/categories") }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10 text-info">category</i>
                     </div>
@@ -96,7 +96,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark  {{ (request()->is('admin/category-articles*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/category-articles") }}">
+                <a class="nav-link text-dark {{ (request()->is('admin/category-articles*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/category-articles") }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10 text-info">pages</i>
                     </div>
@@ -128,7 +128,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark {{ (request()->is('admin/sertificates*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/sertificates') }}">
+                <a class="nav-link text-dark {{ (request()->is('admin/certificate*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/certificate') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10 text-info">assignment</i>
                     </div>
@@ -160,7 +160,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark {{ (request()->is('admin/intructores*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/admins') }}">
+                <a class="nav-link text-dark {{ (request()->is('admin/admins*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/admins') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10 text-info">admin_panel_settings</i>
                     </div>
@@ -179,7 +179,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark " href="./pages/sign-up.html">
+                <a class="nav-link text-dark {{ (request()->is('admin/profile*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/profile") }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10 text-info">person</i>
                     </div>

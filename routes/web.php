@@ -77,11 +77,11 @@ Route::prefix('admin')->group(function () {
         return view('admin.pages.report.index');
     });
 
-    Route::get('/sertificates', function () {
-        return view('admin.pages.sertificate.index');
+    Route::get('/certificate', function () {
+        return view('admin.pages.certificate.index');
     });
-    Route::get('/sertificates/{id}', function () {
-        return view('admin.pages.sertificate.edit');
+    Route::get('/certificates/{id}', function () {
+        return view('admin.pages.certificate.edit');
     });
 
     Route::get('/articles', function () {
@@ -100,5 +100,13 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/purchase-history', function () {
         return view('admin.pages.purchase-history.index');
+    });
+
+    Route::get('/my-course', function () {
+        return view('admin.pages.my-course.index');
+    });
+
+    Route::get('/my-certificate', function () {
+        return view('admin.pages.my-certificate.index');
     });
 });

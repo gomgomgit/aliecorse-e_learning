@@ -9,17 +9,23 @@
             <h3>Pembelian</h3>
             <div class="d-flex">
                 <div class="float-end">
-                    <h6 class="">Bulan</h6>
-                    <div class="input-group input-group-outline">
-                        <label class="form-label">Durasi Jam</label>
-                        <input type="number" class="form-control" min="0">
+                    {{-- <h6 class="">Bulan</h6> --}}
+                    <div class="input-group input-group-static">
+                        <label for="exampleFormControlSelect1" class="ms-0">Bulan</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Jan</option>
+                            <option>Feb</option>
+                        </select>
                     </div>
                 </div>
                 <div class="ms-2">
-                    <h6 class="">Tahun</h6>
-                    <div class="input-group input-group-outline">
-                        <label class="form-label">Durasi Jam</label>
-                        <input type="number" class="form-control" min="0">
+                    {{-- <h6 class="">Tahun</h6> --}}
+                    <div class="input-group input-group-static">
+                        <label for="exampleFormControlSelect1" class="ms-0">Tahun</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>2020</option>
+                            <option>2021</option>
+                    </select>
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@
             <img src="https://www.ubm.ac.id/wp-content/uploads/2019/02/sertifikat-billy.png" class="img-fluid w-100" alt="sertificate">
         </div>
         <div class="py-4 text-center">
-            <a href="{{ url('admin/sertificates/1') }}" class="btn btn-success">
+            <a href="{{ url('admin/certificate/1') }}" class="btn btn-success">
                 <i class="fas fa-edit"></i>
                 Edit Sertifikat
             </a>
