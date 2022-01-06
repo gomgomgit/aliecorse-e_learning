@@ -12,41 +12,41 @@
             <li class="nav-item">
                 <a class="nav-link text-dark {{ (request()->is('admin')) ? 'active bg-gradient-info' : '' }}" href="{{ route('dashboard') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">speed</i>
+                    <i class="material-icons opacity-10 text-primary">speed</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Beranda</span>
+                    <span class="nav-link-text ms-1 fw-normal">Beranda</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark {{ (request()->is('admin/profile*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('/admin/profile') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">person</i>
+                    <i class="material-icons opacity-10 text-primary">person</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Profile</span>
+                    <span class="nav-link-text ms-1 fw-normal">Profile</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark " href="./pages/billing.html">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">school</i>
+                    <i class="material-icons opacity-10 text-primary">school</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Kursus Saya</span>
+                    <span class="nav-link-text ms-1 fw-normal">Kursus Saya</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark " href="./pages/virtual-reality.html">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">shopping_cart</i>
+                    <i class="material-icons opacity-10 text-primary">shopping_cart</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Riwayat Pembelian</span>
+                    <span class="nav-link-text ms-1 fw-normal">Riwayat Pembelian</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark " href="./pages/rtl.html">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">article</i>
+                    <i class="material-icons opacity-10 text-primary">article</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Sertifikat Saya</span>
+                    <span class="nav-link-text ms-1 fw-normal">Sertifikat Saya</span>
                 </a>
             </li>
             <li class="nav-item mt-2">
@@ -58,97 +58,97 @@
             <li class="nav-item">
                 <a class="nav-link text-dark " href="./pages/notifications.html">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">speed</i>
+                    <i class="material-icons opacity-10 text-primary">speed</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Dashboard</span>
+                    <span class="nav-link-text ms-1 fw-normal">Dashboard</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark  {{ (request()->is('admin/course*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/courses') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">school</i>
+                    <i class="material-icons opacity-10 text-primary">school</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Kursus</span>
+                    <span class="nav-link-text ms-1 fw-normal">Kursus</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark " href="">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">meeting_room</i>
+                    <i class="material-icons opacity-10 text-primary">meeting_room</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Webinar</span>
+                    <span class="nav-link-text ms-1 fw-normal">Webinar</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark  {{ (request()->is('admin/categories*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/categories") }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">category</i>
+                    <i class="material-icons opacity-10 text-primary">category</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Kategori</span>
+                    <span class="nav-link-text ms-1 fw-normal">Kategori</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark {{ (request()->is('admin/reviews*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/reviews') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">reviews</i>
+                    <i class="material-icons opacity-10 text-primary">reviews</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Ulasan</span>
+                    <span class="nav-link-text ms-1 fw-normal">Ulasan</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark {{ (request()->is('admin/purchases*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/purchases') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">shop</i>
+                    <i class="material-icons opacity-10 text-primary">shop</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Pembelian</span>
+                    <span class="nav-link-text ms-1 fw-normal">Pembelian</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark {{ (request()->is('admin/questions*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/questions') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">question_answer</i>
+                    <i class="material-icons opacity-10 text-primary">question_answer</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Pertanyaan</span>
+                    <span class="nav-link-text ms-1 fw-normal">Pertanyaan</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark {{ (request()->is('admin/sertificates*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/sertificates') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">assignment</i>
+                    <i class="material-icons opacity-10 text-primary">assignment</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Sertifikat</span>
+                    <span class="nav-link-text ms-1 fw-normal">Sertifikat</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark {{ (request()->is('admin/reports*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/reports') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">report</i>
+                    <i class="material-icons opacity-10 text-primary">report</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Laporan</span>
+                    <span class="nav-link-text ms-1 fw-normal">Laporan</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark {{ (request()->is('admin/students*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/students') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">person</i>
+                    <i class="material-icons opacity-10 text-primary">person</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Siswa</span>
+                    <span class="nav-link-text ms-1 fw-normal">Siswa</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark {{ (request()->is('admin/instructors*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/instructors') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">cast_for_education</i>
+                    <i class="material-icons opacity-10 text-primary">cast_for_education</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Instruktur</span>
+                    <span class="nav-link-text ms-1 fw-normal">Instruktur</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark {{ (request()->is('admin/intructores*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/admins') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">admin_panel_settings</i>
+                    <i class="material-icons opacity-10 text-primary">admin_panel_settings</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Admin</span>
+                    <span class="nav-link-text ms-1 fw-normal">Admin</span>
                 </a>
             </li>
             <li class="nav-item mt-2">
@@ -157,25 +157,25 @@
             <li class="nav-item">
                 <a class="nav-link text-dark " href="./pages/sign-up.html">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">settings</i>
+                    <i class="material-icons opacity-10 text-primary">settings</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Pengaturan</span>
+                    <span class="nav-link-text ms-1 fw-normal">Pengaturan</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark " href="./pages/sign-up.html">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">person</i>
+                    <i class="material-icons opacity-10 text-primary">person</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Profile</span>
+                    <span class="nav-link-text ms-1 fw-normal">Profile</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark " href="./pages/sign-up.html">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">logout</i>
+                    <i class="material-icons opacity-10 text-primary">logout</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Logout</span>
+                    <span class="nav-link-text ms-1 fw-normal">Logout</span>
                 </a>
             </li>
         </ul>
