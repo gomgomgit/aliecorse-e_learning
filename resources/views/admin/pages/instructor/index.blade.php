@@ -1,13 +1,13 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Siswa')
+@section('title', 'Instruktur')
     
 @section('content')
 <div class="container-fluid">
     <div class="py-4">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h3>
-                Siswa
+                Instruktur
             </h3>
             <div class="">
                 <a href="" class="border border-info border-2 px-4 py-2 rounded text-info fw-bold" style="background-color: white">

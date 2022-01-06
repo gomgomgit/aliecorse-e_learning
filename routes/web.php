@@ -97,4 +97,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/category-articles/create', function () {
         return view('admin.pages.category-article.create');
     });
+
+    Route::get('/purchase-history', function () {
+        return view('admin.pages.purchase-history.index');
+    });
 });

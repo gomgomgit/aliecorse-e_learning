@@ -21,7 +21,7 @@
                 <table class="table align-items-center mb-0">
                     <thead>
                         <tr>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2 opacity-7">Gambar</th>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2 opacity-7">Thumbnail</th>
                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Judul</th>
                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Konten</th>
                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Aksi</th>

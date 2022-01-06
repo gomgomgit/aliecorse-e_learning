@@ -25,15 +25,12 @@
                 <div class="">
                     <button class="btn btn-success mb-0">
                         <i class="fas fa-eye"></i>
-                        Lihat
                     </button>
                     <button class="btn btn-info mb-0">
                         <i class="fas fa-edit"></i>
-                        Edit
                     </button>
                     <button class="btn btn-danger mb-0">
                         <i class="fas fa-trash"></i>
-                        Delete
                     </button>
                 </div>
             </div>
@@ -45,15 +42,13 @@
                 <div class="">
                     <button class="btn btn-success mb-0">
                         <i class="fas fa-eye"></i>
-                        Lihat
                     </button>
                     <button class="btn btn-info mb-0">
                         <i class="fas fa-edit"></i>
-                        Edit
+                        
                     </button>
                     <button class="btn btn-danger mb-0">
                         <i class="fas fa-trash"></i>
-                        Delete
                     </button>
                 </div>
             </div>
@@ -65,15 +60,13 @@
                 <div class="">
                     <button class="btn btn-success mb-0">
                         <i class="fas fa-eye"></i>
-                        Lihat
+                        
                     </button>
                     <button class="btn btn-info mb-0">
                         <i class="fas fa-edit"></i>
-                        Edit
                     </button>
                     <button class="btn btn-danger mb-0">
                         <i class="fas fa-trash"></i>
-                        Delete
                     </button>
                 </div>
             </div>

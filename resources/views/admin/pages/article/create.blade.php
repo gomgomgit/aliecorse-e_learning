@@ -10,7 +10,7 @@
         </h3>
         <div class="row">
             <div class="col-4">
-                <h6 class="">Gambar</h6>
+                <h6 class="">Thumbnail</h6>
                 <div class="">
                     <img class="w-100" src="https://s3.amazonaws.com/creativetim_bucket/products/50/original/material-dashboard.jpg?1634648873" alt="">
                 </div>
