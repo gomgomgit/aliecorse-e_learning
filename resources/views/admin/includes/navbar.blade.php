@@ -4,7 +4,7 @@
             <div class="d-flex align-items-center">
                 <img src="https://avatars.githubusercontent.com/u/58408947?v=4" alt="" class="rounded-circle" style="width: 90px; height: 90px">
                 <div class="ms-3">
-                    <h5 class="m-0 fw-normal fs-4">Hello,</h5>
+                    <h5 class="m-0 fw-normal fs-4 mb-n2">Hello,</h5>
                     <h5 class="m-0 fw-bolder fs-3">Alex Sihaburan</h5>
                 </div>
             </div>
