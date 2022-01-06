@@ -80,11 +80,27 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link text-dark  {{ (request()->is('admin/articles*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/articles") }}">
+                    <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="material-icons opacity-10">article</i>
+                    </div>
+                    <span class="nav-link-text ms-1 fw-bold">Artikel</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link text-dark  {{ (request()->is('admin/categories*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/categories") }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">category</i>
                     </div>
                     <span class="nav-link-text ms-1 fw-bold">Kategori</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark  {{ (request()->is('admin/category-articles*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/category-articles") }}">
+                    <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="material-icons opacity-10">pages</i>
+                    </div>
+                    <span class="nav-link-text ms-1 fw-bold">Kategori Artikel</span>
                 </a>
             </li>
             <li class="nav-item">

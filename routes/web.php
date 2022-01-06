@@ -83,4 +83,18 @@ Route::prefix('admin')->group(function () {
     Route::get('/sertificates/{id}', function () {
         return view('admin.pages.sertificate.edit');
     });
+
+    Route::get('/articles', function () {
+        return view('admin.pages.article.index');
+    });
+    Route::get('/articles/create', function () {
+        return view('admin.pages.article.create');
+    });
+
+    Route::get('/category-articles', function () {
+        return view('admin.pages.category-article.index');
+    });
+    Route::get('/category-articles/create', function () {
+        return view('admin.pages.category-article.create');
+    });
 });
