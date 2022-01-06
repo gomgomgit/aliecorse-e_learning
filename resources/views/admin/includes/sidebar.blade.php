@@ -7,7 +7,7 @@
     </a>
     </div> --}}
     <hr class="horizontal light mt-0 mb-2">
-    <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
+    <div class="collapse navbar-collapse  w-auto h-auto pb-5" id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link text-dark {{ (request()->is('admin')) ? 'active bg-gradient-info' : '' }}" href="{{ route('dashboard') }}">
@@ -82,9 +82,9 @@
             <li class="nav-item">
                 <a class="nav-link text-dark  {{ (request()->is('admin/articles*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/articles") }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">article</i>
+                    <i class="material-icons opacity-10 text-primary">article</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Artikel</span>
+                    <span class="nav-link-text ms-1 fw-normal">Artikel</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -98,9 +98,9 @@
             <li class="nav-item">
                 <a class="nav-link text-dark  {{ (request()->is('admin/category-articles*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/category-articles") }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                    <i class="material-icons opacity-10">pages</i>
+                    <i class="material-icons opacity-10 text-primary">pages</i>
                     </div>
-                    <span class="nav-link-text ms-1 fw-bold">Kategori Artikel</span>
+                    <span class="nav-link-text ms-1 fw-normal">Kategori Artikel</span>
                 </a>
             </li>
             <li class="nav-item">
