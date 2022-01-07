@@ -1,11 +1,11 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Ulasan')
+@section('title', 'Pertanyaan')
     
 @section('content')
 <div class="container-fluid">
     <div class="py-4">
-        <h3>Ulasan</h3>
+        <h3>Pertanyaan</h3>
         <div class="card p-2">
             <div class="table-responsive p-0">
                 <table class="table align-items-center mb-0">

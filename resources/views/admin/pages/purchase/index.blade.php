@@ -7,12 +7,12 @@
     <div class="py-4">
         <div class="d-flex justify-content-between mb-2">
             <h3>Pembelian</h3>
-            <div class="d-flex">
+            <div class="d-flex gap-3">
                 <div class="float-end">
                     {{-- <h6 class="">Bulan</h6> --}}
                     <div class="input-group input-group-static">
-                        <label for="exampleFormControlSelect1" class="ms-0">Bulan</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <label for="exampleFormControlSelect1" class="ms-0 text-xs text-dark fw-bold">Bulan</label>
+                        <select class="form-control pt-0" id="exampleFormControlSelect1">
                             <option>Jan</option>
                             <option>Feb</option>
                         </select>
@@ -21,8 +21,8 @@
                 <div class="ms-2">
                     {{-- <h6 class="">Tahun</h6> --}}
                     <div class="input-group input-group-static">
-                        <label for="exampleFormControlSelect1" class="ms-0">Tahun</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <label for="exampleFormControlSelect1" class="ms-0 text-xs text-dark fw-bold">Tahun</label>
+                        <select class="form-control pt-0" id="exampleFormControlSelect1">
                             <option>2020</option>
                             <option>2021</option>
                     </select>

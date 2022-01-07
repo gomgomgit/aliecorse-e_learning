@@ -97,16 +97,15 @@
                 </div>
                 <h6 class="mt-2 mb-0">Tipe Video</h6>
                 <div class="input-group input-group-static">
-                    <label for="tipeVideo" class="ms-0">Pilih Tipe Video</label>
                     <select class="form-control" id="tipeVideo">
-                        <option>1</option>
-                        <option>2</option>
+                        <option>Youtube</option>
+                        <option>Embed Video</option>
                     </select>
                 </div>
                 <h6 class="mt-2 mb-0">Video Link / Embed</h6>
                 <div class="input-group input-group-outline">
                     <label class="form-label">Masukkan Video Link / Embed</label>
-                    <input type="text" class="form-control">
+                    <textarea type="text" class="form-control"> </textarea>
                 </div>
             </div>
             <div class="modal-footer mx-auto">
@@ -419,15 +418,21 @@
                     </div>
                 </div>
 
+                <div class="mt-3 d-grid">
+                    <button type="sumbit" class="btn btn-block btn-success">
+                        <i class="fas fa-save"></i>
+                        Simpan Pertanyaan
+                    </button>
+                </div>
                 
             </div>
-            <div class="modal-footer mx-auto">
-                {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
-                {{-- <button type="sumbit" class="btn btn-success">
+            {{-- <div class="modal-footer mx-auto">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="sumbit" class="btn btn-success">
                     <i class="fas fa-plus-square"></i>
                     Tambah Video
-                </button> --}}
-            </div>
+                </button>
+            </div> --}}
         </div>
     </div>
 </div>

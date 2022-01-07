@@ -26,6 +26,10 @@
                         <i class="fas fa-eye"></i>
                         Lihat
                     </button>
+                    <a href='/admin/courses/1/topic' class="btn btn-warning mb-0">
+                        <i class="fas fa-pen"></i>
+                        Edit
+                    </a>
                     <button class="btn btn-danger mb-0">
                         <i class="fas fa-trash"></i>
                         Delete

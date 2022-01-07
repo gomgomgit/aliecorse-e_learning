@@ -5,7 +5,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="py-4">
-        <form action="" class="">
+        <form action="/admin/courses/1" class="">
             <h3>Kursus Saya</h3>
             <div class="row">
                 <div class="col-4">
