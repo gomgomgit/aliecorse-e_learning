@@ -71,10 +71,10 @@
                     Tambah Quiz
                 </button>
             </div>
-            <div class="float-end mt-5">
+            <div class="d-grid mt-5">
                 <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
                     <i class="fas fa-plus-square"></i>
-                    Tambah Topik
+                    Simpan Topik
                 </button>
             </div>
         </div>
