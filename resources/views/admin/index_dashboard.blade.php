@@ -10,7 +10,7 @@
                 <div class="card-body">
                 <div class="text-center">
                     <i class="material-icons opacity-10 text-light p-3 bg-info rounded-circle fs-1">menu_book</i>
-                    <h4>Jumlah Sertifikat</h4>
+                    <h4>Endrolled Courses</h4>
                     <h1>12</h1>
                 </div>
                 </div>
@@ -21,7 +21,7 @@
                 <div class="card-body">
                 <div class="text-center">
                     <i class="material-icons opacity-10 text-light p-3 bg-warning rounded-circle fs-1">school</i>
-                    <h4>Jumlah Kursus</h4>
+                    <h4>Active Courses</h4>
                     <h1>12</h1>
                 </div>
                 </div>
@@ -32,13 +32,13 @@
                 <div class="card-body">
                 <div class="text-center">
                     <i class="material-icons opacity-10 text-light p-3 bg-success rounded-circle fs-1">emoji_events</i>
-                    <h4>Kursus Selesai</h4>
+                    <h4>Completed Courses</h4>
                     <h1>12</h1>
                 </div>
                 </div>
             </div>
         </div>
-        {{-- <div class="col-lg-4 col-md-6 mt-2 mb-4">
+        <div class="col-lg-4 col-md-6 mt-2 mb-4">
             <div class="card bg-gradient-info z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
@@ -70,7 +70,7 @@
                 </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
     </div>
     
     <div class="row mb-4">
@@ -79,7 +79,7 @@
                 <div class="card-header pb-0">
                     <div class="row">
                         <div class="col-lg-6 col-7">
-                            <h6>Kursus terbaru yang di ikuti</h6>
+                            <h6>Projects</h6>
                             <p class="text-sm mb-0">
                                 <i class="fa fa-check text-dark" aria-hidden="true"></i>
                                 <span class="font-weight-bold ms-1">30 done</span> this month

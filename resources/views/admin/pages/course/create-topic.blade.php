@@ -10,10 +10,10 @@
                 <h3>Latihan berkaca pada dirimu sendiri</h3>
             </div>
             <div class="">
-                <button class="btn btn-success w-100">
+                <a href="{{ url()->previous() }}" class="btn btn-success w-100">
                     <i class="fas fa-arrow-left"></i>
                     Kembali
-                </button>
+                </a>
             </div>
         </div>
         <div class="py-4 border-bottom border-2">

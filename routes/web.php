@@ -25,6 +25,10 @@ Route::prefix('admin')->group(function () {
     Route::get('/', function () {
         return view('admin.index');
     })->name('dashboard');
+    Route::get('/dashboard', function () {
+        return view('admin.index_dashboard');
+    });
+
     Route::get('/courses', function () {
         return view('admin.pages.course.index');
     });
@@ -80,7 +84,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/certificate', function () {
         return view('admin.pages.certificate.index');
     });
-    Route::get('/certificates/{id}', function () {
+    Route::get('/certificate/{id}', function () {
         return view('admin.pages.certificate.edit');
     });
 

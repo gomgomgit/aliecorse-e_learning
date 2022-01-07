@@ -39,7 +39,7 @@
                         <span>21 Pelajaran</span>
                     </div>
                     <div class="">
-                        <a href="" class="px-2">
+                        <a href="{{ url('admin/courses/1') }}" class="px-2">
                             <i class="material-icons opacity-10">visibility</i>
                         </a>
                         <a href="" class="px-2">
