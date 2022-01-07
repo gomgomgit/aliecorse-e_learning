@@ -42,19 +42,41 @@
         <div class="py-4">
             <h6>Pelajaran</h6>
             <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-1">
-                <span class="fw-bold">Video pengembangan Diri</span>
-                <div class="">
-                    <span class="btn btn-info mb-0">
-                        Video
+                <span class="fw-bold">
+                    <span class="badge bg-info ml-2">Video</span>
+                    <span class="mr-2">
+                        Video pengembangan Diri
                     </span>
+                </span>
+                
+                <div>
+                    <button class="btn btn-warning mb-0">
+                        <i class="fas fa-pen"></i>
+                        Edit
+                    </button>
+                    <button class="btn btn-danger mb-0">
+                        <i class="fas fa-trash"></i>
+                        Delete
+                    </button>
                 </div>
             </div>
             <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2">
-                <span class="fw-bold">Quiz Satu</span>
-                <div class="">
-                    <span class="btn btn-info mb-0">
-                        Quiz
+                <span class="fw-bold">
+                    <span class="badge bg-info ml-2">Kuis</span>
+                    <span class="mr-2">
+                        Quiz Satu
                     </span>
+                </span>
+                
+                <div class="">
+                    <button class="btn btn-warning mb-0">
+                        <i class="fas fa-pen"></i>
+                        Edit
+                    </button>
+                    <button class="btn btn-danger mb-0">
+                        <i class="fas fa-trash"></i>
+                        Delete
+                    </button>
                 </div>
             </div>
             <div class="mt-4">
@@ -71,10 +93,10 @@
                     Tambah Quiz
                 </button>
             </div>
-            <div class="float-end mt-5">
+            <div class="d-grid mt-5">
                 <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
                     <i class="fas fa-plus-square"></i>
-                    Tambah Topik
+                    Simpan Topik
                 </button>
             </div>
         </div>
