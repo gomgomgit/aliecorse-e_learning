@@ -43,16 +43,11 @@
                                 </p>
                             </td>
                             <td class="align-middle">
-                                <div class="float-end">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
+                                <div class="text-center">
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">edit</i>
-                                    </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">delete</i>
-                                    </a>
+                                    
                                 </div>
                             </td>
                         </tr>
@@ -77,16 +72,11 @@
                                 </p>
                             </td>
                             <td class="align-middle">
-                                <div class="float-end">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
+                                <div class="text-center">
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">edit</i>
-                                    </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">delete</i>
-                                    </a>
+                            
                                 </div>
                             </td>
                         </tr>
@@ -111,15 +101,9 @@
                                 </p>
                             </td>
                             <td class="align-middle">
-                                <div class="float-end">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
-                                    </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">edit</i>
-                                    </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">delete</i>
+                                <div class="text-center">
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
                                 </div>
                             </td>

@@ -10,7 +10,7 @@
                 <h3>Kategori Artikel</h3>
             </div>
             <div class="">
-                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <i class="fas fa-plus-square"></i>
                     Tambah Kategori
                 </button>
@@ -23,13 +23,13 @@
                     <span>23 Kursus</span>
                 </div>
                 <div class="">
-                    <button class="btn btn-success mb-0">
+                    <button class="btn btn-outline-success mb-0">
                         <i class="fas fa-eye"></i>
                     </button>
-                    <button class="btn btn-info mb-0">
+                    <button class="btn btn-outline-info mb-0">
                         <i class="fas fa-edit"></i>
                     </button>
-                    <button class="btn btn-danger mb-0">
+                    <button class="btn btn-outline-danger mb-0">
                         <i class="fas fa-trash"></i>
                     </button>
                 </div>
@@ -40,13 +40,13 @@
                     <span>23 Kursus</span>
                 </div>
                 <div class="">
-                    <button class="btn btn-success mb-0">
+                    <button class="btn btn-outline-success mb-0">
                         <i class="fas fa-eye"></i>
                     </button>
-                    <button class="btn btn-info mb-0">
+                    <button class="btn btn-outline-info mb-0">
                         <i class="fas fa-edit"></i>
                     </button>
-                    <button class="btn btn-danger mb-0">
+                    <button class="btn btn-outline-danger mb-0">
                         <i class="fas fa-trash"></i>
                     </button>
                 </div>
@@ -57,13 +57,13 @@
                     <span>23 Kursus</span>
                 </div>
                 <div class="">
-                    <button class="btn btn-success mb-0">
+                    <button class="btn btn-outline-success mb-0">
                         <i class="fas fa-eye"></i>
                     </button>
-                    <button class="btn btn-info mb-0">
+                    <button class="btn btn-outline-info mb-0">
                         <i class="fas fa-edit"></i>
                     </button>
-                    <button class="btn btn-danger mb-0">
+                    <button class="btn btn-outline-danger mb-0">
                         <i class="fas fa-trash"></i>
                     </button>
                 </div>

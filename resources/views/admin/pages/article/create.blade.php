@@ -11,9 +11,10 @@
         <div class="row">
             <div class="col-4">
                 <h6 class="">Thumbnail</h6>
-                <div class="">
-                    <img class="w-100" src="https://s3.amazonaws.com/creativetim_bucket/products/50/original/material-dashboard.jpg?1634648873" alt="">
-                </div>
+                <a href="#" class="" id="add-img">
+                    <img src="https://via.placeholder.com/468x260?text=Klik+untuk+upload" id="preview" class="img-fluid">
+                </a>
+                <input type="file" class="d-none" name="" id="add-img2">
             </div>
             <div class="col-8">
                 <div class="mb-3">
@@ -50,5 +51,30 @@
     <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
     <script>
         CKEDITOR.replace( 'editor1' );
+    </script>
+
+    <script>
+        $('#add-img').click(function(){
+            $('#add-img2').click();
+        });
+    </script>
+
+    <script>
+        $(document).on("click", ".browse", function() {
+        var file = $(this).parents().find(".file");
+        file.trigger("click");
+        });
+        $('input[type="file"]').change(function(e) {
+        var fileName = e.target.files[0].name;
+        $("#file").val(fileName);
+
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            // get loaded data and render thumbnail.
+            document.getElementById("preview").src = e.target.result;
+        };
+        // read the image file as a data URL.
+        reader.readAsDataURL(this.files[0]);
+        });
     </script>
 @endpush

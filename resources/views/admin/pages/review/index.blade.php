@@ -48,14 +48,14 @@
                             </td>
                             <td class="align-middle">
                                 <div class="float-end">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">edit</i>
+                                    <a href="" class="btn btn-outline-info mb-0">
+                                        <i class="fas fa-pencil"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">delete</i>
+                                    <a href="" class="btn btn-outline-danger mb-0">
+                                        <i class="fas fa-trash"></i>
                                     </a>
                                 </div>
                             </td>
@@ -88,14 +88,14 @@
                             </td>
                             <td class="align-middle">
                                 <div class="float-end">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">edit</i>
+                                    <a href="" class="btn btn-outline-info mb-0">
+                                        <i class="fas fa-pencil"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">delete</i>
+                                    <a href="" class="btn btn-outline-danger mb-0">
+                                        <i class="fas fa-trash"></i>
                                     </a>
                                 </div>
                             </td>
@@ -128,14 +128,14 @@
                             </td>
                             <td class="align-middle">
                                 <div class="float-end">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">edit</i>
+                                    <a href="" class="btn btn-outline-info mb-0">
+                                        <i class="fas fa-pencil"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">delete</i>
+                                    <a href="" class="btn btn-outline-danger mb-0">
+                                        <i class="fas fa-trash"></i>
                                     </a>
                                 </div>
                             </td>

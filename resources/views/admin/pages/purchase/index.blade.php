@@ -66,48 +66,14 @@
                             </td>
                             <td class="align-middle">
                                 <div class="float-end">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">edit</i>
+                                    <a href="" class="btn btn-outline-info mb-0">
+                                        <i class="fas fa-pencil"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">delete</i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h6 class="mb-0 text-sm">John Michael</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="text-xs font-weight-bold mb-0">Manager</p>
-                            </td>
-                            <td class="align-middle text-center text-sm">
-                                <span class="text-secondary text-xs font-weight-bold">21 September 2021</span>
-                            </td>
-                            <td class="align-middle text-center">
-                                <p class="text-xs font-weight-bold mb-0">Indra frimawan</p>
-                            </td>
-                            <td class="align-middle">
-                                <p  class="text-center text-xs font-weight-bold mb-0">
-                                    Rp 300.000
-                                </p>
-                            </td>
-                            <td class="align-middle">
-                                <div class="float-end">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
-                                    </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">edit</i>
-                                    </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">delete</i>
+                                    <a href="" class="btn btn-outline-danger mb-0">
+                                        <i class="fas fa-trash"></i>
                                     </a>
                                 </div>
                             </td>
@@ -134,14 +100,48 @@
                             </td>
                             <td class="align-middle">
                                 <div class="float-end">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">edit</i>
+                                    <a href="" class="btn btn-outline-info mb-0">
+                                        <i class="fas fa-pencil"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">delete</i>
+                                    <a href="" class="btn btn-outline-danger mb-0">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex flex-column justify-content-center">
+                                    <h6 class="mb-0 text-sm">John Michael</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="text-xs font-weight-bold mb-0">Manager</p>
+                            </td>
+                            <td class="align-middle text-center text-sm">
+                                <span class="text-secondary text-xs font-weight-bold">21 September 2021</span>
+                            </td>
+                            <td class="align-middle text-center">
+                                <p class="text-xs font-weight-bold mb-0">Indra frimawan</p>
+                            </td>
+                            <td class="align-middle">
+                                <p  class="text-center text-xs font-weight-bold mb-0">
+                                    Rp 300.000
+                                </p>
+                            </td>
+                            <td class="align-middle">
+                                <div class="float-end">
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="" class="btn btn-outline-info mb-0">
+                                        <i class="fas fa-pencil"></i>
+                                    </a>
+                                    <a href="" class="btn btn-outline-danger mb-0">
+                                        <i class="fas fa-trash"></i>
                                     </a>
                                 </div>
                             </td>

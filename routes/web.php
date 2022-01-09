@@ -109,8 +109,14 @@ Route::prefix('admin')->group(function () {
     Route::get('/my-course', function () {
         return view('admin.pages.my-course.index');
     });
+    Route::get('/my-course/{id}', function () {
+        return view('admin.pages.my-course.detail');
+    });
 
     Route::get('/my-certificate', function () {
         return view('admin.pages.my-certificate.index');
+    });
+    Route::get('/my-certificate/{id}', function () {
+        return view('admin.pages.my-certificate.detail');
     });
 });

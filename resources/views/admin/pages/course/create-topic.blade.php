@@ -272,8 +272,9 @@
                                     </div>
                                 </div>
                                 <div class="w-25">
-                                    <select name="" id="" class="form-select">
+                                    <select name="" id="" class="form-select px-2">
                                         <option value="" class="form-input">Menit</option>
+                                        <option value="" class="form-input">Detik</option>
                                     </select>
                                 </div>
                                 <div class="form-check form-switch">
@@ -397,14 +398,14 @@
                         </div>
                     </div>
                     <div class="mt-3 d-flex justify-content-end">
-                        <button type="sumbit" class="btn btn-success">
+                        <button type="sumbit" class="btn btn-success" onclick="myFunction2()">
                             <i class="fas fa-plus-square"></i>
                             Tambah Jawaban
                         </button>
                     </div>
                 </div>
                 
-                <div class="mt-3 border border-2 p-2 rounded">
+                <div class="mt-3 border border-2 p-2 rounded" id="myDIV2" style="display: none">
                     <h6 class="mb-0">Jawaban</h6>
                     <div class="input-group input-group-outline mb-2">
                         <label class="form-label">Masukkan Jawaban</label>
@@ -466,6 +467,15 @@
     <script>
         function myFunction() {
         var x = document.getElementById("myDIV");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+        } 
+        
+        function myFunction2() {
+        var x = document.getElementById("myDIV2");
         if (x.style.display === "block") {
             x.style.display = "none";
         } else {

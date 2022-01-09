@@ -38,8 +38,8 @@
                             </td>
                             <td class="align-middle">
                                 <div class="text-center">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
                                 </div>
                             </td>
@@ -63,8 +63,8 @@
                             </td>
                             <td class="align-middle">
                                 <div class="text-center">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
                                 </div>
                             </td>
@@ -88,9 +88,10 @@
                             </td>
                             <td class="align-middle">
                                 <div class="text-center">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
+                                 
                                 </div>
                             </td>
                         </tr>
