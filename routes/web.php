@@ -80,6 +80,9 @@ Route::prefix('admin')->group(function () {
     Route::get('/reports', function () {
         return view('admin.pages.report.index');
     });
+    Route::get('/reports/{id}', function () {
+        return view('admin.pages.report.detail');
+    });
 
     Route::get('/certificate', function () {
         return view('admin.pages.certificate.index');

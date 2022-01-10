@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', 'laporan')
+@section('title', 'Laporan')
     
 @push('after-style')
     <link href="{{asset('/css/custom.css')}}" rel="stylesheet"/>
@@ -34,134 +34,83 @@
             </div>
         </div>
 
-        <div class="row gap-4">
+        {{-- <div class="row gap-4">
             <div class="p-8 col-4 bg-radial-green">
                 <h3>sdafdsjklfh</h3>
             </div>
-        </div>
-        {{-- <div class="card p-2">
-            <div class="table-responsive p-0">
-                <table class="table align-items-center mb-0">
-                    <thead>
-                        <tr>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2 opacity-7">Kursus</th>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Siswa</th>
-                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tanggal</th>
-                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Instruktur</th>
-                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Harga</th>
-                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h6 class="mb-0 text-sm">John Michael</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="text-xs font-weight-bold mb-0">Manager</p>
-                            </td>
-                            <td class="align-middle text-center text-sm">
-                                <span class="text-secondary text-xs font-weight-bold">21 September 2021</span>
-                            </td>
-                            <td class="align-middle text-center">
-                                <p class="text-xs font-weight-bold mb-0">Indra frimawan</p>
-                            </td>
-                            <td class="align-middle">
-                                <p  class="text-center text-xs font-weight-bold mb-0">
-                                    Rp 300.000
-                                </p>
-                            </td>
-                            <td class="align-middle">
-                                <div class="float-end">
-                                    <a href="" class="btn btn-outline-success mb-0">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                    <a href="" class="btn btn-outline-info mb-0">
-                                        <i class="fas fa-pencil"></i>
-                                    </a>
-                                    <a href="" class="btn btn-outline-danger mb-0">
-                                        <i class="fas fa-trash"></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h6 class="mb-0 text-sm">John Michael</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="text-xs font-weight-bold mb-0">Manager</p>
-                            </td>
-                            <td class="align-middle text-center text-sm">
-                                <span class="text-secondary text-xs font-weight-bold">21 September 2021</span>
-                            </td>
-                            <td class="align-middle text-center">
-                                <p class="text-xs font-weight-bold mb-0">Indra frimawan</p>
-                            </td>
-                            <td class="align-middle">
-                                <p  class="text-center text-xs font-weight-bold mb-0">
-                                    Rp 300.000
-                                </p>
-                            </td>
-                            <td class="align-middle">
-                                <div class="float-end">
-                                    <a href="" class="btn btn-outline-success mb-0">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                    <a href="" class="btn btn-outline-info mb-0">
-                                        <i class="fas fa-pencil"></i>
-                                    </a>
-                                    <a href="" class="btn btn-outline-danger mb-0">
-                                        <i class="fas fa-trash"></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h6 class="mb-0 text-sm">John Michael</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="text-xs font-weight-bold mb-0">Manager</p>
-                            </td>
-                            <td class="align-middle text-center text-sm">
-                                <span class="text-secondary text-xs font-weight-bold">21 September 2021</span>
-                            </td>
-                            <td class="align-middle text-center">
-                                <p class="text-xs font-weight-bold mb-0">Indra frimawan</p>
-                            </td>
-                            <td class="align-middle">
-                                <p  class="text-center text-xs font-weight-bold mb-0">
-                                    Rp 300.000
-                                </p>
-                            </td>
-                            <td class="align-middle">
-                                <div class="float-end">
-                                    <a href="" class="btn btn-outline-success mb-0">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                    <a href="" class="btn btn-outline-info mb-0">
-                                        <i class="fas fa-pencil"></i>
-                                    </a>
-                                    <a href="" class="btn btn-outline-danger mb-0">
-                                        <i class="fas fa-trash"></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </div> --}}
+
+        <div class="row mt-5">
+            <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                    <div class="card-header p-3 pt-2">
+                    <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                        <i class="material-icons opacity-10">school</i>
+                    </div>
+                    <div class="text-end pt-1">
+                        <p class="mb-0 text-capitalize">Kursus Diambil</p>
+                        <h4 class="mb-0">53</h4>
+                    </div>
+                </div>
+                <hr class="dark horizontal my-0">
+                    <div class="text-end card-footer p-3">
+                        <a href="{{ url("admin/reports/1") }}" class="btn btn-outline-info">
+                            <i class="fas fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                <div class="card-header p-3 pt-2">
+                    <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+                        <i class="material-icons opacity-10">money</i>
+                    </div>
+                    <div class="text-end pt-1">
+                        <p class="mb-0 text-capitalize">Pendapatan</p>
+                        <h4 class="mb-0">Rp 2.300.000</h4>
+                    </div>
+                </div>
+                <hr class="dark horizontal my-0">
+                    <div class="text-end card-footer p-3">
+                        <a href="{{ url("adminreports1") }}" class="btn btn-outline-info">
+                            <i class="fas fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                    <div class="card-header p-3 pt-2">
+                        <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
+                            <i class="material-icons opacity-10">person</i>
+                        </div>
+                        <div class="text-end pt-1">
+                            <p class="mb-0 text-capitalize">Siswa Mendaftar</p>
+                            <h4 class="mb-0">3.462</h4>
+                        </div>
+                    </div>
+                    <hr class="dark horizontal my-0">
+                    <div class="text-end card-footer p-3">
+                        <a href="{{ url("adminreports1") }}" class="btn btn-outline-info">
+                            <i class="fas fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <h3>Grafik Pendapatan</h3>
+            <div class="card">
+                <div class="card-body p-3">
+                    <div class="chart">
+                        <canvas id="line-chart" class="chart-canvas" height="300px"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 @endsection
