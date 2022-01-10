@@ -10,7 +10,7 @@
                 <h3>Latihan berkaca pada dirimu sendiri</h3>
             </div>
             <div class="">
-                <button class="btn btn-success w-100">
+                <button class="btn btn-outline-success w-100">
                     <i class="fas fa-plus"></i>
                     Lihat Detail Kursus
                 </button>
@@ -31,13 +31,13 @@
                             <span class="fw-bold col-6">Latihan Menggambar 1</span>
                             <span class="col-3">23 Pelajaran</span>
                             <div class="col-3 d-flex justify-content-end gap-2">
-                                <button class="btn btn-info mb-0">
+                                <button class="btn btn-outline-info mb-0">
                                     <i class="fas fa-eye"></i>
                                 </button>
-                                <a href='/admin/courses/1/topic' class="btn btn-warning mb-0">
+                                <a href='/admin/courses/1/topic' class="btn btn-outline-warning mb-0">
                                     <i class="fas fa-pen"></i>
                                 </a>
-                                <button class="btn btn-danger mb-0">
+                                <button class="btn btn-outline-danger mb-0">
                                     <i class="fas fa-trash"></i>
                                 </button>
                             </div>
@@ -54,13 +54,13 @@
                             <span class="fw-bold col-6">Latihan Menggambar 1</span>
                             <span class="col-3">23 Pelajaran</span>
                             <div class="col-3 d-flex justify-content-end gap-2">
-                                <button class="btn btn-info mb-0">
+                                <button class="btn btn-outline-info mb-0">
                                     <i class="fas fa-eye"></i>
                                 </button>
-                                <a href='/admin/courses/1/topic' class="btn btn-warning mb-0">
+                                <a href='/admin/courses/1/topic' class="btn btn-outline-warning mb-0">
                                     <i class="fas fa-pen"></i>
                                 </a>
-                                <button class="btn btn-danger mb-0">
+                                <button class="btn btn-outline-danger mb-0">
                                     <i class="fas fa-trash"></i>
                                 </button>
                             </div>
@@ -77,13 +77,13 @@
                             <span class="fw-bold col-6">Latihan Menggambar 1</span>
                             <span class="col-3">23 Pelajaran</span>
                             <div class="col-3 d-flex justify-content-end gap-2">
-                                <button class="btn btn-info mb-0">
+                                <button class="btn btn-outline-info mb-0">
                                     <i class="fas fa-eye"></i>
                                 </button>
-                                <a href='/admin/courses/1/topic' class="btn btn-warning mb-0">
+                                <a href='/admin/courses/1/topic' class="btn btn-outline-warning mb-0">
                                     <i class="fas fa-pen"></i>
                                 </a>
-                                <button class="btn btn-danger mb-0">
+                                <button class="btn btn-outline-danger mb-0">
                                     <i class="fas fa-trash"></i>
                                 </button>
                             </div>
@@ -93,13 +93,13 @@
             </x-laravel-blade-sortable::sortable>
             <div class="d-flex justify-content-between mt-4">
                 <div>
-                    <a href="{{ url('admin/courses/1/topic') }}" class="btn btn-info align-end">
+                    <a href="{{ url('admin/courses/1/topic') }}" class="btn btn-outline-info align-end">
                         <i class="fas fa-save"></i>
                         Simpan Urutan Topik
                     </a>
                 </div>
                 <div>
-                    <a href="{{ url('admin/courses/1/topic') }}" class="btn btn-success align-end">
+                    <a href="{{ url('admin/courses/1/topic') }}" class="btn btn-outline-success align-end">
                         <i class="fas fa-plus"></i>
                         Tambah Topik
                     </a>

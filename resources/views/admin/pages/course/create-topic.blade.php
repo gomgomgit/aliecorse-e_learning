@@ -10,7 +10,7 @@
                 <h3>Latihan berkaca pada dirimu sendiri</h3>
             </div>
             <div class="">
-                <a href="{{ url()->previous() }}" class="btn btn-success w-100">
+                <a href="{{ url()->previous() }}" class="btn btn-outline-success w-100">
                     <i class="fas fa-arrow-left"></i>
                     Kembali
                 </a>
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="">
-                    <button class="btn btn-success mb-0" onclick="myFunction()" type="button">
+                    <button class="btn btn-outline-success mb-0" onclick="myFunction()" type="button">
                         <i class="fas fa-plus-square"></i>
                         Tambah Deskripsi
                     </button>
@@ -60,13 +60,11 @@
                             </span>
                             
                             <div>
-                                <button class="btn btn-warning mb-0">
+                                <button class="btn btn-outline-info mb-0">
                                     <i class="fas fa-pen"></i>
-                                    Edit
                                 </button>
-                                <button class="btn btn-danger mb-0">
+                                <button class="btn btn-outline-danger mb-0">
                                     <i class="fas fa-trash"></i>
-                                    Delete
                                 </button>
                             </div>
                         </div>
@@ -87,13 +85,11 @@
                             </span>
                             
                             <div>
-                                <button class="btn btn-warning mb-0">
+                                <button class="btn btn-outline-info mb-0">
                                     <i class="fas fa-pen"></i>
-                                    Edit
                                 </button>
-                                <button class="btn btn-danger mb-0">
+                                <button class="btn btn-outline-danger mb-0">
                                     <i class="fas fa-trash"></i>
-                                    Delete
                                 </button>
                             </div>
                         </div>
@@ -114,13 +110,11 @@
                             </span>
                             
                             <div>
-                                <button class="btn btn-warning mb-0">
+                                <button class="btn btn-outline-info mb-0">
                                     <i class="fas fa-pen"></i>
-                                    Edit
                                 </button>
-                                <button class="btn btn-danger mb-0">
+                                <button class="btn btn-outline-danger mb-0">
                                     <i class="fas fa-trash"></i>
-                                    Delete
                                 </button>
                             </div>
                         </div>
@@ -128,21 +122,21 @@
                 </x-laravel-blade-sortable::sortable-item>
             </x-laravel-blade-sortable::sortable>
             <div class="mt-4">
-                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <i class="fab fa-youtube"></i>
                     Tambah Video
                 </button>
-                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
                     <i class="fas fa-file-alt"></i>
                     Tambah File
                 </button>
-                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
                     <i class="fas fa-question"></i>
                     Tambah Quiz
                 </button>
             </div>
             <div class="d-grid mt-5">
-                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+                <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
                     <i class="fas fa-plus-square"></i>
                     Simpan Topik
                 </button>
@@ -179,7 +173,7 @@
                 </div>
             </div>
             <div class="modal-footer mx-auto">
-                <button type="sumbit" class="btn btn-success">
+                <button type="sumbit" class="btn btn-outline-success">
                     <i class="fas fa-plus-square"></i>
                     Tambah Video
                 </button>
@@ -213,7 +207,7 @@
                 </div>
             </div>
             <div class="modal-footer mx-auto">
-                <button type="sumbit" class="btn btn-success">
+                <button type="sumbit" class="btn btn-outline-success">
                     <i class="fas fa-plus-square"></i>
                     Tambah File
                 </button>
@@ -271,7 +265,7 @@
                                 <textarea class="form-control" rows="5" placeholder="Detail Kuis Tulis Disini." spellcheck="false"></textarea>
                             </div>
                             <div class="float-end mt-4">
-                                <button type="sumbit" class="btn btn-success" id="next">
+                                <button type="sumbit" class="btn btn-outline-success" id="next">
                                     <i class="fas fa-arrow-right"></i>
                                     Lanjut
                                 </button>
@@ -282,10 +276,10 @@
                                 <span class="fw-bold">Soal satu</span>
                                 <div class="">
                                     <span class="badge bg-warning">Single choice</span>
-                                    <button class="btn btn-info mb-0">
+                                    <button class="btn btn-outline-info mb-0">
                                         <i class="fas fa-edit"></i>
                                     </button>
-                                    <button class="btn btn-danger mb-0">
+                                    <button class="btn btn-outline-danger mb-0">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </div>
@@ -294,17 +288,17 @@
                                 <span class="fw-bold">Soal satu</span>
                                 <div class="">
                                     <span class="badge bg-warning">Single choice</span>
-                                    <button class="btn btn-info mb-0">
+                                    <button class="btn btn-outline-info mb-0">
                                         <i class="fas fa-edit"></i>
                                     </button>
-                                    <button class="btn btn-danger mb-0">
+                                    <button class="btn btn-outline-danger mb-0">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </div>
                             </div>
 
                             <div class="float-end mt-4">
-                                <button type="sumbit" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
+                                <button type="sumbit" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
                                     <i class="fas fa-plus-square"></i>
                                     Tambah Soal
                                 </button>
@@ -346,7 +340,7 @@
                                 </select>
                             </div>
                             <div class="float-end mt-4">
-                                <button type="sumbit" class="btn btn-success">
+                                <button type="sumbit" class="btn btn-outline-success">
                                     <i class="fas fa-save"></i>
                                     Simpan Kuis
                                 </button>
@@ -357,8 +351,8 @@
                 
             </div>
             <div class="modal-footer">
-                {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
-                {{-- <button type="sumbit" class="btn btn-success" id="next">
+                {{-- <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button> --}}
+                {{-- <button type="sumbit" class="btn btn-outline-success" id="next">
                     <i class="fas fa-arrow-right"></i>
                     Lanjut
                 </button> --}}
@@ -374,7 +368,7 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="staticBackdrop4Label">Tambah Pertanyaan</h5>
                 {{-- <button type="button" class="btn fs-5" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button> --}}
-                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
                     <i class="fas fa-arrow-left"></i>
                     Kembali
                 </button>
@@ -421,11 +415,10 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="customRadio1">
                             </div>
-                            {{-- <span class="badge bg-success"><i class="fas fa-check-square"></i></span> --}}
-                            <button class="btn btn-info mb-0 mx-2">
+                            <button class="btn btn-outline-info mb-0 mx-2">
                                 <i class="fas fa-edit"></i>
                             </button>
-                            <button class="btn btn-danger mb-0">
+                            <button class="btn btn-outline-danger mb-0">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </div>
@@ -436,17 +429,16 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="customRadio1">
                             </div>
-                            {{-- <span class="badge bg-success"><i class="fas fa-check-square"></i></span> --}}
-                            <button class="btn btn-info mb-0 mx-2">
+                            <button class="btn btn-outline-info mb-0 mx-2">
                                 <i class="fas fa-edit"></i>
                             </button>
-                            <button class="btn btn-danger mb-0">
+                            <button class="btn btn-outline-danger mb-0">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </div>
                     </div>
                     <div class="mt-3 d-flex justify-content-end">
-                        <button type="sumbit" class="btn btn-success" onclick="myFunction2()">
+                        <button type="sumbit" class="btn btn-outline-success" onclick="myFunction2()" id="myButton">
                             <i class="fas fa-plus-square"></i>
                             Tambah Jawaban
                         </button>
@@ -460,9 +452,11 @@
                         <input type="text" class="form-control">
                     </div>
                     <h6 class="mt-2 mb-0">Tambah Gambar</h6>
-                    <div class="d-flex">
-                        <img src="https://s3.amazonaws.com/creativetim_bucket/products/50/original/material-dashboard.jpg?1634648873" alt="" class="w-50">
-                        <input class="ms-4" type="file" class="form-input">
+                    <div class="w-100">
+                        <a href="#" class="" id="add-img">
+                            <img src="https://via.placeholder.com/468x260?text=Klik+untuk+upload" id="preview" class="img-fluid">
+                        </a>
+                        <input type="file" class="d-none" name="" id="add-img2">
                     </div>
                     <div class="mt-4">
                         <h6 class="mb-0">Format Jawaban</h6>
@@ -481,16 +475,22 @@
                                     <label class="custom-control-label" for="customRadio3">Keduanya</label>
                                 </div>
                             </div>
-                            <button type="sumbit" class="btn btn-success">
-                                <i class="fas fa-save"></i>
-                                Simpan Jawaban
-                            </button>
+                            <div class="">
+                                <button type="button" class="btn btn-outline-danger" onclick="myFunction3()">
+                                    <i class="fas fa-times"></i>
+                                    Batal
+                                </button>
+                                <button type="sumbit" class="btn btn-outline-success">
+                                    <i class="fas fa-save"></i>
+                                    Simpan Jawaban
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="mt-3 d-grid">
-                    <button type="sumbit" class="btn btn-block btn-success">
+                    <button type="sumbit" class="btn btn-outline-block btn-outline-success">
                         <i class="fas fa-save"></i>
                         Simpan Pertanyaan
                     </button>
@@ -498,8 +498,8 @@
                 
             </div>
             {{-- <div class="modal-footer mx-auto">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="sumbit" class="btn btn-success">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="sumbit" class="btn btn-outline-success">
                     <i class="fas fa-plus-square"></i>
                     Tambah Video
                 </button>
@@ -515,7 +515,7 @@
 
     <x-laravel-blade-sortable::scripts/>
 
-    <script src="{{ asset('/js/app.js') }}"></script>
+    {{-- <script src="{{ asset('/js/app.js') }}"></script> --}}
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/6.0.0-beta.2/basic.css"></script> --}}
 
     <script>
@@ -530,16 +530,54 @@
         
         function myFunction2() {
         var x = document.getElementById("myDIV2");
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
+        var y = document.getElementById("myButton");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                y.style.display = "block";
+            } else {
+                x.style.display = "block";
+                y.style.display = "none";
+            }
+        }
+
+        function myFunction3() {
+        var x = document.getElementById("myDIV2");
+        var y = document.getElementById("myButton");
+
+        if (x.style.display === "none") {
             x.style.display = "block";
+            y.style.display = "none";
+        } else {
+            x.style.display = "none";
+            y.style.display = "block";
         }
         } 
     </script>
     <script>
         $("#next").click(function(){
             $("#next1").click();
+        });
+
+        $('#add-img').click(function(){
+            $('#add-img2').click();
+        });
+    </script>
+    <script>
+        $(document).on("click", ".browse", function() {
+        var file = $(this).parents().find(".file");
+        file.trigger("click");
+        });
+        $('input[type="file"]').change(function(e) {
+        var fileName = e.target.files[0].name;
+        $("#file").val(fileName);
+
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            // get loaded data and render thumbnail.
+            document.getElementById("preview").src = e.target.result;
+        };
+        // read the image file as a data URL.
+        reader.readAsDataURL(this.files[0]);
         });
     </script>
 @endpush
