@@ -119,7 +119,7 @@
     @stack('before-script')
     @include('admin.includes.script')
     @stack('after-script')
-    
+    @yield('end-script')
 </body>
 
 </html>
