@@ -49,95 +49,80 @@
                     as="div"
                     sort-key="1" {{-- this is important. set a key for each entry --}}
                 >
-                    <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-1">
-                        <span class="fw-bold">
-                            <span class="badge bg-info ml-2">Video</span>
-                            <span class="mr-2">
-                                Video pengembangan Diri
+                    <div class="d-flex align-items-center border border-2 rounded p-2 mb-1">
+                        <span class="flex-shrink-0 ps-2 pe-3"><i class="fas fa-sort"></i></span>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">
+                                <span class="badge bg-info ml-2">Video</span>
+                                <span class="mr-2">
+                                    Video pengembangan Diri
+                                </span>
                             </span>
-                        </span>
-                        
-                        <div>
-                            <button class="btn btn-warning mb-0">
-                                <i class="fas fa-pen"></i>
-                                Edit
-                            </button>
-                            <button class="btn btn-danger mb-0">
-                                <i class="fas fa-trash"></i>
-                                Delete
-                            </button>
+                            
+                            <div>
+                                <button class="btn btn-warning mb-0">
+                                    <i class="fas fa-pen"></i>
+                                    Edit
+                                </button>
+                                <button class="btn btn-danger mb-0">
+                                    <i class="fas fa-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </x-laravel-blade-sortable::sortable-item>
                 <x-laravel-blade-sortable::sortable-item
                     as="div"
-                    sort-key="1" {{-- this is important. set a key for each entry --}}
+                    sort-key="3" {{-- this is important. set a key for each entry --}}
                 >
-                    <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-1">
-                        <span class="fw-bold">
-                            <span class="badge bg-info ml-2">Video</span>
-                            <span class="mr-2">
-                                Video pengembangan Diri
+                    <div class="d-flex align-items-center border border-2 rounded p-2 mb-1">
+                        <span class="flex-shrink-0 ps-2 pe-3"><i class="fas fa-sort"></i></span>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">
+                                <span class="badge bg-success ml-2">File</span>
+                                <span class="mr-2">
+                                    Struktur dasar pengambangan diri
+                                </span>
                             </span>
-                        </span>
-                        
-                        <div>
-                            <button class="btn btn-warning mb-0">
-                                <i class="fas fa-pen"></i>
-                                Edit
-                            </button>
-                            <button class="btn btn-danger mb-0">
-                                <i class="fas fa-trash"></i>
-                                Delete
-                            </button>
+                            
+                            <div>
+                                <button class="btn btn-warning mb-0">
+                                    <i class="fas fa-pen"></i>
+                                    Edit
+                                </button>
+                                <button class="btn btn-danger mb-0">
+                                    <i class="fas fa-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </x-laravel-blade-sortable::sortable-item>
                 <x-laravel-blade-sortable::sortable-item
                     as="div"
-                    sort-key="1" {{-- this is important. set a key for each entry --}}
+                    sort-key="2" {{-- this is important. set a key for each entry --}}
                 >
-                    <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-1">
-                        <span class="fw-bold">
-                            <span class="badge bg-success ml-2">File</span>
-                            <span class="mr-2">
-                                Table struktur dasar pengambangan diri
+                    <div class="d-flex align-items-center border border-2 rounded p-2 mb-1">
+                        <span class="flex-shrink-0 ps-2 pe-3"><i class="fas fa-sort"></i></span>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">
+                                <span class="badge bg-warning ml-2">Quiz</span>
+                                <span class="mr-2">
+                                    Quiz satu
+                                </span>
                             </span>
-                        </span>
-                        
-                        <div>
-                            <button class="btn btn-warning mb-0">
-                                <i class="fas fa-pen"></i>
-                                Edit
-                            </button>
-                            <button class="btn btn-danger mb-0">
-                                <i class="fas fa-trash"></i>
-                                Delete
-                            </button>
-                        </div>
-                    </div>
-                </x-laravel-blade-sortable::sortable-item>
-                <x-laravel-blade-sortable::sortable-item
-                    as="div"
-                    sort-key="1" {{-- this is important. set a key for each entry --}}
-                >
-                    <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-1">
-                        <span class="fw-bold">
-                            <span class="badge bg-warning ml-2">Kuis</span>
-                            <span class="mr-2">
-                                Quiz Satu
-                            </span>
-                        </span>
-                        
-                        <div class="">
-                            <button class="btn btn-warning mb-0">
-                                <i class="fas fa-pen"></i>
-                                Edit
-                            </button>
-                            <button class="btn btn-danger mb-0">
-                                <i class="fas fa-trash"></i>
-                                Delete
-                            </button>
+                            
+                            <div>
+                                <button class="btn btn-warning mb-0">
+                                    <i class="fas fa-pen"></i>
+                                    Edit
+                                </button>
+                                <button class="btn btn-danger mb-0">
+                                    <i class="fas fa-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </x-laravel-blade-sortable::sortable-item>

@@ -23,41 +23,24 @@
             >
                 <x-laravel-blade-sortable::sortable-item
                     as="div"
-                    sort-key="1" {{-- this is important. set a key for each entry --}}
+                    sort-key="2" {{-- this is important. set a key for each entry --}}
                 >
                     <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-1">
-                        <span class="fw-bold">Latihan menari</span>
-                        <span>23 Pelajaran</span>
-                        <div class="">
-                            <button class="btn btn-info mb-0">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <a href='/admin/courses/1/topic' class="btn btn-warning mb-0">
-                                <i class="fas fa-pen"></i>
-                            </a>
-                            <button class="btn btn-danger mb-0">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </div>
-                    </div>
-                </x-laravel-blade-sortable::sortable-item>
-                <x-laravel-blade-sortable::sortable-item
-                    as="div"
-                    sort-key="3" {{-- this is important. set a key for each entry --}}
-                >
-                    <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-1">
-                        <span class="fw-bold">Latihan menari</span>
-                        <span>23 Pelajaran</span>
-                        <div class="">
-                            <button class="btn btn-info mb-0">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <a href='/admin/courses/1/topic' class="btn btn-warning mb-0">
-                                <i class="fas fa-pen"></i>
-                            </a>
-                            <button class="btn btn-danger mb-0">
-                                <i class="fas fa-trash"></i>
-                            </button>
+                        <span class="flex-shrink-0 ps-2 pe-3"><i class="fas fa-sort"></i></span>
+                        <div class="w-100 row d-flex justify-content-between align-items-center">
+                            <span class="fw-bold col-6">Latihan Menggambar 1</span>
+                            <span class="col-3">23 Pelajaran</span>
+                            <div class="col-3 d-flex justify-content-end gap-2">
+                                <button class="btn btn-info mb-0">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href='/admin/courses/1/topic' class="btn btn-warning mb-0">
+                                    <i class="fas fa-pen"></i>
+                                </a>
+                                <button class="btn btn-danger mb-0">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </x-laravel-blade-sortable::sortable-item>
@@ -66,18 +49,44 @@
                     sort-key="2" {{-- this is important. set a key for each entry --}}
                 >
                     <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-1">
-                        <span class="fw-bold">Latihan menari</span>
-                        <span>23 Pelajaran</span>
-                        <div class="">
-                            <button class="btn btn-info mb-0">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <a href='/admin/courses/1/topic' class="btn btn-warning mb-0">
-                                <i class="fas fa-pen"></i>
-                            </a>
-                            <button class="btn btn-danger mb-0">
-                                <i class="fas fa-trash"></i>
-                            </button>
+                        <span class="flex-shrink-0 ps-2 pe-3"><i class="fas fa-sort"></i></span>
+                        <div class="w-100 row d-flex justify-content-between align-items-center">
+                            <span class="fw-bold col-6">Latihan Menggambar 1</span>
+                            <span class="col-3">23 Pelajaran</span>
+                            <div class="col-3 d-flex justify-content-end gap-2">
+                                <button class="btn btn-info mb-0">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href='/admin/courses/1/topic' class="btn btn-warning mb-0">
+                                    <i class="fas fa-pen"></i>
+                                </a>
+                                <button class="btn btn-danger mb-0">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </x-laravel-blade-sortable::sortable-item>
+                <x-laravel-blade-sortable::sortable-item
+                    as="div"
+                    sort-key="2" {{-- this is important. set a key for each entry --}}
+                >
+                    <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-1">
+                        <span class="flex-shrink-0 ps-2 pe-3"><i class="fas fa-sort"></i></span>
+                        <div class="w-100 row d-flex justify-content-between align-items-center">
+                            <span class="fw-bold col-6">Latihan Menggambar 1</span>
+                            <span class="col-3">23 Pelajaran</span>
+                            <div class="col-3 d-flex justify-content-end gap-2">
+                                <button class="btn btn-info mb-0">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href='/admin/courses/1/topic' class="btn btn-warning mb-0">
+                                    <i class="fas fa-pen"></i>
+                                </a>
+                                <button class="btn btn-danger mb-0">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </x-laravel-blade-sortable::sortable-item>
