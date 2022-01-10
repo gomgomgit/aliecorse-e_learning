@@ -1,21 +1,54 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Siswa')
+@section('title', 'laporan')
     
+@push('after-style')
+    <link href="{{asset('/css/custom.css')}}" rel="stylesheet"/>
+@endpush
 @section('content')
 <div class="container-fluid">
     <div class="py-4">
-        <h3>Laporan</h3>
+        <div class="d-flex justify-content-between mb-2">
+            <h3>Laporan</h3>
+            <div class="d-flex gap-3">
+                <div class="float-end">
+                    {{-- <h6 class="">Bulan</h6> --}}
+                    <div class="input-group input-group-static">
+                        <label for="exampleFormControlSelect1" class="ms-0 text-xs text-dark fw-bold">Bulan</label>
+                        <select class="form-control pt-0" id="exampleFormControlSelect1">
+                            <option>Januari</option>
+                            <option>Februari</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ms-2">
+                    {{-- <h6 class="">Tahun</h6> --}}
+                    <div class="input-group input-group-static">
+                        <label for="exampleFormControlSelect1" class="ms-0 text-xs text-dark fw-bold">Tahun</label>
+                        <select class="form-control pt-0" id="exampleFormControlSelect1">
+                            <option>2020</option>
+                            <option>2021</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row gap-4">
+            <div class="p-8 col-4 bg-radial-green">
+                <h3>sdafdsjklfh</h3>
+            </div>
+        </div>
         {{-- <div class="card p-2">
             <div class="table-responsive p-0">
                 <table class="table align-items-center mb-0">
                     <thead>
                         <tr>
                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2 opacity-7">Kursus</th>
-                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Kursus Diikuti</th>
-                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tanggal Bergabung</th>
-                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Email</th>
-                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No HP</th>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Siswa</th>
+                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tanggal</th>
+                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Instruktur</th>
+                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Harga</th>
                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Aksi</th>
                         </tr>
                     </thead>
@@ -27,27 +60,29 @@
                                 </div>
                             </td>
                             <td>
-                                <p class="text-center text-xs font-weight-bold mb-0">4</p>
+                                <p class="text-xs font-weight-bold mb-0">Manager</p>
                             </td>
                             <td class="align-middle text-center text-sm">
                                 <span class="text-secondary text-xs font-weight-bold">21 September 2021</span>
                             </td>
                             <td class="align-middle text-center">
-                                <p class="text-xs font-weight-bold mb-0">jokoirawan@email.com</p>
+                                <p class="text-xs font-weight-bold mb-0">Indra frimawan</p>
                             </td>
                             <td class="align-middle">
-                                <p class="text-center text-xs font-weight-bold mb-0">0237493824243</p>
+                                <p  class="text-center text-xs font-weight-bold mb-0">
+                                    Rp 300.000
+                                </p>
                             </td>
                             <td class="align-middle">
                                 <div class="float-end">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">edit</i>
+                                    <a href="" class="btn btn-outline-info mb-0">
+                                        <i class="fas fa-pencil"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">delete</i>
+                                    <a href="" class="btn btn-outline-danger mb-0">
+                                        <i class="fas fa-trash"></i>
                                     </a>
                                 </div>
                             </td>
@@ -59,27 +94,29 @@
                                 </div>
                             </td>
                             <td>
-                                <p class="text-center text-xs font-weight-bold mb-0">4</p>
+                                <p class="text-xs font-weight-bold mb-0">Manager</p>
                             </td>
                             <td class="align-middle text-center text-sm">
                                 <span class="text-secondary text-xs font-weight-bold">21 September 2021</span>
                             </td>
                             <td class="align-middle text-center">
-                                <p class="text-xs font-weight-bold mb-0">jokoirawan@email.com</p>
+                                <p class="text-xs font-weight-bold mb-0">Indra frimawan</p>
                             </td>
                             <td class="align-middle">
-                                <p class="text-center text-xs font-weight-bold mb-0">0237493824243</p>
+                                <p  class="text-center text-xs font-weight-bold mb-0">
+                                    Rp 300.000
+                                </p>
                             </td>
                             <td class="align-middle">
                                 <div class="float-end">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">edit</i>
+                                    <a href="" class="btn btn-outline-info mb-0">
+                                        <i class="fas fa-pencil"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">delete</i>
+                                    <a href="" class="btn btn-outline-danger mb-0">
+                                        <i class="fas fa-trash"></i>
                                     </a>
                                 </div>
                             </td>
@@ -91,30 +128,35 @@
                                 </div>
                             </td>
                             <td>
-                                <p class="text-center text-xs font-weight-bold mb-0">4</p>
+                                <p class="text-xs font-weight-bold mb-0">Manager</p>
                             </td>
                             <td class="align-middle text-center text-sm">
                                 <span class="text-secondary text-xs font-weight-bold">21 September 2021</span>
                             </td>
                             <td class="align-middle text-center">
-                                <p class="text-xs font-weight-bold mb-0">jokoirawan@email.com</p>
+                                <p class="text-xs font-weight-bold mb-0">Indra frimawan</p>
                             </td>
                             <td class="align-middle">
-                                <p class="text-center text-xs font-weight-bold mb-0">0237493824243</p>
+                                <p  class="text-center text-xs font-weight-bold mb-0">
+                                    Rp 300.000
+                                </p>
                             </td>
                             <td class="align-middle">
                                 <div class="float-end">
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">visibility</i>
+                                    <a href="" class="btn btn-outline-success mb-0">
+                                        <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">edit</i>
+                                    <a href="" class="btn btn-outline-info mb-0">
+                                        <i class="fas fa-pencil"></i>
                                     </a>
-                                    <a href="" class="px-2">
-                                        <i class="material-icons opacity-10">delete</i>
+                                    <a href="" class="btn btn-outline-danger mb-0">
+                                        <i class="fas fa-trash"></i>
                                     </a>
                                 </div>
                             </td>
+                        </tr>
+                        <tr>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>

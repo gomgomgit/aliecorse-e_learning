@@ -41,44 +41,92 @@
         </div>
         <div class="py-4">
             <h6>Pelajaran</h6>
-            <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-1">
-                <span class="fw-bold">
-                    <span class="badge bg-info ml-2">Video</span>
-                    <span class="mr-2">
-                        Video pengembangan Diri
-                    </span>
-                </span>
-                
-                <div>
-                    <button class="btn btn-warning mb-0">
-                        <i class="fas fa-pen"></i>
-                        Edit
-                    </button>
-                    <button class="btn btn-danger mb-0">
-                        <i class="fas fa-trash"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
-            <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2">
-                <span class="fw-bold">
-                    <span class="badge bg-info ml-2">Kuis</span>
-                    <span class="mr-2">
-                        Quiz Satu
-                    </span>
-                </span>
-                
-                <div class="">
-                    <button class="btn btn-warning mb-0">
-                        <i class="fas fa-pen"></i>
-                        Edit
-                    </button>
-                    <button class="btn btn-danger mb-0">
-                        <i class="fas fa-trash"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
+            
+            <x-laravel-blade-sortable::sortable
+                as="div"
+            >
+                <x-laravel-blade-sortable::sortable-item
+                    as="div"
+                    sort-key="1" {{-- this is important. set a key for each entry --}}
+                >
+                    <div class="d-flex align-items-center border border-2 rounded p-2 mb-1">
+                        <span class="flex-shrink-0 ps-2 pe-3"><i class="fas fa-sort"></i></span>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">
+                                <span class="badge bg-info ml-2">Video</span>
+                                <span class="mr-2">
+                                    Video pengembangan Diri
+                                </span>
+                            </span>
+                            
+                            <div>
+                                <button class="btn btn-warning mb-0">
+                                    <i class="fas fa-pen"></i>
+                                    Edit
+                                </button>
+                                <button class="btn btn-danger mb-0">
+                                    <i class="fas fa-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </x-laravel-blade-sortable::sortable-item>
+                <x-laravel-blade-sortable::sortable-item
+                    as="div"
+                    sort-key="3" {{-- this is important. set a key for each entry --}}
+                >
+                    <div class="d-flex align-items-center border border-2 rounded p-2 mb-1">
+                        <span class="flex-shrink-0 ps-2 pe-3"><i class="fas fa-sort"></i></span>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">
+                                <span class="badge bg-success ml-2">File</span>
+                                <span class="mr-2">
+                                    Struktur dasar pengambangan diri
+                                </span>
+                            </span>
+                            
+                            <div>
+                                <button class="btn btn-warning mb-0">
+                                    <i class="fas fa-pen"></i>
+                                    Edit
+                                </button>
+                                <button class="btn btn-danger mb-0">
+                                    <i class="fas fa-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </x-laravel-blade-sortable::sortable-item>
+                <x-laravel-blade-sortable::sortable-item
+                    as="div"
+                    sort-key="2" {{-- this is important. set a key for each entry --}}
+                >
+                    <div class="d-flex align-items-center border border-2 rounded p-2 mb-1">
+                        <span class="flex-shrink-0 ps-2 pe-3"><i class="fas fa-sort"></i></span>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">
+                                <span class="badge bg-warning ml-2">Quiz</span>
+                                <span class="mr-2">
+                                    Quiz satu
+                                </span>
+                            </span>
+                            
+                            <div>
+                                <button class="btn btn-warning mb-0">
+                                    <i class="fas fa-pen"></i>
+                                    Edit
+                                </button>
+                                <button class="btn btn-danger mb-0">
+                                    <i class="fas fa-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </x-laravel-blade-sortable::sortable-item>
+            </x-laravel-blade-sortable::sortable>
             <div class="mt-4">
                 <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <i class="fab fa-youtube"></i>
@@ -193,7 +241,7 @@
                                 Info Kuis
                             </a>
                         </li>
-                        <li class="nav-item" id="next1">
+                        <li class="nav-item">
                             <a class="nav-link fw-bold mb-0 px-5 py-1" data-bs-toggle="tab" href="#v-pills-profile" role="tab" aria-controls="code" aria-selected="false">
                                 <span class="material-icons align-middle mb-1">
                                     question_mark
@@ -413,7 +461,7 @@
                     </div>
                     <h6 class="mt-2 mb-0">Tambah Gambar</h6>
                     <div class="d-flex">
-                        <img src="https://via.placeholder.com/400X200" id="preview" alt="" class="w-50">
+                        <img src="https://s3.amazonaws.com/creativetim_bucket/products/50/original/material-dashboard.jpg?1634648873" alt="" class="w-50">
                         <input class="ms-4" type="file" class="form-input">
                     </div>
                     <div class="mt-4">
@@ -462,10 +510,13 @@
 @endsection
 
 @push('after-script')
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.7.0/Sortable.js"></script>
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/6.0.0-beta.2/basic.css"></script> --}}
-    <script defer src="https://unpkg.com/alpinejs@3.7.1/dist/cdn.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js" integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
 
+    <x-laravel-blade-sortable::scripts/>
+
+    <script src="{{ asset('/js/app.js') }}"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/6.0.0-beta.2/basic.css"></script> --}}
 
     <script>
         function myFunction() {
@@ -491,23 +542,4 @@
             $("#next1").click();
         });
     </script>
-
-<script>
-    $(document).on("click", ".browse", function() {
-    var file = $(this).parents().find(".file");
-    file.trigger("click");
-    });
-    $('input[type="file"]').change(function(e) {
-    var fileName = e.target.files[0].name;
-    $("#file").val(fileName);
-
-    var reader = new FileReader();
-    reader.onload = function(e) {
-        // get loaded data and render thumbnail.
-        document.getElementById("preview").src = e.target.result;
-    };
-    // read the image file as a data URL.
-    reader.readAsDataURL(this.files[0]);
-    });
-</script>
 @endpush
