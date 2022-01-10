@@ -1,0 +1,24 @@
+.bg-radial-blue {
+  background: rgb(13,110,253);
+  background: radial-gradient(circle, rgba(13,110,253,0.4) 0%, rgba(13,110,253,0.05) 100%);
+}
+.bg-radial-indigo {
+  background: rgb(102,16,242);
+  background: radial-gradient(circle, rgba(102,16,242,0.4) 0%, rgba(102,16,242,0.05) 100%);
+}
+.bg-radial-green {
+  background: rgb(25,135,84);
+  background: radial-gradient(circle, rgba(25,135,84,0.4) 0%, rgba(25,135,84,0.05) 100%);
+}
+.bg-radial-red {
+  background: rgb(220,53,69);
+  background: radial-gradient(circle, rgba(220,53,69,0.4) 0%, rgba(220,53,69,0.05) 100%);
+}
+.bg-radial-yellow {
+  background: rgb(255,193,7);
+  background: radial-gradient(circle, rgba(255,193,7,0.4) 0%, rgba(255,193,7,0.05) 100%);
+}
+.bg-radial-orange {
+  background: rgb(253,126,20);
+  background: radial-gradient(circle, rgba(253,126,20,0.4) 0%, rgba(253,126,20,0.05) 100%);
+}
