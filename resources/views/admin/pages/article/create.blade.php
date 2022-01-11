@@ -43,6 +43,12 @@
             <h6 class="">Konten</h6>
             <textarea name="editor1"></textarea>
         </div>
+        <div class="py-4">
+            <button class="btn btn-outline-success w-100">
+                <i class="fas fa-plus-square"></i>
+                Buat Artikel
+            </button>
+        </div>
     </div>
 </div>
 @endsection
