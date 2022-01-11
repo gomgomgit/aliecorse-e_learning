@@ -2,14 +2,18 @@
 
 @section('title', 'Dashboard')
     
+@push('after-style')
+    <link href="{{asset('/css/custom.css')}}" rel="stylesheet"/>
+@endpush
+
 @section('content')
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-4 col-md-6 mt-3 mb-4">
-            <div class="card bg-gradient-info z-index-2 ">
+            <div class="card bg-radial-blue z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-info rounded-circle fs-1">menu_book</i>
+                    <i class="material-icons opacity-10 text-light p-3 bg-radial-blue rounded-circle fs-1">menu_book</i>
                     <h4>Jumlah Sertifikat</h4>
                     <h1>12</h1>
                 </div>
@@ -17,10 +21,10 @@
             </div>
         </div>
         <div class="col-lg-4 col-md-6 mt-3 mb-4">
-            <div class="card bg-gradient-warning z-index-2 ">
+            <div class="card bg-radial-yellow z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-warning rounded-circle fs-1">school</i>
+                    <i class="material-icons opacity-10 text-light p-3 bg-radial-yellow rounded-circle fs-1">school</i>
                     <h4>Jumlah Kursus</h4>
                     <h1>12</h1>
                 </div>
@@ -28,10 +32,10 @@
             </div>
         </div>
         <div class="col-lg-4 col-md-6 mt-3 mb-4">
-            <div class="card bg-gradient-success z-index-2 ">
+            <div class="card bg-radial-green z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-success rounded-circle fs-1">emoji_events</i>
+                    <i class="material-icons opacity-10 text-light p-3 bg-radial-green rounded-circle fs-1">emoji_events</i>
                     <h4>Kursus Selesai</h4>
                     <h1>12</h1>
                 </div>
@@ -39,7 +43,7 @@
             </div>
         </div>
         {{-- <div class="col-lg-4 col-md-6 mt-2 mb-4">
-            <div class="card bg-gradient-info z-index-2 ">
+            <div class="card bg-radial-blue z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
                     <i class="material-icons opacity-10 text-light p-3 bg-info rounded-circle fs-1">group</i>
@@ -50,7 +54,7 @@
             </div>
         </div>
         <div class="col-lg-4 col-md-6 mt-2 mb-4">
-            <div class="card bg-gradient-warning z-index-2 ">
+            <div class="card bg-radial-yellow z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
                     <i class="material-icons opacity-10 text-light p-3 bg-warning rounded-circle fs-1">widgets</i>
@@ -61,7 +65,7 @@
             </div>
         </div>
         <div class="col-lg-4 col-md-6 mt-2 mb-4">
-            <div class="card bg-gradient-success z-index-2 ">
+            <div class="card bg-radial-green z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
                     <i class="material-icons opacity-10 text-light p-3 bg-success rounded-circle fs-1">paid</i>
@@ -149,7 +153,7 @@
                                                 </div>
                                             </div>
                                             <div class="progress">
-                                                <div class="progress-bar bg-gradient-info w-60" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-radial-info w-60" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -186,7 +190,7 @@
                                                 </div>
                                             </div>
                                             <div class="progress">
-                                                <div class="progress-bar bg-gradient-info w-10" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-radial-info w-10" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -223,7 +227,7 @@
                                                 </div>
                                             </div>
                                             <div class="progress">
-                                                <div class="progress-bar bg-gradient-success w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-radial-success w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -266,7 +270,7 @@
                                                 </div>
                                             </div>
                                             <div class="progress">
-                                                <div class="progress-bar bg-gradient-success w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-radial-success w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -300,7 +304,7 @@
                                                 </div>
                                             </div>
                                             <div class="progress">
-                                                <div class="progress-bar bg-gradient-info w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                                                <div class="progress-bar bg-radial-info w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -337,7 +341,7 @@
                                                 </div>
                                             </div>
                                             <div class="progress">
-                                                <div class="progress-bar bg-gradient-info w-40" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"></div>
+                                                <div class="progress-bar bg-radial-info w-40" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -361,7 +365,7 @@
                     <div class="timeline timeline-one-side">
                         <div class="timeline-block mb-3">
                             <span class="timeline-step">
-                                <i class="material-icons text-success text-gradient">notifications</i>
+                                <i class="material-icons text-success text-radial">notifications</i>
                             </span>
                             <div class="timeline-content">
                                 <h6 class="text-dark text-sm font-weight-bold mb-0">$2400, Design changes</h6>
@@ -370,7 +374,7 @@
                         </div>
                         <div class="timeline-block mb-3">
                             <span class="timeline-step">
-                                <i class="material-icons text-danger text-gradient">code</i>
+                                <i class="material-icons text-danger text-radial">code</i>
                             </span>
                             <div class="timeline-content">
                                 <h6 class="text-dark text-sm font-weight-bold mb-0">New order #1832412</h6>
@@ -379,7 +383,7 @@
                         </div>
                         <div class="timeline-block mb-3">
                             <span class="timeline-step">
-                                <i class="material-icons text-dark text-gradient">shopping_cart</i>
+                                <i class="material-icons text-dark text-radial">shopping_cart</i>
                             </span>
                             <div class="timeline-content">
                                 <h6 class="text-dark text-sm font-weight-bold mb-0">Server payments for April</h6>
@@ -388,7 +392,7 @@
                         </div>
                         <div class="timeline-block mb-3">
                             <span class="timeline-step">
-                                <i class="material-icons text-warning text-gradient">credit_card</i>
+                                <i class="material-icons text-warning text-radial">credit_card</i>
                             </span>
                             <div class="timeline-content">
                                 <h6 class="text-dark text-sm font-weight-bold mb-0">New card added for order #4395133</h6>
@@ -397,7 +401,7 @@
                         </div>
                         <div class="timeline-block mb-3">
                             <span class="timeline-step">
-                                <i class="material-icons text-primary text-gradient">key</i>
+                                <i class="material-icons text-primary text-radial">key</i>
                             </span>
                             <div class="timeline-content">
                                 <h6 class="text-dark text-sm font-weight-bold mb-0">Unlock packages for development</h6>
@@ -406,7 +410,7 @@
                         </div>
                         <div class="timeline-block">
                             <span class="timeline-step">
-                                <i class="material-icons text-dark text-gradient">payments</i>
+                                <i class="material-icons text-dark text-radial">payments</i>
                             </span>
                             <div class="timeline-content">
                                 <h6 class="text-dark text-sm font-weight-bold mb-0">New order #9583120</h6>

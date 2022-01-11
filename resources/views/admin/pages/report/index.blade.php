@@ -34,17 +34,11 @@
             </div>
         </div>
 
-        {{-- <div class="row gap-4">
-            <div class="p-8 col-4 bg-radial-green">
-                <h3>sdafdsjklfh</h3>
-            </div>
-        </div> --}}
-
         <div class="row mt-5">
             <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
-                <div class="card">
-                    <div class="card-header p-3 pt-2">
-                    <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                <div class="card bg-radial-blue">
+                    <div class="p-3 pt-2">
+                    <div class="icon icon-lg icon-shape bg-radial-blue shadow-dark text-center border-radius-xl mt-n4 position-absolute">
                         <i class="material-icons opacity-10">school</i>
                     </div>
                     <div class="text-end pt-1">
@@ -61,9 +55,9 @@
                 </div>
             </div>
             <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
-                <div class="card">
-                <div class="card-header p-3 pt-2">
-                    <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+                <div class="card bg-radial-green">
+                <div class="p-3 pt-2">
+                    <div class="icon icon-lg icon-shape bg-radial-green shadow-primary text-center border-radius-xl mt-n4 position-absolute">
                         <i class="material-icons opacity-10">money</i>
                     </div>
                     <div class="text-end pt-1">
@@ -73,16 +67,16 @@
                 </div>
                 <hr class="dark horizontal my-0">
                     <div class="text-end card-footer p-3">
-                        <a href="{{ url("adminreports1") }}" class="btn btn-outline-info">
+                        <a href="{{ url("admin/reports/1") }}" class="btn btn-outline-info">
                             <i class="fas fa-eye"></i>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
-                <div class="card">
-                    <div class="card-header p-3 pt-2">
-                        <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
+                <div class="card bg-radial-indigo">
+                    <div class="p-3 pt-2">
+                        <div class="icon icon-lg icon-shape bg-radial-indigo shadow-success text-center border-radius-xl mt-n4 position-absolute">
                             <i class="material-icons opacity-10">person</i>
                         </div>
                         <div class="text-end pt-1">
@@ -92,7 +86,7 @@
                     </div>
                     <hr class="dark horizontal my-0">
                     <div class="text-end card-footer p-3">
-                        <a href="{{ url("adminreports1") }}" class="btn btn-outline-info">
+                        <a href="{{ url("admin/reports/1") }}" class="btn btn-outline-info">
                             <i class="fas fa-eye"></i>
                         </a>
                     </div>
@@ -102,10 +96,10 @@
 
         <div class="row my-5">
             <h3>Grafik Pendapatan</h3>
-            <div class="card">
-                <div class="card-body p-3">
+            <div class="col-12">
+                <div class="card bg-gradient-info">
                     <div class="chart">
-                        <canvas id="line-chart" class="chart-canvas" height="300px"></canvas>
+                        <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
                     </div>
                 </div>
             </div>
