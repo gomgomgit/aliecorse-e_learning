@@ -48,7 +48,7 @@
                 </div>
                 <hr class="dark horizontal my-0">
                     <div class="text-end card-footer p-3">
-                        <a href="{{ url("admin/reports/1") }}" class="btn btn-outline-info">
+                        <a href="{{ url("admin/reports/1") }}" class="btn btn-outline-info mb-0">
                             <i class="fas fa-eye"></i>
                         </a>
                     </div>
@@ -67,7 +67,7 @@
                 </div>
                 <hr class="dark horizontal my-0">
                     <div class="text-end card-footer p-3">
-                        <a href="{{ url("admin/reports/1") }}" class="btn btn-outline-info">
+                        <a href="{{ url("admin/reports/1") }}" class="btn btn-outline-info mb-0">
                             <i class="fas fa-eye"></i>
                         </a>
                     </div>
@@ -86,7 +86,7 @@
                     </div>
                     <hr class="dark horizontal my-0">
                     <div class="text-end card-footer p-3">
-                        <a href="{{ url("admin/reports/1") }}" class="btn btn-outline-info">
+                        <a href="{{ url("admin/reports/1") }}" class="btn btn-outline-info mb-0">
                             <i class="fas fa-eye"></i>
                         </a>
                     </div>
