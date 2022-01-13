@@ -65,15 +65,15 @@
                 </div>
                 <div class="mt-3">
                     <button class="btn btn-outline-success w-100">
-                        <i class="fas fa-plus-square"></i>
+                        <i class="fas fa-video"></i>
                         Join Via Zoom App
                     </button>
                     <button class="btn btn-outline-success w-100">
-                        <i class="fas fa-plus-square"></i>
+                        <i class="fas fa-globe"></i>
                         Join Via Web Browser
                     </button>
                     <button class="btn btn-outline-success w-100">
-                        <i class="fas fa-plus-square"></i>
+                        <i class="fas fa-play"></i>
                         Start meeting
                     </button>
                 </div>
@@ -82,6 +82,3 @@
     </div>
 </div>
 @endsection
-
-@push('after-script')
-@endpush

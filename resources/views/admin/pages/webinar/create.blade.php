@@ -5,7 +5,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="py-4">
-        <form action="/admin/courses/1" class="">
+        <form action="/admin/webinars/1" class="">
             <h3>Tambah Webinar</h3>
             <div class="row">
                 <div class="col-4">
@@ -54,8 +54,16 @@
                 <h6 class="">Start Time </h6>
                 <div class="input-group input-group-outline">
                     <label class="form-label">Masukkan Start Time </label>
-                    <input type="date" class="form-control">
+                    <input type="text" class="form-control">
                 </div>
+                {{-- <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div> --}}
             </div>
             <div class="mb-3">
                 <h6 class="">Meeting Password</h6>
@@ -133,7 +141,16 @@
 </div>
 @endsection
 
+@push('after-style')
+    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> --}}
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
+@endpush
+
 @push('after-script')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
     {{-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> --}}
     <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
@@ -186,4 +203,20 @@
         });
     </script>
     
+    <script>
+        $(function () {
+            $('#datetimepicker1').datetimepicker({
+                format: 'DD-MM-YYYY LT'
+            });
+            $('#datetimepicker2').datetimepicker({
+                format: 'DD-MM-YYYY'
+            });
+            $('#datetimepicker3').datetimepicker({
+                format: 'LT'
+            });
+            $('#datetimepicker3').datetimepicker({
+                format: 'LT'
+            });
+        });
+    </script>
 @endpush
