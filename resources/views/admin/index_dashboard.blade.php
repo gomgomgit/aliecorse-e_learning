@@ -21,55 +21,22 @@
             </div>
         </div>
         <div class="col-lg-4 col-md-6 mt-3 mb-4">
-            <div class="card bg-radial-yellow z-index-2 ">
+            <div class="card bg-radial-green z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-yellow rounded-circle fs-1">school</i>
+                    <i class="material-icons opacity-10 text-light p-3 bg-green rounded-circle fs-1">school</i>
                     <h4>Active Courses</h4>
                     <h1>12</h1>
                 </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 mt-3 mb-4">
-            <div class="card bg-radial-green z-index-2 ">
-                <div class="card-body">
-                <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-green rounded-circle fs-1">emoji_events</i>
-                    <h4>Completed Courses</h4>
-                    <h1>12</h1>
-                </div>
-                </div>
-            </div>
-        </div>
         <div class="col-lg-4 col-md-6 mt-2 mb-4">
-            <div class="card bg-radial-red z-index-2 ">
+            <div class="card bg-radial-yellow z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-red rounded-circle fs-1">group</i>
+                    <i class="material-icons opacity-10 text-light p-3 bg-yellow rounded-circle fs-1">group</i>
                     <h4>Total Students</h4>
-                    <h1>12</h1>
-                </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mt-2 mb-4">
-            <div class="card bg-radial-indigo z-index-2 ">
-                <div class="card-body">
-                <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-indigo rounded-circle fs-1">widgets</i>
-                    <h4>Total Courses</h4>
-                    <h1>12</h1>
-                </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mt-2 mb-4">
-            <div class="card bg-radial-orange z-index-2 ">
-                <div class="card-body">
-                <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-orange rounded-circle fs-1">paid</i>
-                    <h4>Total Earnings</h4>
                     <h1>12</h1>
                 </div>
                 </div>
