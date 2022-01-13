@@ -122,4 +122,17 @@ Route::prefix('admin')->group(function () {
     Route::get('/my-certificate/{id}', function () {
         return view('admin.pages.my-certificate.detail');
     });
+
+    Route::get('/webinars', function () {
+        return view('admin.pages.webinar.index');
+    });
+    Route::get('/webinars/create', function () {
+        return view('admin.pages.webinar.create');
+    });
+    Route::get('/webinars/settings', function () {
+        return view('admin.pages.webinar.setting');
+    });
+    Route::get('/webinars/{id}', function () {
+        return view('admin.pages.webinar.detail');
+    });
 });
