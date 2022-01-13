@@ -36,9 +36,9 @@
 
         <div class="row mt-5">
             <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
-                <div class="card bg-radial-blue">
+                <div class="card">
                     <div class="p-3 pt-2">
-                    <div class="icon icon-lg icon-shape bg-radial-blue shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                    <div class="icon icon-lg icon-shape bg-gradient-info shadow-dark text-center border-radius-xl mt-n4 position-absolute">
                         <i class="material-icons opacity-10">school</i>
                     </div>
                     <div class="text-end pt-1">
@@ -55,9 +55,9 @@
                 </div>
             </div>
             <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
-                <div class="card bg-radial-green">
+                <div class="card">
                 <div class="p-3 pt-2">
-                    <div class="icon icon-lg icon-shape bg-radial-green shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+                    <div class="icon icon-lg icon-shape bg-gradient-success shadow-primary text-center border-radius-xl mt-n4 position-absolute">
                         <i class="material-icons opacity-10">money</i>
                     </div>
                     <div class="text-end pt-1">
@@ -74,9 +74,9 @@
                 </div>
             </div>
             <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
-                <div class="card bg-radial-indigo">
+                <div class="card">
                     <div class="p-3 pt-2">
-                        <div class="icon icon-lg icon-shape bg-radial-indigo shadow-success text-center border-radius-xl mt-n4 position-absolute">
+                        <div class="icon icon-lg icon-shape bg-gradient-primary shadow-success text-center border-radius-xl mt-n4 position-absolute">
                             <i class="material-icons opacity-10">person</i>
                         </div>
                         <div class="text-end pt-1">

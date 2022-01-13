@@ -72,7 +72,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark " href="#">
+                <a class="nav-link text-dark {{ (request()->is('admin/webinars*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/webinars') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10 text-info">meeting_room</i>
                     </div>
