@@ -13,7 +13,7 @@
             <div class="card bg-radial-blue z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-radial-blue rounded-circle fs-1">menu_book</i>
+                    <i class="material-icons opacity-10 text-light p-3 bg-blue rounded-circle fs-1">menu_book</i>
                     <h4>Endrolled Courses</h4>
                     <h1>12</h1>
                 </div>
@@ -24,7 +24,7 @@
             <div class="card bg-radial-yellow z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-radial-yellow rounded-circle fs-1">school</i>
+                    <i class="material-icons opacity-10 text-light p-3 bg-yellow rounded-circle fs-1">school</i>
                     <h4>Active Courses</h4>
                     <h1>12</h1>
                 </div>
@@ -35,7 +35,7 @@
             <div class="card bg-radial-green z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-radial-green rounded-circle fs-1">emoji_events</i>
+                    <i class="material-icons opacity-10 text-light p-3 bg-green rounded-circle fs-1">emoji_events</i>
                     <h4>Completed Courses</h4>
                     <h1>12</h1>
                 </div>
@@ -46,7 +46,7 @@
             <div class="card bg-radial-red z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-radial-red rounded-circle fs-1">group</i>
+                    <i class="material-icons opacity-10 text-light p-3 bg-red rounded-circle fs-1">group</i>
                     <h4>Total Students</h4>
                     <h1>12</h1>
                 </div>
@@ -57,7 +57,7 @@
             <div class="card bg-radial-indigo z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-radial-indigo rounded-circle fs-1">widgets</i>
+                    <i class="material-icons opacity-10 text-light p-3 bg-indigo rounded-circle fs-1">widgets</i>
                     <h4>Total Courses</h4>
                     <h1>12</h1>
                 </div>
@@ -68,7 +68,7 @@
             <div class="card bg-radial-orange z-index-2 ">
                 <div class="card-body">
                 <div class="text-center">
-                    <i class="material-icons opacity-10 text-light p-3 bg-radial-orange rounded-circle fs-1">paid</i>
+                    <i class="material-icons opacity-10 text-light p-3 bg-orange rounded-circle fs-1">paid</i>
                     <h4>Total Earnings</h4>
                     <h1>12</h1>
                 </div>

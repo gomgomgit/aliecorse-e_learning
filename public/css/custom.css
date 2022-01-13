@@ -1,22 +1,40 @@
+.bg-blue {
+  background: rgba(13,110,253, 0.7);
+}
 .bg-radial-blue {
   background: rgb(13,110,253);
   background: radial-gradient(circle, rgba(13,110,253,0.4) 0%, rgba(13,110,253,0.05) 100%);
+}
+.bg-indigo {
+  background: rgba(102,16,242, 0.7);
 }
 .bg-radial-indigo {
   background: rgb(102,16,242);
   background: radial-gradient(circle, rgba(102,16,242,0.4) 0%, rgba(102,16,242,0.05) 100%);
 }
+.bg-green {
+  background: rgba(25,135,84, 0.7);
+}
 .bg-radial-green {
   background: rgb(25,135,84);
   background: radial-gradient(circle, rgba(25,135,84,0.4) 0%, rgba(25,135,84,0.05) 100%);
+}
+.bg-red {
+  background: rgba(220,53,69, 0.7);
 }
 .bg-radial-red {
   background: rgb(220,53,69);
   background: radial-gradient(circle, rgba(220,53,69,0.4) 0%, rgba(220,53,69,0.05) 100%);
 }
+.bg-yellow {
+  background: rgba(255,193,7, 0.7);
+}
 .bg-radial-yellow {
   background: rgb(255,193,7);
   background: radial-gradient(circle, rgba(255,193,7,0.4) 0%, rgba(255,193,7,0.05) 100%);
+}
+.bg-orange {
+  background: rgba(253,126,20, 0.7);
 }
 .bg-radial-orange {
   background: rgb(253,126,20);
