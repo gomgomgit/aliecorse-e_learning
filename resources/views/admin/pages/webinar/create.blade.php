@@ -52,10 +52,15 @@
             </div>
             <div class="mb-3">
                 <h6 class="">Start Time </h6>
-                <div class="input-group input-group-outline">
+                <div class="input-group input-group-static">
+                    <input class="flatpickr flatpickr-input form-control" type="text" placeholder="Select Date.." data-id="datetime" readonly="readonly">
+                    {{-- <input class="form-control datepicker" placeholder="Please select date" type="text" onfocus="focused(this)" onfocusout="defocused(this)"> --}}
+                </div>
+  
+                {{-- <div class="input-group input-group-outline">
                     <label class="form-label">Masukkan Start Time </label>
                     <input type="text" class="form-control">
-                </div>
+                </div> --}}
                 {{-- <div class="form-group">
                     <div class='input-group date' id='datetimepicker1'>
                         <input type='text' class="form-control" />
@@ -142,18 +147,33 @@
 @endsection
 
 @push('after-style')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
     {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> --}}
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
+    {{-- <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css"> --}}
 @endpush
-
+    
 @push('after-script')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-    <script src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+    <script src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script> --}}
 
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
     {{-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> --}}
     <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+
+    <script>
+        $(".flatpickr").flatpickr(
+            {
+                enableTime: true,
+                dateFormat: "Y-m-d H:i",
+            }
+        );
+    </script>
+
+
     <script>
         CKEDITOR.replace( 'editor1' );
     </script>
