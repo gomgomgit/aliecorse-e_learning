@@ -1,430 +1,527 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+   <!-- Bootstrap CSS CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <style>
-        body {
-        position: relative;
-    overflow-x: hidden;
-    background-color: #CFD8DC;
-        }
-body,
-html { height: 100%;}
-.nav .open > a, 
-.nav .open > a:hover, 
-.nav .open > a:focus {background-color: transparent;}
-
-/*-------------------------------*/
-/*           Wrappers            */
-/*-------------------------------*/
-
-#wrapper {
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+     ul {
+  list-style-type: none;
 }
-
-#wrapper.toggled {
-    padding-left: 220px;
-}
-
-#sidebar-wrapper {
-    z-index: 1000;
-    left: 220px;
-    width: 0;
-    height: 100%;
-    margin-left: -220px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background: #160303;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#sidebar-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-    width: 220px;
-}
-
-#page-content-wrapper {
-    width: 100%;
-    padding-top: 70px;
-}
-
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -220px;
-}
-
-/*-------------------------------*/
-/*     Sidebar nav styles        */
-/*-------------------------------*/
-.navbar {
-  padding: 0;
-}
-
-.sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 220px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.sidebar-nav li {
-    position: relative; 
-    line-height: 20px;
-    display: inline-block;
-    width: 100%;
-}
-
-.sidebar-nav li:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    height: 100%;
-    width: 3px;
-    background-color: #1c1c1c;
-    -webkit-transition: width .2s ease-in;
-      -moz-transition:  width .2s ease-in;
-       -ms-transition:  width .2s ease-in;
-            transition: width .2s ease-in;
-
-}
-.sidebar-nav li:hover{
-  background: skyblue !important;
-  border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.sidebar-nav li:hover:before,
-.sidebar-nav li.open:hover:before {
-    width: 100%;
-    -webkit-transition: width .2s ease-in;
-      -moz-transition:  width .2s ease-in;
-       -ms-transition:  width .2s ease-in;
-            transition: width .2s ease-in;
-
-}
-
-.sidebar-nav li a {
-    display: block;
-    color: #ddd;
-    text-decoration: none;
-    padding: 10px 15px 10px 30px;    
-}
-
-.sidebar-nav li a:hover,
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus,
-.sidebar-nav li.open a:hover,
-.sidebar-nav li.open a:active,
-.sidebar-nav li.open a:focus{
-    color: #fff;
-    text-decoration: none;
-    background-color: transparent;
-}
-.sidebar-header {
-    text-align: center;
-    font-size: 20px;
-    position: relative;
-    width: 100%;
-    display: inline-block;
-}
-.sidebar-brand {
-    height: 65px;
-    position: relative;
-    background:#212531;
-    background: linear-gradient(to right bottom, #2f3441 50%, #212531 50%);
-   padding-top: 1em;
-}
-.sidebar-brand a {
-    color: #ddd;
-}
-.sidebar-brand a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-.dropdown-header {
-    text-align: center;
-    font-size: 1em;
-    color: #ddd;
-    background:#212531;
-    background: linear-gradient(to right bottom, #2f3441 50%, #212531 50%);
-}
-.sidebar-nav .dropdown-menu {
-    position: relative;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border-radius: 0;
-    border: none;
-    background-color: #222;
-    box-shadow: none;
-}
-.dropdown-menu.show {
-    top: 0;
-}
-/*Fontawesome icons*/
-.nav.sidebar-nav li a::before {
-    font-family: fontawesome;
-    content: "\f12e";
-    vertical-align: baseline;
-    display: inline-block;
-    padding-right: 5px;
-}
-a[href*="#home"]::before {
-  content: "\f015" !important;
-}
-a[href*="#about"]::before {
-  content: "\f129" !important;
-}
-a[href*="#events"]::before {
-  content: "\f073" !important;
-}
-a[href*="#events"]::before {
-  content: "\f073" !important;
-}
-a[href*="#team"]::before {
-  content: "\f0c0" !important;
-}
-a[href*="#works"]::before {
-  content: "\f0b1" !important;
-}
-a[href*="#pictures"]::before {
-  content: "\f03e" !important;
-}
-a[href*="#videos"]::before {
-  content: "\f03d" !important;
-}
-a[href*="#books"]::before {
-  content: "\f02d" !important;
-}
-a[href*="#art"]::before {
-  content: "\f1fc" !important;
-}
-a[href*="#awards"]::before {
-  content: "\f02e" !important;
-}
-a[href*="#services"]::before {
-  content: "\f013" !important;
-}
-a[href*="#contact"]::before {
-  content: "\f086" !important;
-}
-a[href*="#followme"]::before {
-  content: "\f099" !important;
-  color: #0084b4;
-}
-/*-------------------------------*/
-/*       Hamburger-Cross         */
-/*-------------------------------*/
-
-.hamburger {
-  position: fixed;
-  top: 20px;  
-  z-index: 999;
-  display: block;
-  width: 32px;
-  height: 32px;
-  margin-left: 15px;
-  background: transparent;
-  border: none;
-}
-.hamburger:hover,
-.hamburger:focus,
-.hamburger:active {
-  outline: none;
-}
-.hamburger.is-closed:before {
-  content: '';
-  display: block;
-  width: 100px;
-  font-size: 14px;
-  color: #fff;
-  line-height: 32px;
-  text-align: center;
-  opacity: 0;
-  -webkit-transform: translate3d(0,0,0);
-  -webkit-transition: all .35s ease-in-out;
-}
-.hamburger.is-closed:hover:before {
-  opacity: 1;
-  display: block;
-  -webkit-transform: translate3d(-100px,0,0);
-  -webkit-transition: all .35s ease-in-out;
-}
-
-.hamburger.is-closed .hamb-top,
-.hamburger.is-closed .hamb-middle,
-.hamburger.is-closed .hamb-bottom,
-.hamburger.is-open .hamb-top,
-.hamburger.is-open .hamb-middle,
-.hamburger.is-open .hamb-bottom {
-  position: absolute;
-  left: 0;
-  height: 4px;
-  width: 100%;
-}
-.hamburger.is-closed .hamb-top,
-.hamburger.is-closed .hamb-middle,
-.hamburger.is-closed .hamb-bottom {
-  background-color: #1a1a1a;
-}
-.hamburger.is-closed .hamb-top { 
-  top: 5px; 
-  -webkit-transition: all .35s ease-in-out;
-}
-.hamburger.is-closed .hamb-middle {
-  top: 50%;
-  margin-top: -2px;
-}
-.hamburger.is-closed .hamb-bottom {
-  bottom: 5px;  
-  -webkit-transition: all .35s ease-in-out;
-}
-
-.hamburger.is-closed:hover .hamb-top {
-  top: 0;
-  -webkit-transition: all .35s ease-in-out;
-}
-.hamburger.is-closed:hover .hamb-bottom {
-  bottom: 0;
-  -webkit-transition: all .35s ease-in-out;
-}
-.hamburger.is-open .hamb-top,
-.hamburger.is-open .hamb-middle,
-.hamburger.is-open .hamb-bottom {
-  background-color: #1a1a1a;
-}
-.hamburger.is-open .hamb-top,
-.hamburger.is-open .hamb-bottom {
-  top: 50%;
-  margin-top: -2px;  
-}
-.hamburger.is-open .hamb-top { 
-  -webkit-transform: rotate(45deg);
-  -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
-}
-.hamburger.is-open .hamb-middle { display: none; }
-.hamburger.is-open .hamb-bottom {
-  -webkit-transform: rotate(-45deg);
-  -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
-}
-.hamburger.is-open:before {
-  content: '';
-  display: block;
-  width: 100px;
-  font-size: 14px;
-  color: #fff;
-  line-height: 32px;
-  text-align: center;
-  opacity: 0;
-  -webkit-transform: translate3d(0,0,0);
-  -webkit-transition: all .35s ease-in-out;
-}
-.hamburger.is-open:hover:before {
-  opacity: 1;
-  display: block;
-  -webkit-transform: translate3d(-100px,0,0);
-  -webkit-transition: all .35s ease-in-out;
-}
-
-/*-------------------------------*/
-/*            Overlay            */
-/*-------------------------------*/
-
-
     </style>
-    <title>Document</title>
+   <!-- Font Awesome JS -->
+   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="wrapper">
-        <div class="overlay"></div>
-         
-             <!-- Sidebar -->
-         <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
-          <ul class="nav sidebar-nav">
-            <div class="sidebar-header text-start">
-              <p class="text-start" style="font-size:16px;">Konten Khusus</p>
+  <nav class="sticky-top p-3 border-bottom border-2" style="background-color: white">
+    <div class="py-2">
+        <div class="d-flex justify-content-between" style="margin-left: 100px;">
+            <div class="d-flex align-items-center">
+                <img src="https://avatars.githubusercontent.com/u/58408947?v=4" alt="" class="rounded-circle" style="width: 90px; height: 90px">
+                <div class="ms-3">
+                    <h5 class="m-0 fw-normal fs-4 mb-n2">Hello,</h5>
+                    <h5 class="m-0 fw-bolder fs-3">Alex Sihaburan</h5>
+                </div>
             </div>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#team">Team</a></li>
-            <li class="dropdown">
-            <a href="#works" class="dropdown-toggle"  data-toggle="dropdown">Works <span class="caret"></span></a>
-          <ul class="dropdown-menu animated fadeInLeft" role="menu">
-           <div class="dropdown-header">Dropdown heading</div>
-           <li><a href="#pictures">Pictures</a></li>
-           <li><a href="#videos">Videeos</a></li>
-           <li><a href="#books">Books</a></li>
-           <li><a href="#art">Art</a></li>
-           <li><a href="#awards">Awards</a></li>
-           </ul>
-           </li>
-           <li><a href="#services">Services</a></li>
-           <li><a href="#contact">Contact</a></li>
-           <li><a href="#followme">Follow me</a></li>
-           </ul>
-       </nav>
-             <!-- /#sidebar-wrapper -->
-     
-             <!-- Page Content -->
-             <div id="page-content-wrapper">
-                 <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
-                     <span class="hamb-top"></span>
-                     <span class="hamb-middle"></span>
-                     <span class="hamb-bottom"></span>
-                 </button>
-             </div>
-             <!-- /#page-content-wrapper -->
-     
-         </div>
-         <!-- /#wrapper -->
-         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-         <script>
-             $(document).ready(function () {
-             var trigger = $('.hamburger'),
-             overlay = $('.overlay'),
-            isClosed = false;
-
-            trigger.click(function () {
-            hamburger_cross();      
-            });
-
-            function hamburger_cross() {
-
-            if (isClosed == true) {          
-                overlay.hide();
-                trigger.removeClass('is-open');
-                trigger.addClass('is-closed');
-                isClosed = false;
-            } else {   
-                overlay.show();
-                trigger.removeClass('is-closed');
-                trigger.addClass('is-open');
-                isClosed = true;
-            }
-        }
+           
+        </div>
+    </div>
+    {{-- <div class="nav-item d-xl-none ps-3 d-flex align-items-center">
+        <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+            <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                show side
+            </div>
+        </a>
+    </div> --}}
+</nav>
+  <div class="position-relative">
+    <div class="bg-info py-4" style="margin-top:50px;">
+      <div class="d-flex justify-content-evenly ms-3 " style="transform: translate(-18%,0%);">
+        <div class="d-flex align-items-center">
+          <img src="https://secure.gravatar.com/avatar/d329f9ba46a1c0e3be83506b159e3666?s=96&d=mm&r=g" alt="" class="rounded-circle ms-3" style="width:50px; height:50px;">
+          <div>
+           <p class="ms-3 text-white" style="transform: translate(0%,60%)">Instructor</p>
+           <p class="ms-3 text-white">
+           
+            adminpondok
+            </p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center me-5">
+          <i class="fas fa-bookmark fs-1 text-warning"></i>
+          <div>
+            <p class="ms-3 text-white" style="transform: translate(0%,60%)">Category</p>
+            <p class="ms-3 text-white">
+              Uncategorized 
+             </p>
+           </div>
+        </div>
+      </div>
+      <h3  style="transform: translate(6.5%,5%)" class="ms-5 text-white">Sample course</h3>
+      <div> 
+        <div class="d-flex pb-4" style="transform: translate(6%,5%)">
+          <div class="d-flex align-items-center ms-5">
+            <i class="fas fa-clock fs-4 text-warning"></i>            
+            <p class="text-white" style="font-size: 14px; transform:translate(10%,30%);">10 Weeks</p>
+          </div>
+          <div class="d-flex align-items-center ms-5">
+            <i class="fas fa-signal fs-5 text-warning"></i>                        
+            <p class="text-white" style="font-size: 14px; transform:translate(10%,30%);">All levels</p>
+          </div>
+          <div class="d-flex align-items-center ms-5">
+            <i class="fas fa-file fs-4 text-warning"></i>            
+            <p class="text-white" style="font-size: 14px; transform:translate(10%,30%);">89 lessons</p>
+          </div>
+          <div class="d-flex align-items-center ms-5">
+            <i class="fas fa-bookmark fs-4 text-warning"></i>
+            <p class="text-white" style="font-size: 14px; transform:translate(10%,30%);">8 quizzes</p>
+          </div>
+          <div class="d-flex align-items-center ms-5">
+            <i class="fas fa-bookmark fs-4 text-warning"></i>
+            <p class="text-white" style="font-size: 14px; transform:translate(10%,30%);">1 student</p>
+          </div>
+          
+         
+        </div>
+      </div>
+    </div>
+    <div class="card" style="width: 19rem; position:absolute; top:60px; right:250px; z-index:2;">
+      <img src="https://images.unsplash.com/photo-1642076573338-9bc6a667fe57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+      <div class="card-body ">
+        <div class="btn-group w-100 my-3" role="group" aria-label="Basic checkbox toggle button group">
+          <input type="checkbox" class="btn-check" style="width: 1000px;" id="btncheck1" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btncheck1">Continue</label>
   
-        $('[data-toggle="offcanvas"]').click(function () {
-                $('#wrapper').toggleClass('toggled');
-        });  
-        });
-         </script>
+        </div>
+        <div class="d-flex">
+          <p class="card-text">
+            You started on:
+          </p>
+          <p class="card-text ms-2">
+            December 31, 2021
+          </p>
+        </div>        
+        <div class="d-flex mt-3">
+          <p class="card-text">
+            You started on:
+          </p>
+          <p class="card-text ms-2">
+            December 31, 2021
+          </p>
+        </div>
+        <hr>
+        <div class="d-flex">
+          <p class="card-text w-75">
+            Lessons completed:           
+          </p>
+          <p class="card-text ms-2">
+            0/89          
+          </p>
+        </div>        
+        <div class="d-flex mt-3">
+          <p class="card-text w-75">
+            Lessons completed:           
+          </p>
+          <p class="card-text ms-2">
+            1/8         
+          </p>
+        </div>
+        <div class="d-flex mt-3">
+          <p class="card-text w-75">
+            Lessons completed:           
+          </p>
+          <p class="card-text ms-2">
+            
+            0%          
+          </p>
+        </div>
+        <div class="progress mb-2">
+          <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-md position-relative">
+    <nav style="margin-top: 90px;">
+      <div class="nav nav-tabs text-dark" id="nav-tab" role="tablist">
+        <button class="nav-link active text-dark fs-5 px-5 bg-light" id="nav-overview-tab" data-bs-toggle="tab" data-bs-target="#nav-overview" type="button" role="tab" aria-controls="nav-overview" aria-selected="true">Overview</button>
+        <button class="nav-link text-dark fs-5 px-5 bg-light" id="nav-curriculum-tab" data-bs-toggle="tab" data-bs-target="#nav-curriculum" type="button" role="tab" aria-controls="nav-curriculum" aria-selected="false">Curriculum</button>
+        <button class="nav-link text-dark fs-5 px-5 bg-light" id="nav-faqs-tab" data-bs-toggle="tab" data-bs-target="#nav-faqs" type="button" role="tab" aria-controls="nav-faqs" aria-selected="false">FAQs</button>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      
+      {{-- Overview --}}
+      <div class="tab-pane fade show active ms-4 mt-4 " id="nav-overview" role="tabpanel" aria-labelledby="nav-overview-tab">
+      
+        <p style="width: 65%;">
+          Exponere more dissensio antiquorum diodorus interrete rhetoribus constituto polliceretur constituto tertium iuppiter munus
+        </p>
+        <p style="width: 65%;">
+          Videsne qui dominorum praeposatum intellego noli negotium longa dissensio tantam fluere uno dixerimus tanto</p>
+        <p style="width: 65%;">
+          Pertinere tardeve manliana longinquum processerat acies mundum cuique      
+        </p>
+       
+      
+      </div>
+
+      {{-- Curicculum --}}
+      <div class="tab-pane fade" id="nav-curriculum" role="tabpanel" aria-labelledby="nav-curriculum-tab">
+        <div class="accordion" id="accordionExample">
+          
+          <div class="accordion-item" style="width: 830px;">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+               <div class="d-flex flex-column">
+                <h5 class="text-dark">Section 1</h5>
+                <p class="text-dark">Graecum voluit obscurari egens beatior reprehendi commota duarum hilare idemque dixisses finis</p>
+                <div class="bg-dark rounded" style="width:80px; height:10px;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                </div>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div>
+                    <i class="fas fa-check me-3 text-warning fw-bold me-4"></i>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div>
+                    <i class="fas fa-check me-3 text-warning fw-bold me-4"></i>
+                  </div>
+                </div>
+                <hr>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div>
+                    <i class="fas fa-check me-3 text-warning fw-bold me-4"></i>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div class="">
+                    <button class="shadow btn-outline-none rounded btn-info text-white" style="font-size: 14px;">Priview</button>
+                  </div>
+                </div>
+                <hr>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div class="">
+                    <button class="shadow btn-outline-none rounded btn-info text-white" style="font-size: 14px;">Priview</button>
+                  </div>
+                </div>
+                <hr>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div class="">
+                    <button class="shadow btn-outline-none rounded btn-info text-white" style="font-size: 14px;">Priview</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" style="width: 830px;">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <div class="d-flex flex-column">
+                  <h5 class="text-dark">Section 2</h5>
+                  <p class="text-dark">Graecum voluit obscurari egens beatior reprehendi commota duarum hilare idemque dixisses finis</p>
+                  <div class="bg-dark rounded" style="width:80px; height:10px;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </div>
+                  </div>
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div>
+                    <i class="fas fa-check me-3 text-warning fw-bold me-4"></i>
+                  </div>
+                </div>
+                <hr>              
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div>
+                    <i class="fas fa-check me-3 text-warning fw-bold me-4"></i>
+                  </div>
+                </div>
+                <hr>              
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div>
+                    <i class="fas fa-check me-3 text-warning fw-bold me-4"></i>
+                  </div>
+                </div>
+                <hr>              
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div>
+                    <i class="fas fa-check me-3 text-warning fw-bold me-4"></i>
+                  </div>
+                </div>
+                <hr>              
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div>
+                    <i class="fas fa-check me-3 text-warning fw-bold me-4"></i>
+                  </div>
+                </div>
+                <hr>              
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" style="width: 830px;">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <div class="d-flex flex-column">
+                  <h5 class="text-dark">Section 3</h5>
+                  <p class="text-dark">Graecum voluit obscurari egens beatior reprehendi commota duarum hilare idemque dixisses finis</p>
+                  <div class="bg-dark rounded" style="width:80px; height:10px;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </div>
+                  </div>
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 3</a>
+                  </div>
+                  <div>
+                    <i class="fas fa-check me-3 text-warning fw-bold me-4"></i>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div>
+                    <i class="fas fa-check me-3 text-warning fw-bold me-4"></i>
+                  </div>
+                </div>
+                <hr>         
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div>
+                    <i class="fas fa-check me-3 text-warning fw-bold me-4"></i>
+                  </div>
+                </div>
+                <hr>        
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-file-alt text-primary ms-4 me-1 fw-bold"></i>                    
+                    <a class="text-decoration-none text-dark fs-6 fw-bold" href="#">Lesson 1</a>
+                  </div>
+                  <div>
+                    <i class="fas fa-check me-3 text-warning fw-bold me-4"></i>
+                  </div>
+                </div>
+                <hr>                            
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      {{-- FAQS --}}
+      <div class="tab-pane fade" id="nav-faqs" role="tabpanel" aria-labelledby="nav-faqs-tab">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item" style="width: 830px;">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Concedere facilius incredibile doloris comparatio suo quem copiosiorem debeatis cuius familiares considerata graecis? 
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <p>
+                  Considerata spe domus suavius concedamus quicumque aristonem alio humanis comitetur permulcet insipiensquo bene
+                </p>              
+                <p>
+                  Considerata spe domus suavius concedamus quicumque aristonem alio humanis comitetur permulcet insipiensquo bene
+                </p>              
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" style="width: 830px;">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Concedere facilius incredibile doloris comparatio suo quem copiosiorem debeatis cuius familiares considerata graecis? 
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <p>
+                  Considerata spe domus suavius concedamus quicumque aristonem alio humanis comitetur permulcet insipiensquo bene
+                </p>              
+                <p>
+                  Considerata spe domus suavius concedamus quicumque aristonem alio humanis comitetur permulcet insipiensquo bene
+                </p>                 
+              </div>
+            </div>
+
+          </div>
+          <div class="accordion-item" style="width: 830px;">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Concedere facilius incredibile doloris comparatio suo quem copiosiorem debeatis cuius familiares considerata graecis? 
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <p>
+                  Considerata spe domus suavius concedamus quicumque aristonem alio humanis comitetur permulcet insipiensquo bene
+                </p>              
+                <p>
+                  Considerata spe domus suavius concedamus quicumque aristonem alio humanis comitetur permulcet insipiensquo bene
+                </p>                 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{-- Target Audience Features --}}
+      <div class="accordion accordion-flush my-5" id="accordionFlushExample">
+        <div class="accordion-item" style="width: 830px;">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Requirements 
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body border-bottom-0">
+              <ul>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+                <hr>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+                <hr>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+                <hr>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+                <hr>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" style="width: 830px;">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Features 
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+                <hr>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+                <hr>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+                <hr>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+                <hr>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+              </ul>              
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" style="width: 830px;">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Target audiences 
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check me-3 text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+                <hr>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check me-3 text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+                <hr>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check me-3 text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+                <hr>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check me-3 text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+                <hr>
+                <li style="transform: translate(-1%,0%)"><i class="fas fa-check me-3 text-warning me-3 fw-bold"></i>Consequentibus longinquum relictae tuique pylades patria arcana vitium actus frangi theophrasto thorius</li>
+              </ul>              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  
+    {{-- @include('admin.includes.navbar') --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
