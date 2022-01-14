@@ -114,6 +114,9 @@ Route::prefix('admin')->group(function () {
     });
     Route::get('/my-course/{id}', function () {
         return view('admin.pages.my-course.detail');
+    });     
+    Route::get('/my-course/{id}/watch', function () {
+        return view('admin.pages.my-course.watch');
     });
 
     Route::get('/my-certificate', function () {
