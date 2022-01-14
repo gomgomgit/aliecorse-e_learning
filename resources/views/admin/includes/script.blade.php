@@ -5,85 +5,85 @@
 <script src="/template/assets/js/plugins/smooth-scrollbar.min.js"></script>
 <script src="/template/assets/js/plugins/chartjs.min.js"></script>
 <script>
-    var ctx = document.getElementById("chart-bars").getContext("2d");
+    // var ctx = document.getElementById("chart-bars").getContext("2d");
 
-    new Chart(ctx, {
-    type: "bar",
-    data: {
-        labels: ["M", "T", "W", "T", "F", "S", "S"],
-        datasets: [{
-        label: "Sales",
-        tension: 0.4,
-        borderWidth: 0,
-        borderRadius: 4,
-        borderSkipped: false,
-        backgroundColor: "rgba(255, 255, 255, .8)",
-        data: [50, 20, 10, 22, 50, 10, 40],
-        maxBarThickness: 6
-        }, ],
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-        legend: {
-            display: false,
-        }
-        },
-        interaction: {
-        intersect: false,
-        mode: 'index',
-        },
-        scales: {
-        y: {
-            grid: {
-            drawBorder: false,
-            display: true,
-            drawOnChartArea: true,
-            drawTicks: false,
-            borderDash: [5, 5],
-            color: 'rgba(255, 255, 255, .2)'
-            },
-            ticks: {
-            suggestedMin: 0,
-            suggestedMax: 500,
-            beginAtZero: true,
-            padding: 10,
-            font: {
-                size: 14,
-                weight: 300,
-                family: "Roboto",
-                style: 'normal',
-                lineHeight: 2
-            },
-            color: "#fff"
-            },
-        },
-        x: {
-            grid: {
-            drawBorder: false,
-            display: true,
-            drawOnChartArea: true,
-            drawTicks: false,
-            borderDash: [5, 5],
-            color: 'rgba(255, 255, 255, .2)'
-            },
-            ticks: {
-            display: true,
-            color: '#f8f9fa',
-            padding: 10,
-            font: {
-                size: 14,
-                weight: 300,
-                family: "Roboto",
-                style: 'normal',
-                lineHeight: 2
-            },
-            }
-        },
-        },
-    },
-    });
+    // new Chart(ctx, {
+    // type: "bar",
+    // data: {
+    //     labels: ["M", "T", "W", "T", "F", "S", "S"],
+    //     datasets: [{
+    //     label: "Sales",
+    //     tension: 0.4,
+    //     borderWidth: 0,
+    //     borderRadius: 4,
+    //     borderSkipped: false,
+    //     backgroundColor: "rgba(255, 255, 255, .8)",
+    //     data: [50, 20, 10, 22, 50, 10, 40],
+    //     maxBarThickness: 6
+    //     }, ],
+    // },
+    // options: {
+    //     responsive: true,
+    //     maintainAspectRatio: false,
+    //     plugins: {
+    //     legend: {
+    //         display: false,
+    //     }
+    //     },
+    //     interaction: {
+    //     intersect: false,
+    //     mode: 'index',
+    //     },
+    //     scales: {
+    //     y: {
+    //         grid: {
+    //         drawBorder: false,
+    //         display: true,
+    //         drawOnChartArea: true,
+    //         drawTicks: false,
+    //         borderDash: [5, 5],
+    //         color: 'rgba(255, 255, 255, .2)'
+    //         },
+    //         ticks: {
+    //         suggestedMin: 0,
+    //         suggestedMax: 500,
+    //         beginAtZero: true,
+    //         padding: 10,
+    //         font: {
+    //             size: 14,
+    //             weight: 300,
+    //             family: "Roboto",
+    //             style: 'normal',
+    //             lineHeight: 2
+    //         },
+    //         color: "#fff"
+    //         },
+    //     },
+    //     x: {
+    //         grid: {
+    //         drawBorder: false,
+    //         display: true,
+    //         drawOnChartArea: true,
+    //         drawTicks: false,
+    //         borderDash: [5, 5],
+    //         color: 'rgba(255, 255, 255, .2)'
+    //         },
+    //         ticks: {
+    //         display: true,
+    //         color: '#f8f9fa',
+    //         padding: 10,
+    //         font: {
+    //             size: 14,
+    //             weight: 300,
+    //             family: "Roboto",
+    //             style: 'normal',
+    //             lineHeight: 2
+    //         },
+    //         }
+    //     },
+    //     },
+    // },
+    // });
 
 
     var ctx2 = document.getElementById("chart-line").getContext("2d");
@@ -268,7 +268,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<script>
+{{-- <script>
     jQuery(document).ready(function($){
         $('#mymodal').on('show.bs.modal', function(e){
             var button = $(e.relatedTarget);
@@ -290,9 +290,9 @@
             <div class="modal-body">
                 <i class="fa fa-spinner fa-spin"></i>
             </div>
-            {{-- <div class="modal-footer">
+            <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div> --}}
+            </div>
         </div>
     </div>
-</div>
+</div> --}}

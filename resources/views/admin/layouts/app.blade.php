@@ -119,7 +119,6 @@
     @stack('before-script')
     @include('admin.includes.script')
     @stack('after-script')
-    
 </body>
 
 </html>

@@ -8,7 +8,7 @@
         <h3>Kursus</h3>
         <div class="border border-2 p-2">
             <div class="row">
-                <div class="col-6">
+                <div class="col-5">
                     <div class="d-flex align-items-center">
                         <img class="w-20" src="https://avatars.githubusercontent.com/u/58408947?v=4" alt="">
                         <div class="ps-2">
@@ -18,7 +18,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 d-flex justify-content-between align-items-center">
+                <div class="col-7 d-flex justify-content-between align-items-center">
+                    {{-- <div class="">
+                        <span class="badge bg-success ml-2">Published</span>
+                    </div> --}}
                     <div class="d-flex">
                         <div>
                             <i class="text-warning fas fa-star"></i>

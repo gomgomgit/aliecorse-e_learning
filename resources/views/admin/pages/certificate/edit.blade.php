@@ -38,7 +38,7 @@
             </div>
         </div> --}}
         <div class="py-4">
-            <button class="btn btn-success w-100">
+            <button class="btn btn-outline-success w-100">
                 <i class="fas fa-save"></i>
                 Simpan
             </button>

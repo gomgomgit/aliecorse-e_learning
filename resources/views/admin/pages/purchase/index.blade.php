@@ -13,8 +13,8 @@
                     <div class="input-group input-group-static">
                         <label for="exampleFormControlSelect1" class="ms-0 text-xs text-dark fw-bold">Bulan</label>
                         <select class="form-control pt-0" id="exampleFormControlSelect1">
-                            <option>Jan</option>
-                            <option>Feb</option>
+                            <option>Januari</option>
+                            <option>Februari</option>
                         </select>
                     </div>
                 </div>
