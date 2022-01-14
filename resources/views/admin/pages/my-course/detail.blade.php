@@ -44,15 +44,15 @@
         </a>
     </div>
 </nav> --}}
-  <div class="position-relative container-md d-flex">
-    <div class="py-4 border-bottom w-100">
+  <div class="position-relative d-flex" style="background: #442e66">
+    <div class="py-4 border-bottom container-md">
       <div class="w-50">
         <div class="d-flex justify-content-between ms-3 mb-4 gap-6">
           <div class="d-flex align-items-center">
             <img src="https://secure.gravatar.com/avatar/d329f9ba46a1c0e3be83506b159e3666?s=96&d=mm&r=g" alt="" class="rounded-circle ms-3" style="width:50px; height:50px;">
             <div>
-              <p class="ms-3 text-dark m-0 fs-6">Instructor</p>
-              <p class="ms-3 text-dark m-0 fs-5 fw-bolder">
+              <p class="ms-3 text-white m-0 fs-6">Instructor</p>
+              <p class="ms-3 text-white m-0 fs-5 fw-bolder">
                 Huriyadi 
               </p>
             </div>
@@ -60,35 +60,35 @@
           <div class="d-flex align-items-center ms-5">
             <i class="fas fa-bookmark fs-1 text-warning"></i>
             <div>
-              <p class="ms-3 text-dark m-0 fs-6">Category</p>
-              <p class="ms-3 text-dark m-0 fs-5 fw-bolder">
+              <p class="ms-3 text-white m-0 fs-6">Category</p>
+              <p class="ms-3 text-white m-0 fs-5 fw-bolder">
                 Uncategorized 
                </p>
              </div>
           </div>
         </div>
-        <h3 class="ms-5 text-dark fs-2 fw-bolder">Sample course</h3>
+        <h3 class="ms-5 text-white fs-2 fw-bolder mb-4">Sample course</h3>
         <div> 
           <div class="d-flex pb-4">
             <div class="d-flex align-items-center ms-5 align-middle">
               <i class="fas fa-clock fs-4 text-warning"></i>            
-              <p class="text-dark m-0 ms-2" style="font-size: 14px;">10 Weeks</p>
+              <p class="text-white m-0 ms-2" style="font-size: 14px;">10 Weeks</p>
             </div>
             <div class="d-flex align-items-center ms-5 align-middle">
               <i class="fas fa-signal fs-5 text-warning"></i>                        
-              <p class="text-dark m-0 ms-2" style="font-size: 14px;">All levels</p>
+              <p class="text-white m-0 ms-2" style="font-size: 14px;">All levels</p>
             </div>
             <div class="d-flex align-items-center ms-5 align-middle">
               <i class="fas fa-file fs-4 text-warning"></i>            
-              <p class="text-dark m-0 ms-2" style="font-size: 14px;">89 lessons</p>
+              <p class="text-white m-0 ms-2" style="font-size: 14px;">89 lessons</p>
             </div>
             <div class="d-flex align-items-center ms-5 align-middle">
               <i class="fas fa-pen fs-4 text-warning"></i>
-              <p class="text-dark m-0 ms-2" style="font-size: 14px;">8 quizzes</p>
+              <p class="text-white m-0 ms-2" style="font-size: 14px;">8 quizzes</p>
             </div>
             <div class="d-flex align-items-center ms-5 align-middle">
               <i class="fas fa-users fs-4 text-warning"></i>
-              <p class="text-dark m-0 ms-2" style="font-size: 14px;">1 student</p>
+              <p class="text-white m-0 ms-2" style="font-size: 14px;">1 student</p>
             </div>
             
            
@@ -103,7 +103,7 @@
         <div class="nav nav-tabs text-dark" id="nav-tab" role="tablist">
           <button class="nav-link active text-dark fs-5 px-5 bg-light" id="nav-overview-tab" data-bs-toggle="tab" data-bs-target="#nav-overview" type="button" role="tab" aria-controls="nav-overview" aria-selected="true">Overview</button>
           <button class="nav-link text-dark fs-5 px-5 bg-light" id="nav-curriculum-tab" data-bs-toggle="tab" data-bs-target="#nav-curriculum" type="button" role="tab" aria-controls="nav-curriculum" aria-selected="false">Curriculum</button>
-          <button class="nav-link text-dark fs-5 px-5 bg-light" id="nav-faqs-tab" data-bs-toggle="tab" data-bs-target="#nav-faqs" type="button" role="tab" aria-controls="nav-faqs" aria-selected="false">FAQs</button>
+          <button class="nav-link text-dark fs-5 px-5 bg-light" id="nav-faqs-tab" data-bs-toggle="tab" data-bs-target="#nav-faqs" type="button" role="tab" aria-controls="nav-faqs" aria-selected="false">Pertanyaan</button>
         </div>
       </nav>
       <div class="tab-content" id="nav-tabContent">
