@@ -25,358 +25,346 @@
         <aside class="w-25">
           <nav class="">
             <div class="nav nav-tabs " id="nav-tab" role="tablist" >
-              <button class="nav-link active bg-light w-50"  id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Lesson List</button>
-              <button class="nav-link bg-light w-50"  id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Question & Answer</button>
+              <button class="nav-link active bg-light w-50 text-dark"  id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Lesson List</button>
+              <button class="nav-link bg-light w-50 text-dark"  id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Question & Answer</button>
            
             </div>
           </nav>
-          <div class="tab-content  shadow-md bg-light"  id="nav-tabContent">
+          <div class="tab-content shadow-lg" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-              <div class="d-flex justify-content-between align-items-center border-bottom" style="border-gray">
-                <div class="mt-4 ms-3">
-                  <p class="text-muted">Chapter 1</p>
-                  <h4 class="text-primary fw-bold">Getting Started</h4>
+              <div class="d-flex justify-content-between align-items-center border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                <div class="my-2">
+                  <p class="text-muted" style="font-size:15px; transform:translate(10%,50%)">Chapter 1</p>
+                  <h5 class="text-primary ms-3 fs-5">Getting Started</h5>
                 </div>
-                <p class="text-muted" style="transform: translate(-80%,150%);">3/5</p>
+                <div class="text-muted" style="transform: translate(-70%,50%)">
+                  <p>3/5</p>
+                </div>
               </div>
-             
-              <div class="d-flex justify-content-between   border-bottom " style="transform: translate(0%,40%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-video text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">Introduction</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
+              <div class="">
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Introduction</p>
                   </div>
-                </div>
-  
-              </div>
-              
-              <div class="d-flex justify-content-between  border-bottom" style="transform: translate(0%,80%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-lock text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">What's React?</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
                   </div>
-                </div> 
-              </div>
-  
-              <div class="d-flex justify-content-between  border-bottom" style="transform: translate(0%,120%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-lock text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted "style="font-size:14px;">Adding the Right React Version to Codepen </p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="d-flex justify-content-between  border-bottom" style="transform: translate(0%,160%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-video text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">Assignment First React Code</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
-                  </div>
-                </div>
-              </div>
-           
-              <div class="d-flex justify-content-between border-bottom " style="transform: translate(0%,200%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-video text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">Quiz : The most modern server</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
-                  </div>
-                </div>
-              </div>
-           
-              <div class="d-flex justify-content-between align-items-center border-bottom" style="border-gray; margin-top:70px;">
-                <div class="mt-4 ms-3">
-                  <p class="text-muted">Chapter 2</p>
-                  <h4 class="text-primary fw-bold">Content Marketing Basic</h4>
-                </div>
-                <p class="text-muted" style="transform: translate(-80%,150%);">3/5</p>
-              </div>
-             
-              <div class="d-flex justify-content-between   border-bottom " style="transform: translate(0%,40%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-video text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">Introduction</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
-                  </div>
-                </div>
-  
-              </div>
-              
-              <div class="d-flex justify-content-between  border-bottom" style="transform: translate(0%,80%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-lock text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">What's React?</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
-                  </div>
-                </div>
-  
+                </a>
                 
-  
-              </div>
-  
-              <div class="d-flex justify-content-between  border-bottom" style="transform: translate(0%,120%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-lock text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted "style="font-size:14px;">Adding the Right React Version to Codepen </p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">What is React ?</p>
                   </div>
-                </div>
-              </div>
-  
-              <div class="d-flex justify-content-between  border-bottom" style="transform: translate(0%,160%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-lock text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">Assignment First React Code</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
                   </div>
-                </div>
-              </div>
-           
-              <div class="d-flex justify-content-between border-bottom " style="transform: translate(0%,200%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-video text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">Quiz : The most modern server</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
+                </a>
+
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Adding the Right React Version to Codepen</p>
                   </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Assignment : First React Code</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Quiz : The most modern server</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                <div class="my-2">
+                  <p class="text-muted" style="font-size:15px; transform:translate(9%,50%)">Chapter 2</p>
+                  <h5 class="text-primary ms-4 fs-5">Content Marketing Basics</h5>
+                </div>
+                <div class="text-muted" style="transform: translate(-70%,50%)">
+                  <p>3/5</p>
                 </div>
               </div>
-              
+
+              <div class="">
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Introduction</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">What is React ?</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Adding the Right React Version to Codepen</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Assignment : First React Code</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Quiz : The most modern server</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
             </div>
 
             
             
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-              <div class="d-flex justify-content-between align-items-center border-bottom" style="border-gray">
-                <div class="mt-4 ms-3">
-                  <p class="text-muted">Chapter 1</p>
-                  <h4 class="text-primary fw-bold">Getting Started</h4>
+                <div class="d-flex justify-content-between align-items-center border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                <div class="my-2">
+                  <p class="text-muted" style="font-size:15px; transform:translate(10%,50%)">Chapter 1</p>
+                  <h5 class="text-primary ms-3 fs-5">Getting Started</h5>
                 </div>
-                <p class="text-muted" style="transform: translate(-80%,150%);">3/5</p>
+                <div class="text-muted" style="transform: translate(-70%,50%)">
+                  <p>3/5</p>
+                </div>
               </div>
-             
-              <div class="d-flex justify-content-between   border-bottom " style="transform: translate(0%,40%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-video text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">Introduction</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
+              <div class="">
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Introduction</p>
                   </div>
-                </div>
-  
-              </div>
-              
-              <div class="d-flex justify-content-between  border-bottom" style="transform: translate(0%,80%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-lock text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">What's React?</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
                   </div>
-                </div> 
-              </div>
-  
-              <div class="d-flex justify-content-between  border-bottom" style="transform: translate(0%,120%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-lock text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted "style="font-size:14px;">Adding the Right React Version to Codepen </p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="d-flex justify-content-between  border-bottom" style="transform: translate(0%,160%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-video text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">Assignment First React Code</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
-                  </div>
-                </div>
-              </div>
-           
-              <div class="d-flex justify-content-between border-bottom " style="transform: translate(0%,200%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-video text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">Quiz : The most modern server</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
-                  </div>
-                </div>
-              </div>
-           
-              <div class="d-flex justify-content-between align-items-center border-bottom" style="border-gray; margin-top:70px;">
-                <div class="mt-4 ms-3">
-                  <p class="text-muted">Chapter 2</p>
-                  <h4 class="text-primary fw-bold">Content Marketing Basic</h4>
-                </div>
-                <p class="text-muted" style="transform: translate(-80%,150%);">3/5</p>
-              </div>
-             
-              <div class="d-flex justify-content-between   border-bottom " style="transform: translate(0%,40%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-video text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">Introduction</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
-                  </div>
-                </div>
-  
-              </div>
-              
-              <div class="d-flex justify-content-between  border-bottom" style="transform: translate(0%,80%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-lock text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">What's React?</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
-                  </div>
-                </div>
-  
+                </a>
                 
-  
-              </div>
-  
-              <div class="d-flex justify-content-between  border-bottom" style="transform: translate(0%,120%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-lock text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted "style="font-size:14px;">Adding the Right React Version to Codepen </p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">What is React ?</p>
                   </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Adding the Right React Version to Codepen</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Assignment : First React Code</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Quiz : The most modern server</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                <div class="my-2">
+                  <p class="text-muted" style="font-size:15px; transform:translate(9%,50%)">Chapter 2</p>
+                  <h5 class="text-primary ms-4 fs-5">Content Marketing Basics</h5>
+                </div>
+                <div class="text-muted" style="transform: translate(-70%,50%)">
+                  <p>3/5</p>
                 </div>
               </div>
-  
-              <div class="d-flex justify-content-between  border-bottom" style="transform: translate(0%,160%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-lock text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">Assignment First React Code</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
+
+              <div class="">
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Introduction</p>
                   </div>
-                </div>
-              </div>
-           
-              <div class="d-flex justify-content-between border-bottom " style="transform: translate(0%,200%); border-gray;">
-                <div class="d-flex ms-4 ">
-                  <i class="fas fa-video text-primary fs-5"></i>                
-                  <p class="ms-2 text-muted"style="font-size:14px;">Quiz : The most modern server</p>
-                </div>
-                <div class="d-flex">
-                  <p>1:30</p>
-                  <div class="form-check ms-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    </label>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
                   </div>
-                </div>
+                </a>
+                
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">What is React ?</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Adding the Right React Version to Codepen</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Assignment : First React Code</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
+                  <div class="d-flex justify-content-center ms-3 mt-3">
+                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
+                    <p class="ms-2 text-muted" style="font-size:15px;">Quiz : The most modern server</p>
+                  </div>
+                  <div class="d-flex me-2 mt-3">
+                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                     
+                    </div>
+                  </div>
+                </a>
+
               </div>
             </div>
             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
@@ -410,28 +398,29 @@
                </li>
                <div class="my-5"style="transform: translate(-4%,0%)">
                  <h4>Exercise Files</h4>
-                 <div class="btn border border-dark mt-4">  
-                    <a href="" class="text-decoration-none d-flex justify-content-between text-dark items-align-center">
-                      <div class="me-5">
-                        <h5>My Course.zip</h5>
-                        <p>size:15.56kb</p>
-                      </div>
-                      <div class="">
-                        <i class="fas fa-cloud-download-alt fs-4"></i>                     
-                       </div>
-                    </a>
-                 </div>
-                 <div class="btn border border-dark mt-4" style="transform: translate(60%,0%)" >  
-                  <a href="" class="text-decoration-none d-flex justify-content-between text-dark items-align-center">
-                    <div class="me-5">
-                      <h5>Assignment_file.jpg</h5>
-                      <p>size:15.56kb</p>
+                 <div class="d-flex justify-content-evenly" style="transform: translate(-7%,0%)">
+                  <a href="#" class="btn d-flex border justify-content-between mt-5" style="width: 40%;">
+                    <div class="d-flex flex-column" style="transform: translate(0%,10%);">
+                      <h5>My.Course.zip</h5>
+                      <p class="text-start">size:15.56kb</p>
                     </div>
-                    <div class="">
-                      <i class="fas fa-cloud-download-alt fs-4"></i>                     
-                     </div>
-                  </a>
-               </div>
+                    <div class="bg-light shadow rounded-circle d-flex justify-content-center align-items-center ms-4 mt-1" style="width:40px;height:40px;">
+                      <i class="fas fa-cloud-download-alt fs-4 text-primary "></i>                     
+  
+                    </div>
+                   </a>
+                   <a href="#" class="btn d-flex border justify-content-between mt-5" style="width: 40%;">
+                    <div class="d-flex flex-column" style="transform: translate(0%,10%);">
+                      <h5>Assignment_file.zip</h5>
+                      <p class="text-start">size:15.56kb</p>
+                    </div>
+                    <div class="bg-primary shadow rounded-circle d-flex justify-content-center align-items-center ms-4 mt-1" style="width:40px;height:40px;">
+                      <i class="fas fa-cloud-download-alt fs-4 text-white "></i>                     
+  
+                    </div>
+                   </a>
+                 </div>
+               
                </div>
             </ul>
           </div>
