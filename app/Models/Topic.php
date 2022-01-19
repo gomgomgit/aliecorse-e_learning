@@ -14,4 +14,9 @@ class Topic extends Model
         'description',
         'order'
     ];
+
+    public function lesson()
+    {
+        return $this->hasMany(Lesson::class, 'topic_id');
+    }
 }

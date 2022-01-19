@@ -14,4 +14,9 @@ class Lesson extends Model
         'type',
         'order'
     ];
+
+    public function topic()
+    {
+        return $this->belongsTo(Topic::class, 'topic_id', 'id');
+    }
 }
