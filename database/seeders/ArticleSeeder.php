@@ -19,28 +19,16 @@ class ArticleSeeder extends Seeder
     public function run()
     {
         Article::truncate();
-        $categories = ArticleCategory::get();
-        $users = User::all();
+        // $categories = ArticleCategory::get();
+        // $users = User::all();
         $faker = Factory::create('id_ID');
-
-        // foreach(range(1,9) as $index){
-        //     Article::create([
-        //         'title' => $faker->words(3,true),
-        //         'thumbnail' => 'https://source.unsplash.com/800x600/?food',
-        //         'category_article_id' => $categories->name,
-        //         'content' => '<p>'.$faker->paragraph(3,true).'</p>',
-        //         'user_id' => $users->id,
-        //         'status' => 'Active'
-
-        //     ]);
-        // }
         $articles = [
             'title' => $faker->words(3,true),
             'thumbnail' => 'https://source.unsplash.com/800x600/?food',
             'category_article_id' =>  rand(1, ArticleCategory::count()),
             'content' => '<p>'.$faker->paragraph(3,true).'</p>',
             'user_id' => rand(1, User::count()),
-            'status' => $faker->randomElements(['Active','NotActive'])
+            'status' => 'Active'
         ];
         foreach($articles as $article){
             ArticleCategory::create([
