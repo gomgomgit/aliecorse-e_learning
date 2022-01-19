@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArticleCategoryController;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -98,9 +100,12 @@ Route::prefix('admin')->group(function () {
         return view('admin.pages.article.create');
     });
 
-    Route::get('/category-articles', function () {
-        return view('admin.pages.category-article.index');
-    });
+    // Route::get('/category-articles', function () {
+    //     return view('admin.pages.category-article.index');
+    // });
+
+    Route::resource('article-category', ArticleCategoryController::class);
+
     Route::get('/category-articles/create', function () {
         return view('admin.pages.category-article.create');
     });

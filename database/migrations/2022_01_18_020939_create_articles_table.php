@@ -20,7 +20,7 @@ class CreateArticlesTable extends Migration
             $table->foreignId('category_article_id');
             $table->text('content');
             $table->foreignId('user_id');
-            $table->enum('status',['Active','NotActive']);
+            $table->enum('status', ['Active', 'NotActive'])->default('Active');
             $table->timestamps();
         });
     }

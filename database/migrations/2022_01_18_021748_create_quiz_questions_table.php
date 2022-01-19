@@ -18,6 +18,8 @@ class CreateQuizQuestionsTable extends Migration
             $table->string('question');
             $table->integer('score');
             $table->boolean('need_answer');
+            $table->boolean('random_answer');
+            $table->boolean('show_answer');
             $table->timestamps();
         });
     }
