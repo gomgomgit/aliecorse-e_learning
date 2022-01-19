@@ -3,9 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Article;
-use Carbon\Factory;
-use Faker\Factory as Faker;
-
+use App\Models\ArticleCategory;
+use App\Models\Category;
+use App\Models\User;
+use Faker\Factory;
 use Illuminate\Database\Seeder;
 
 class ArticleSeeder extends Seeder
@@ -18,16 +19,39 @@ class ArticleSeeder extends Seeder
     public function run()
     {
         Article::truncate();
-        $faker = Faker::create('id_ID');
+        $categories = ArticleCategory::get();
+        $users = User::all();
+        $faker = Factory::create('id_ID');
 
-        foreach(range(0,3) as $index){
-                Article::create([
-                    'category_id' => rand(1, Article::count()),
-                    'title' => $faker->words(3,true),               
-                    'content' => '<p>'.$faker->paragraphs(3,true).'</p>',
-                    'image' => 'https://source.unsplash.com/800X600/?food',
-                    'status' => $faker->randomElement(['Active','Not Active'])
-                ]);
+        // foreach(range(1,9) as $index){
+        //     Article::create([
+        //         'title' => $faker->words(3,true),
+        //         'thumbnail' => 'https://source.unsplash.com/800x600/?food',
+        //         'category_article_id' => $categories->name,
+        //         'content' => '<p>'.$faker->paragraph(3,true).'</p>',
+        //         'user_id' => $users->id,
+        //         'status' => 'Active'
+
+        //     ]);
+        // }
+        $articles = [
+            'title' => $faker->words(3,true),
+            'thumbnail' => 'https://source.unsplash.com/800x600/?food',
+            'category_article_id' =>  rand(1, ArticleCategory::count()),
+            'content' => '<p>'.$faker->paragraph(3,true).'</p>',
+            'user_id' => rand(1, User::count()),
+            'status' => $faker->randomElements(['Active','NotActive'])
+        ];
+        foreach($articles as $article){
+            ArticleCategory::create([
+                'title' => $article['title'],
+                'thumbnail' => $article['thumbnail'],
+                'category_article_id' => $article['category_article_id'],
+                'content' => $article['content'],
+                'user_id' => $article['user_id'],
+                'status' => $article['status']
+            ]);
         }
+
     }
 }

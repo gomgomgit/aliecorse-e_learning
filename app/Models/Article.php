@@ -9,22 +9,22 @@ class Article extends Model
 {
     use HasFactory;
 
-    protected  $fillable = [
-        'user_id',
-        'category_id',
+    protected $fillable = [
         'title',
+        'thumbnail',
+        'category_article_id',
         'content',
-        'image',
-        'status'
+        'user_id',
+        'status',
     ];
 
-    public function category()
+    public function articleCategory()
     {
-        return $this->belongsTo(CategoryArticle::class, 'category_id', 'id');
+        return $this->belongsTo(ArticleCategory::class, 'article_category_id','id');
     }
 
     public function user()
     {
-        return $this->belongsTo(User::class,'user_id','id');
+        return $this->belongsTo(User::class, 'user_id','id');
     }
 }

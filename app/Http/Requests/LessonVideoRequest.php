@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CategoryArticleRequest extends FormRequest
+class LessonVideoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class CategoryArticleRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -24,16 +24,7 @@ class CategoryArticleRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|max:10|string',
-        ];
-    }
-
-    public function messages()
-    {
-        return [
-            'name.required' => "CategoryArticle harus diisi",
-            'name.string' => "Harus diisi dengan abjad",
-            'name.max' => "Tidak boleh 10 karakter"
+            //
         ];
     }
 }

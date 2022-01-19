@@ -5,16 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CategoryArticle extends Model
+class QuizQuestion extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name'
+        'question',
+        'score',
+        'need_answer',
+        'random_answer',
+        'show_answer'
     ];
-    
-    public function article()
-    {
-        return $this->belongsTo(Article::class);
-    }
 }
