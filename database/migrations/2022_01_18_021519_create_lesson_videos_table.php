@@ -17,6 +17,7 @@ class CreateLessonVideosTable extends Migration
             $table->id();
             $table->string('name');
             $table->enum('type',['Youtube','Embed']);
+            $table->foreignId('lesson_id');
             $table->string('link');
             $table->timestamps();
         });

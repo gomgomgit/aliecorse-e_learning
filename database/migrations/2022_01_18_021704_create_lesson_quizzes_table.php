@@ -19,6 +19,7 @@ class CreateLessonQuizzesTable extends Migration
             $table->text('detail');
             $table->time('time_limit');
             $table->time('limit_type');
+            $table->foreignId('lesson_id');
             $table->integer('passing_grade');
             $table->integer('question_order');
             $table->timestamps();

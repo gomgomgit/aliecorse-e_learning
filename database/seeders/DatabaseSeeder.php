@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         ArticleSeeder::class,
         CategorySeeder::class,
         ArticleCategorySeeder::class,
+        CourseSeeder::class
 
         ]);
     }

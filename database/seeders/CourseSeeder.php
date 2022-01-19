@@ -27,10 +27,59 @@ class CourseSeeder extends Seeder
                 'thumbnail' => 'https://source.unsplash.com/800x600/?food',
                 'name' => $faker->words(3,true),
                 'category_id' => $categories->id,
-                'content' => '<p>'.$faker->paragraphs(3,true).'</p>',
+                'description' => '<p>'.$faker->paragraphs(3,true).'</p>',
             ],
 
         ];
+        $courses2 = [
+            [
+                'thumbnail' => 'https://source.unsplash.com/800x600/?food',
+                'name' => $faker->words(3,true),
+                'category_id' => $categories2->id,
+                'description' => '<p>'.$faker->paragraphs(3,true).'</p>',
+            ],
+
+        ];
+        $courses3 = [
+            [
+                'thumbnail' => 'https://source.unsplash.com/800x600/?food',
+                'name' => $faker->words(3,true),
+                'category_id' => $categories3->id,
+                'description' => '<p>'.$faker->paragraphs(3,true).'</p>',
+            ],
+
+        ];
+
+        foreach($courses as $course){
+            for($i = 0; $i < 5; $i++){
+                Course::create([
+                    'thumbnail' => $course['thumbnail'],
+                    'name' => $course['name'],
+                    'category_id' => $course['category_id'],
+                    'description' => $course['description'],
+                ]);
+            }
+        }
+        foreach($courses2 as $course){
+            for($i = 0; $i < 5; $i++){
+                Course::create([
+                    'thumbnail' => $course['thumbnail'],
+                    'name' => $course['name'],
+                    'category_id' => $course['category_id'],
+                    'description' => $course['description'],
+                ]);
+            }
+        }
+        foreach($courses3 as $course){
+            for($i = 0; $i < 5; $i++){
+                Course::create([
+                    'thumbnail' => $course['thumbnail'],
+                    'name' => $course['name'],
+                    'category_id' => $course['category_id'],
+                    'description' => $course['description'],
+                ]);
+            }
+        }
 
 
     }

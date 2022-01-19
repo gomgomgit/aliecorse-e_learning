@@ -12,6 +12,7 @@ class LessonFile extends Model
     protected $fillable = [
         'name',
         'description',
+        'lesson_id',
         'file'
     ];
 }

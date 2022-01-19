@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\CourseDiscount;
+use Faker\Factory;
 use Illuminate\Database\Seeder;
 
 class CourseDiscountSeeder extends Seeder
@@ -13,6 +15,9 @@ class CourseDiscountSeeder extends Seeder
      */
     public function run()
     {
-        //
+        CourseDiscount::truncate();
+        $faker = Factory::create('id_ID');
+
+
     }
 }

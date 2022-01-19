@@ -17,6 +17,7 @@ class CreateLessonFilesTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
+            $table->foreignId('lesson_id');
             $table->string('file');
             $table->timestamps();
         });
