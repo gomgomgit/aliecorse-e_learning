@@ -12,7 +12,12 @@ class LessonFile extends Model
     protected $fillable = [
         'name',
         'description',
-        'lesson_id',
-        'file'
+        'file',
+        'lesson_id'
     ];
+
+    public function lesson()
+    {
+        return $this->belongsTo(Lesson::class, 'lesson_id', 'id');
+    }
 }

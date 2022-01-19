@@ -12,8 +12,12 @@ class LessonVideo extends Model
     protected $fillable = [
         'name',
         'type',
-        'lesson_id',
-        'link'
-
+        'link',
+        'lesson_id'
     ];
+
+    public function lesson()
+    {
+        return $this->belongsTo(Lesson::class, 'lesson_id', 'id');
+    }
 }

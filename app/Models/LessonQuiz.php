@@ -14,8 +14,13 @@ class LessonQuiz extends Model
         'detail',
         'time_limit',
         'limit_type',
-        'lesson_id',
         'passing_grade',
-        'question_order'
+        'question_order',
+        'lesson_id'
     ];
+
+    public function lesson()
+    {
+        return $this->belongsTo(Lesson::class, 'lesson_id', 'id');
+    }
 }
