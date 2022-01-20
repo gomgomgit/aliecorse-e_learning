@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\CertificateSetting;
+use Faker\Factory;
 use Illuminate\Database\Seeder;
 
 class CertificateSettingSeeder extends Seeder
@@ -13,6 +15,11 @@ class CertificateSettingSeeder extends Seeder
      */
     public function run()
     {
-        //
+        CertificateSetting::truncate();
+        $faker = Factory::create('id_ID');
+
+        CertificateSetting::create([
+            'image' => $faker->imageUrl(800, 600, 'cats')
+        ]);
     }
 }

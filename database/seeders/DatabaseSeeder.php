@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Review;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,11 +16,17 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
         UserSeeder::class,
+        StudentSeeder::class,
+        ArticleCategorySeeder::class,
         ArticleSeeder::class,
         CategorySeeder::class,
-        ArticleCategorySeeder::class,
-        CourseSeeder::class
-
+        CourseSeeder::class,
+        CertificateSettingSeeder::class,
+        OrderSeeder::class,
+        QuestionSeeder::class,
+        ReviewSeeder::class,
+        StudentCertificateSeeder::class,
+        StudentCourseSeeder::class
         ]);
     }
 }
