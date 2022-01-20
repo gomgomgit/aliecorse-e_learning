@@ -20,9 +20,10 @@ class UserSeeder extends Seeder
         $faker = Factory::create('id_ID');
         User::create([
             'name' =>$faker->name(),
-            'email' => $faker->freeEmail(),
+            'email' => $faker->name().'@gmail.com',
             'password' => bcrypt('1234'),
             'role' => 'Admin',
+
         ]);
     }
 }
