@@ -15,13 +15,14 @@ class CreateLessonQuizzesTable extends Migration
     {
         Schema::create('lesson_quizzes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('lesson_id');
             $table->string('name');
             $table->text('detail');
             $table->time('time_limit');
-            $table->time('limit_type');
-            $table->foreignId('lesson_id');
+            $table->enum('limit_type',['Detik','Menit']);
+            $table->time('show_timeout');
             $table->integer('passing_grade');
-            $table->integer('question_order');
+            $table->enum('question_order',['Random','Berurutan']);
             $table->timestamps();
         });
     }

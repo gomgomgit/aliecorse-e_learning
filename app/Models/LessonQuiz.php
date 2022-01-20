@@ -14,6 +14,7 @@ class LessonQuiz extends Model
         'detail',
         'time_limit',
         'limit_type',
+        'show_timeout',
         'lesson_id',
         'passing_grade',
         'question_order'

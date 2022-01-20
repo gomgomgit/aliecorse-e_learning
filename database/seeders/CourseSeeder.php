@@ -25,7 +25,6 @@ class CourseSeeder extends Seeder
         $courses = [
             [
                 'thumbnail' => 'https://source.unsplash.com/800x600/?food',
-                'name' => $faker->words(3,true),
                 'category_id' => $categories->id,
                 'description' => '<p>'.$faker->paragraphs(3,true).'</p>',
             ],
@@ -34,7 +33,6 @@ class CourseSeeder extends Seeder
         $courses2 = [
             [
                 'thumbnail' => 'https://source.unsplash.com/800x600/?food',
-                'name' => $faker->words(3,true),
                 'category_id' => $categories2->id,
                 'description' => '<p>'.$faker->paragraphs(3,true).'</p>',
             ],
@@ -43,7 +41,6 @@ class CourseSeeder extends Seeder
         $courses3 = [
             [
                 'thumbnail' => 'https://source.unsplash.com/800x600/?food',
-                'name' => $faker->words(3,true),
                 'category_id' => $categories3->id,
                 'description' => '<p>'.$faker->paragraphs(3,true).'</p>',
             ],
@@ -51,30 +48,30 @@ class CourseSeeder extends Seeder
         ];
 
         foreach($courses as $course){
-            for($i = 0; $i < 5; $i++){
+            for($i = 0; $i < 2; $i++){
                 Course::create([
                     'thumbnail' => $course['thumbnail'],
-                    'name' => $course['name'],
+                    'name' => $faker->randomElement(['Kursus Bahasa Asing','Belajar Web Developer','Mobile App','Design','Bisnis']),
                     'category_id' => $course['category_id'],
                     'description' => $course['description'],
                 ]);
             }
         }
         foreach($courses2 as $course){
-            for($i = 0; $i < 5; $i++){
+            for($i = 0; $i < 2; $i++){
                 Course::create([
                     'thumbnail' => $course['thumbnail'],
-                    'name' => $course['name'],
+                    'name' => $faker->randomElement(['Kursus Bahasa Asing','Belajar Web Developer','Mobile App','Design','Bisnis']),
                     'category_id' => $course['category_id'],
                     'description' => $course['description'],
                 ]);
             }
         }
         foreach($courses3 as $course){
-            for($i = 0; $i < 5; $i++){
+            for($i = 0; $i < 2; $i++){
                 Course::create([
                     'thumbnail' => $course['thumbnail'],
-                    'name' => $course['name'],
+                    'name' => $faker->randomElement(['Kursus Bahasa Asing','Belajar Web Developer','Mobile App','Design','Bisnis']),
                     'category_id' => $course['category_id'],
                     'description' => $course['description'],
                 ]);
