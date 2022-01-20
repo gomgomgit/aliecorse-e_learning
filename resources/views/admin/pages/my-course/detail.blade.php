@@ -46,25 +46,29 @@
 </nav> --}}
   <div class="position-relative d-flex" style="background: #442e66">
     <div class="py-4 border-bottom container-md">
-      <div class="w-50">
-        <div class="d-flex justify-content-between ms-3 mb-4 gap-6">
-          <div class="d-flex align-items-center">
-            <img src="https://secure.gravatar.com/avatar/d329f9ba46a1c0e3be83506b159e3666?s=96&d=mm&r=g" alt="" class="rounded-circle ms-3" style="width:50px; height:50px;">
-            <div>
-              <p class="ms-3 text-white m-0 fs-6">Instructor</p>
-              <p class="ms-3 text-white m-0 fs-5 fw-bolder">
-                Huriyadi 
-              </p>
+      <div style="width: 60%">
+        <div class="row ms-3 mb-4 gap-6">
+          <div class="col-6">
+            <div class="d-flex align-items-center">
+              <img src="https://secure.gravatar.com/avatar/d329f9ba46a1c0e3be83506b159e3666?s=96&d=mm&r=g" alt="" class="rounded-circle ms-3" style="width:50px; height:50px;">
+              <div>
+                <p class="ms-3 text-white m-0 fs-6">Instructor</p>
+                <p class="ms-3 text-white m-0 fs-5 fw-bolder">
+                  Huriyadi 
+                </p>
+              </div>
             </div>
           </div>
-          <div class="d-flex align-items-center ms-5">
-            <i class="fas fa-bookmark fs-1 text-warning"></i>
-            <div>
-              <p class="ms-3 text-white m-0 fs-6">Category</p>
-              <p class="ms-3 text-white m-0 fs-5 fw-bolder">
-                Uncategorized 
-               </p>
-             </div>
+          <div class="col-6">
+            <div class="d-flex align-items-center ms-5">
+              <i class="fas fa-bookmark fs-1 text-warning"></i>
+              <div>
+                <p class="ms-3 text-white m-0 fs-6">Category</p>
+                <p class="ms-3 text-white m-0 fs-5 fw-bolder">
+                  Uncategorized 
+                 </p>
+               </div>
+            </div>
           </div>
         </div>
         <h3 class="ms-5 text-white fs-2 fw-bolder mb-4">Sample course</h3>
@@ -469,11 +473,11 @@
       <div class="card" style="margin-top: -8rem">
         <img style="max-width: 19rem" src="https://images.unsplash.com/photo-1642076573338-9bc6a667fe57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
         <div class="card-body ">
-          <div class="btn-group w-100 my-3" role="group" aria-label="Basic checkbox toggle button group">
-            <input type="checkbox" class="btn-check" style="width: 1000px;" id="btncheck1" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btncheck1">Continue</label>
-    
-          </div>
+          <a href="/admin/my-course/1/watch">
+            <div class="btn-group w-100 my-3" role="group" aria-label="Basic checkbox toggle button group">
+              <label class="btn btn-outline-primary" for="btncheck1">Continue</label>
+            </div>
+          </a>
           <div class="d-flex">
             <p class="card-text">
               You started on:
