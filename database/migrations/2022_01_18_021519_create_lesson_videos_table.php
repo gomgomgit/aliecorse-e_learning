@@ -15,9 +15,9 @@ class CreateLessonVideosTable extends Migration
     {
         Schema::create('lesson_videos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('lesson_id');
             $table->string('name');
             $table->enum('type',['Youtube','Embed']);
-            $table->foreignId('lesson_id');
             $table->string('link');
             $table->timestamps();
         });

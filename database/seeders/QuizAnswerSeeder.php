@@ -18,10 +18,13 @@ class QuizAnswerSeeder extends Seeder
         QuizAnswer::truncate();
         $faker = Factory::create('id_ID');
 
-        QuizAnswer::create([
-            'title' => $faker->text(),
-            'image' => $faker->imageUrl(800, 600),
-            'format' => $faker->randomElement(['Text', 'Gambar', 'Keduanya'])
-        ]);
+        for ($i=1; $i < 4; $i++) { 
+            QuizAnswer::create([
+                'quiz_question_id' => $i,
+                'title' => $faker->text(),
+                'image' => $faker->imageUrl(800, 600),
+                'format' => $faker->randomElement(['Text', 'Gambar', 'Keduanya'])
+            ]);
+        }
     }
 }

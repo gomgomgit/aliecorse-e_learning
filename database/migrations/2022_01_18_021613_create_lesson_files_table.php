@@ -15,9 +15,9 @@ class CreateLessonFilesTable extends Migration
     {
         Schema::create('lesson_files', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('lesson_id');
             $table->string('name');
             $table->text('description');
-            $table->foreignId('lesson_id');
             $table->string('file');
             $table->timestamps();
         });
