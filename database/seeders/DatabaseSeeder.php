@@ -16,7 +16,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
         UserSeeder::class,
-<<<<<<< HEAD
         CategorySeeder::class,
         ArticleCategorySeeder::class,
         ArticleSeeder::class,
@@ -27,8 +26,6 @@ class DatabaseSeeder extends Seeder
         LessonVideoSeeder::class,
         LessonFileSeeder::class,
         LessonQuizSeeder::class,
-        
-=======
         StudentSeeder::class,
         ArticleCategorySeeder::class,
         ArticleSeeder::class,
@@ -40,7 +37,6 @@ class DatabaseSeeder extends Seeder
         ReviewSeeder::class,
         StudentCertificateSeeder::class,
         StudentCourseSeeder::class
->>>>>>> 18d77a298680d88d68b6bd384e4642e09e2c8110
         ]);
     }
 }
