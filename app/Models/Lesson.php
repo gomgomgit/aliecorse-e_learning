@@ -19,4 +19,19 @@ class Lesson extends Model
     {
         return $this->belongsTo(Topic::class, 'topic_id', 'id');
     }
+    
+    public function lessonFile()
+    {
+        return $this->hasMany(LessonFile::class, 'lesson_id');
+    }
+
+    public function lessonQuiz()
+    {
+        return $this->hasMany(LessonQuiz::class, 'lesson_id');
+    }
+
+    public function lessonVideo()
+    {
+        return $this->hasMany(LessonVideo::class, 'lesson_id');
+    }
 }
