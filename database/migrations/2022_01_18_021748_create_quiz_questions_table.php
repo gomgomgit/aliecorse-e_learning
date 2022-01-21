@@ -16,6 +16,7 @@ class CreateQuizQuestionsTable extends Migration
         Schema::create('quiz_questions', function (Blueprint $table) {
             $table->id();
             $table->string('question');
+            $table->foreignId('lesson_quiz_id');
             $table->integer('score');
             $table->boolean('need_answer');
             $table->boolean('random_answer');

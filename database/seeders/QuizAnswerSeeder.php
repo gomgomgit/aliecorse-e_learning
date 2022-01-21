@@ -17,6 +17,7 @@ class QuizAnswerSeeder extends Seeder
     {
         QuizAnswer::truncate();
         $faker = Factory::create('id_ID');
+        
 
         QuizAnswer::create([
             'title' => $faker->text(),

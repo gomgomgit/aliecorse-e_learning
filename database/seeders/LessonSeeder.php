@@ -19,13 +19,18 @@ class LessonSeeder extends Seeder
     {
         Lesson::truncate();
         $faker = Factory::create('id_ID');
-       
-            for($i = 0; $i < 3; $i++){
+        $topics = Topic::pluck('id');
+        foreach ($topics as $topic) {
+            for ($i=0; $i < 3; $i++) {
                 Lesson::create([
-                    'topic_id' => $faker->randomElement([1,2,4]),
+                    'topic_id' => $topic,
                     'type' => $faker->randomElement(['Video','File','Quiz']),
                     'order' => $faker->randomElement([1,2,3,4,5,6,7,8,9]),
+                    'is_priview' => $faker->randomElement([0,1]),
+                  
                 ]);
             }
+        }
+           
     }
 }
