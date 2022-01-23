@@ -88,7 +88,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark {{ (request()->is('admin/categories*')) ? 'active bg-gradient-info' : '' }}" href="{{ url("admin/categories") }}">
+                <a class="nav-link text-dark {{ (request()->is('admin/categories*')) ? 'active bg-gradient-info' : '' }}" href="{{ route('categories.index') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10 text-info">category</i>
                     </div>

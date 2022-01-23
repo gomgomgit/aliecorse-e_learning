@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleCategoryController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,12 +45,13 @@ Route::prefix('admin')->group(function () {
         return view('admin.pages.course.create-topic');
     });
 
-    Route::get('/categories', function () {
-        return view('admin.pages.category.index');
-    });
-    Route::get('/categories/create', function () {
-        return view('admin.pages.category.create');
-    })->name('categories.create');
+    Route::resource('/categories', CategoryController::class);
+    // Route::get('/categories', function () {
+    //     return view('admin.pages.category.index');
+    // });
+    // Route::get('/categories/create', function () {
+    //     return view('admin.pages.category.create');
+    // })->name('categories.create');
 
     Route::get('/profile', function () {
         return view('admin.pages.profile.index');
