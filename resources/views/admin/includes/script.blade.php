@@ -268,7 +268,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-{{-- <script>
+<script>
     jQuery(document).ready(function($){
         $('#mymodal').on('show.bs.modal', function(e){
             var button = $(e.relatedTarget);
@@ -281,11 +281,11 @@
 </script>
 
 <div class="modal" id="mymodal" tabindex="-1">
-    <div class="modal-dialog mt-4">
+    <div class="modal-dialog modal-lg mt-4">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title"></h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><i class="fas fa-times-circle"></i></button>
             </div>
             <div class="modal-body">
                 <i class="fa fa-spinner fa-spin"></i>
@@ -295,4 +295,4 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div>

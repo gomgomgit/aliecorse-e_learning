@@ -95,12 +95,13 @@ Route::prefix('admin')->group(function () {
         return view('admin.pages.certificate.edit');
     });
 
-    Route::get('/articles', function () {
-        return view('admin.pages.article.index');
-    });
-    Route::get('/articles/create', function () {
-        return view('admin.pages.article.create');
-    });
+    Route::resource('articles', ArticleController::class);
+    // Route::get('/articles', function () {
+    //     return view('admin.pages.article.index');
+    // });
+    // Route::get('/articles/create', function () {
+    //     return view('admin.pages.article.create');
+    // });
 
     // Route::get('/category-articles', function () {
     //     return view('admin.pages.category-article.index');

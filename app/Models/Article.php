@@ -20,7 +20,7 @@ class Article extends Model
 
     public function articleCategory()
     {
-        return $this->belongsTo(ArticleCategory::class, 'article_category_id','id');
+        return $this->belongsTo(ArticleCategory::class, 'category_article_id','id');
     }
 
     public function user()

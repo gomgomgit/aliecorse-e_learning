@@ -1,54 +1,75 @@
+@php
+    $isEdit = isset($articles);
+    
+    $title = $isEdit ? 'Edit Data Artikel' : 'Tambah Data Artikel';
+    $route = $isEdit ? route('articles.update', $articles->id) : route('articles.store');
+    $button = $isEdit ? 'Update' : 'Create';
+@endphp
+
 @extends('admin.layouts.app')
 
-@section('title', 'Buat Artikel')
+@section('title', $title)
     
 @section('content')
 <div class="container-fluid">
     <div class="py-4">
         <h3>
-            Buat Artikel
+            {{ $title }}
         </h3>
-        <div class="row">
-            <div class="col-4">
-                <h6 class="">Thumbnail</h6>
-                <a href="#" class="" id="add-img">
-                    <img src="https://via.placeholder.com/468x260?text=Klik+untuk+upload" id="preview" class="img-fluid">
-                </a>
-                <input type="file" class="d-none" name="" id="add-img2">
-            </div>
-            <div class="col-8">
-                <div class="mb-3">
-                    <h6 class="">Judul</h6>
-                    <div class="input-group input-group-outline">
-                        <label class="form-label">Masukkan Judul Artikel</label>
-                        <input type="text" class="form-control">
+        <form action="{{ $route }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            @if ($isEdit)
+                @method('PUT')
+            @else
+                @method('POST')
+            @endif
+            <div class="row">
+                <div class="col-4">
+                    <h6 class="">Thumbnail</h6>
+                    <a href="#" class="" id="add-img">
+                        <img src="{{ $isEdit ? asset('/storage/'.$articles->thumbnail) : 'https://via.placeholder.com/468x260?text=Klik+untuk+upload' }}" id="preview" class="img-fluid">
+                    </a>
+                    <input type="file" class="d-none" name="thumbnail" id="add-img2">
+                </div>
+                <div class="col-8">
+                    <div class="mb-3">
+                        <h6 class="">Judul</h6>
+                        <div class="input-group input-group-outline">
+                            <label class="form-label">{{ $isEdit ? '': 'Masukkan Judul Artikel' }}</label>
+                            <input name="title" type="text" class="form-control" value="{{ $isEdit ? $articles->title : '' }}">
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <h6 class="">Kategori</h6>
+                        <div class="input-group input-group-static mb-4">
+                            <label for="exampleFormControlSelect1" class="ms-0">Masukkan Jenis Kategori</label>
+                            <select name="category_article_id" class="form-control" id="exampleFormControlSelect1">
+                                @if ($isEdit)
+                                @foreach ($articleCategories as $articleCategory)
+                                <option value="{{ $articles->category_article_id }}" {{ $articleCategory->id  === $articles->category_article_id ? 'selected': ''}}>{{ $articleCategory->name }}</option>
+                                @endforeach
+                                @else
+                                    <option selected disabled>Pilih</option>
+                                    @foreach ($articleCategories as $articleCategory)
+                                        <option value="{{ $articleCategory->id }}">{{ $articleCategory->name }}</option>
+                                    @endforeach
+                                @endif
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div class="mt-2">
-                    <h6 class="">Kategori</h6>
-                    <div class="input-group input-group-static mb-4">
-                        <label for="exampleFormControlSelect1" class="ms-0">Masukkan Jenis Kategori</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                </div>
             </div>
-        </div>
-        <div class="my-4">
-            <h6 class="">Konten</h6>
-            <textarea name="editor1"></textarea>
-        </div>
-        <div class="py-4">
-            <button class="btn btn-outline-success w-100">
-                <i class="fas fa-plus-square"></i>
-                Buat Artikel
-            </button>
-        </div>
+            <div class="my-4">
+                <h6 class="">Konten</h6>
+                <textarea name="content">{{ $isEdit ? $articles->content : '' }}</textarea>
+            </div>
+            <div class="py-4">
+                <button class="btn btn-outline-success w-100">
+                    <i class="fas fa-plus-square"></i>
+                    {{ $button }}
+                </button>
+            </div>
+        </form>
     </div>
 </div>
 @endsection
@@ -56,7 +77,7 @@
 @push('after-script')
     <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
     <script>
-        CKEDITOR.replace( 'editor1' );
+        CKEDITOR.replace( 'content' );
     </script>
 
     <script>
