@@ -24,15 +24,26 @@
                         <span>23 Kursus</span>
                     </div>
                     <div class="">
-                        <button class="btn btn-outline-success mb-0">
+                        <button class="btn btn-outline-success mb-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Lihat Detail">
                             <i class="fas fa-eye"></i>
                         </button>
-                        <a href="" class="btn btn-outline-info mb-0" data-id="{{ $category->id }}" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
-                            <i class="fas fa-edit"></i>
+                        <a href="#mymodal"
+                            data-remote="{{ route('categories.edit', $category->id) }}"
+                            data-toggle="modal"
+                            data-target="#mymodal"
+                            data-title="Edit {{$category->name }}" 
+                            class="btn btn-outline-info mb-0"
+                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                            <i class="fas fa-pencil"></i>
                         </a>
-                        <button class="btn btn-outline-danger mb-0">
-                            <i class="fas fa-trash"></i>
-                        </button>
+                        <form action="{{ route('categories.destroy', $category->id) }}" method="POST" class="d-inline">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-outline-danger mb-0" 
+                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete Data">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
             @endforeach
@@ -68,14 +79,14 @@
 </div>
 
 <!-- Modal Edit -->
-<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+{{-- <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="staticBackdropLabel">Tambah Kategori</h5>
                 <button type="button" class="btn fs-5" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
-            <form action="{{ route('categories.store') }}" method="POST">
+            <form action="{{ route('categories.update', $category->id) }}" method="POST">
                 @csrf
                 <div class="modal-body">
                     <div class="input-group input-group-outline">
@@ -92,5 +103,5 @@
             </form>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection

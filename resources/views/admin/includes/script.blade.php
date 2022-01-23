@@ -285,14 +285,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title"></h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><i class="fas fa-times-circle"></i></button>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">&times;</button>
             </div>
             <div class="modal-body">
                 <i class="fa fa-spinner fa-spin"></i>
             </div>
-            <div class="modal-footer">
+            {{-- <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>

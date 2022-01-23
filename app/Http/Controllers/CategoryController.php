@@ -45,7 +45,7 @@ class CategoryController extends Controller
 
         Category::create($data);
         
-        return redirect()->route('categories.index');
+        return redirect()->route('categories.index')->with('success-create', 'berhasil membuat data kategori');
     }
 
     /**
@@ -68,9 +68,8 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::findOrFail($id);
-        $categories = Category::get();
 
-        return view('admin.pages.category.index', compact('categories', 'category'));
+        return view('admin.pages.category.edit', compact('category'));
     }
 
     /**
@@ -82,7 +81,13 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $request->validate([
+            'name' => 'required|string'
+        ]);
+        Category::FindOrfail($id)->update($data);
+
+        return redirect()->route('categories.index')->with('success-update', 'berhasil mengedit data kategori');
     }
 
     /**
@@ -93,6 +98,9 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Category::findOrFail($id);
+
+        $data->delete();
+        return back()->with('success-delete', 'berhasil menghapus data kategori');
     }
 }
