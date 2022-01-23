@@ -34,7 +34,7 @@
                             data-title="Edit {{$category->name }}" 
                             class="btn btn-outline-info mb-0"
                             data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
-                            <i class="fas fa-pencil"></i>
+                            <i class="fas fa-edit"></i>
                         </a>
                         <form action="{{ route('categories.destroy', $category->id) }}" method="POST" class="d-inline">
                             @csrf

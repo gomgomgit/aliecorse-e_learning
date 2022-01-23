@@ -17,57 +17,36 @@
             </div>
         </div>
         <div class="py-2">
+            @foreach ($articleCategories as $articleCategory)
             <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-2">
                 <div class="w-40 d-flex justify-content-between">
-                    <span class="fw-bold">Perpajakan</span>
+                    <span class="fw-bold">{{ $articleCategory->name }}</span>
                     <span>23 Kursus</span>
                 </div>
                 <div class="">
-                    <button class="btn btn-outline-success mb-0">
+                    <button class="btn btn-outline-success mb-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Lihat Detail">
                         <i class="fas fa-eye"></i>
                     </button>
-                    <button class="btn btn-outline-info mb-0">
+                    <a href="#mymodal"
+                        data-remote="{{ route('article-categories.edit', $articleCategory->id) }}"
+                        data-toggle="modal"
+                        data-target="#mymodal"
+                        data-title="Edit {{$articleCategory->name }}" 
+                        class="btn btn-outline-info mb-0"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
                         <i class="fas fa-edit"></i>
-                    </button>
-                    <button class="btn btn-outline-danger mb-0">
-                        <i class="fas fa-trash"></i>
-                    </button>
+                    </a>
+                    <form action="{{ route('article-categories.destroy', $articleCategory->id) }}" method="POST" class="d-inline">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-outline-danger mb-0" 
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete Data">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-2">
-                <div class="w-40 d-flex justify-content-between">
-                    <span class="fw-bold">IT</span>
-                    <span>23 Kursus</span>
-                </div>
-                <div class="">
-                    <button class="btn btn-outline-success mb-0">
-                        <i class="fas fa-eye"></i>
-                    </button>
-                    <button class="btn btn-outline-info mb-0">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                    <button class="btn btn-outline-danger mb-0">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-2">
-                <div class="w-40 d-flex justify-content-between">
-                    <span class="fw-bold">Bisnis</span>
-                    <span>23 Kursus</span>
-                </div>
-                <div class="">
-                    <button class="btn btn-outline-success mb-0">
-                        <i class="fas fa-eye"></i>
-                    </button>
-                    <button class="btn btn-outline-info mb-0">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                    <button class="btn btn-outline-danger mb-0">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
@@ -80,18 +59,22 @@
                 <h5 class="modal-title" id="staticBackdropLabel">Tambah Kategori</h5>
                 <button type="button" class="btn fs-5" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
-            <div class="modal-body">
-                <div class="input-group input-group-outline">
-                    <label class="form-label">Nama</label>
-                    <input type="text" class="form-control">
+            <form action="{{ route('article-categories.store') }}" method="POST">
+                @csrf
+                @method('POST')
+                <div class="modal-body">
+                    <div class="input-group input-group-outline">
+                        <label class="form-label">Nama</label>
+                        <input name="name" type="text" class="form-control">
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer mx-auto">
-                <button type="sumbit" class="btn btn-success">
-                    <i class="fas fa-plus-square"></i>
-                    Tambah Kategori
-                </button>
-            </div>
+                <div class="modal-footer mx-auto">
+                    <button type="sumbit" class="btn btn-success">
+                        <i class="fas fa-plus-square"></i>
+                        Tambah Kategori
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
