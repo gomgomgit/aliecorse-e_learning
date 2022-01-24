@@ -152,7 +152,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark {{ (request()->is('admin/instructors*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/instructors') }}">
+                <a class="nav-link text-dark {{ (request()->is('admin/instructors*')) ? 'active bg-gradient-info' : '' }}" href="{{ route('instructors.index') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10 text-info">cast_for_education</i>
                     </div>
@@ -160,7 +160,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark {{ (request()->is('admin/admins*')) ? 'active bg-gradient-info' : '' }}" href="{{ url('admin/admins') }}">
+                <a class="nav-link text-dark {{ (request()->is('admin/admins*')) ? 'active bg-gradient-info' : '' }}" href="{{ route('admins.index') }}">
                     <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10 text-info">admin_panel_settings</i>
                     </div>

@@ -85,7 +85,7 @@ class ArticleCategoryController extends Controller
         $request->validate([
             'name' => 'required|string'
         ]);
-        ArticleCategory::FindOrfail($id)->update($data);
+        ArticleCategory::findOrFail($id)->update($data);
 
         return redirect()->route('article-categories.index')->with('success-update', 'berhasil mengedit data kategori');
     }

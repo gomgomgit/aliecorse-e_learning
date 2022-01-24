@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleCategoryController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\InstructorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -65,9 +67,7 @@ Route::prefix('admin')->group(function () {
         return view('admin.pages.purchase.index');
     });
 
-    Route::get('/instructors', function () {
-        return view('admin.pages.instructor.index');
-    });
+    Route::resource('/instructors', InstructorController::class);
 
     Route::get('/questions', function () {
         return view('admin.pages.question.index');
@@ -77,9 +77,7 @@ Route::prefix('admin')->group(function () {
         return view('admin.pages.student.index');
     });
 
-    Route::get('/admins', function () {
-        return view('admin.pages.admin.index');
-    });
+    Route::resource('/admins', AdminController::class);
 
     Route::get('/reports', function () {
         return view('admin.pages.report.index');
@@ -95,9 +93,9 @@ Route::prefix('admin')->group(function () {
         return view('admin.pages.certificate.edit');
     });
 
-    Route::resource('articles', ArticleController::class);
+    Route::resource('/articles', ArticleController::class);
 
-    Route::resource('article-categories', ArticleCategoryController::class);
+    Route::resource('/article-categories', ArticleCategoryController::class);
 
     Route::get('/category-articles/create', function () {
         return view('admin.pages.category-article.create');
