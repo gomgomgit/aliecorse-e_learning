@@ -101,23 +101,166 @@
                   </ul>
                 </div>
                 <div class="tab-pane fade py-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                  <h4 class="fw-bold">Tanya Jawab</h4>
+                  <div class="d-flex justify-content-between">
+                    <h4 class="fw-bold">Tanya Jawab</h4>
 
-                  <div>
-                    <div class="d-flex gap-3">
-                      <div>
-                        <img width="30px" src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" alt="">
+                    <button type="button" class="btn btn-outline-primary px-5 fw-bolder" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Ajukan Pertanyaan
+                    </button>
+                  </div>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Ajukan Pertanyaan</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Judul atau Ringkasan</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                          </div>
+                          
+                          <div class="my-4">
+                              <h6 class="">Deskripsi</h6>
+                              <textarea name="editor1"></textarea>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
                       </div>
+                    </div>
+                  </div>
+
+
+                  <div class="my-5 px-4">
+                    <div class="d-flex gap-3 my-3">
                       <div>
+                        <div class="bg-secondary rounded-circle overflow-hidden">
+                          <img width="30px" src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" alt="">
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
                         <p class="title m-0 fw-bold">
                           Error API
                         </p>
                         <p class="question m-0">
                           Api untuk login mendapat respon 419 sepertinya terkena cors laravel sanctum
                         </p>
-                      </div>
-                      <div>
 
+                        <div class="mt-3">
+                          <p class="student text-primary fs-6">
+                            Samuel - Pelajaran 23 - 2 Bulan lalu
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-1 d-flex flex-column gap-2">
+                        <div>
+                          <span>21</span>
+                          <i class="fas text-primary fa-arrow-alt-circle-up fs-5" style="transform:translate(0%,10%);"></i>                    
+                        </div>
+                        <div>
+                          <span>14</span>
+                          <i class="fas fa-comment-alt fs-5" style="transform:translate(0%,10%);"></i>                    
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-3 my-3">
+                      <div>
+                        <div class="bg-secondary rounded-circle overflow-hidden">
+                          <img width="30px" src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" alt="">
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="title m-0 fw-bold">
+                          Error API
+                        </p>
+                        <p class="question m-0">
+                          Api untuk login mendapat respon 419 sepertinya terkena cors laravel sanctum
+                        </p>
+
+                        <div class="mt-3">
+                          <p class="student text-primary fs-6">
+                            Samuel - Pelajaran 23 - 2 Bulan lalu
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-1 d-flex flex-column gap-2">
+                        <div>
+                          <span>21</span>
+                          <i class="fas text-primary fa-arrow-alt-circle-up fs-5" style="transform:translate(0%,10%);"></i>                    
+                        </div>
+                        <div>
+                          <span>14</span>
+                          <i class="fas fa-comment-alt fs-5" style="transform:translate(0%,10%);"></i>                    
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-3 my-3">
+                      <div>
+                        <div class="bg-secondary rounded-circle overflow-hidden">
+                          <img width="30px" src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" alt="">
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="title m-0 fw-bold">
+                          Error API
+                        </p>
+                        <p class="question m-0">
+                          Api untuk login mendapat respon 419 sepertinya terkena cors laravel sanctum
+                        </p>
+
+                        <div class="mt-3">
+                          <p class="student text-primary fs-6">
+                            Samuel - Pelajaran 23 - 2 Bulan lalu
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-1 d-flex flex-column gap-2">
+                        <div>
+                          <span>21</span>
+                          <i class="fas text-primary fa-arrow-alt-circle-up fs-5" style="transform:translate(0%,10%);"></i>                    
+                        </div>
+                        <div>
+                          <span>14</span>
+                          <i class="fas fa-comment-alt fs-5" style="transform:translate(0%,10%);"></i>                    
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-3 my-3">
+                      <div>
+                        <div class="bg-secondary rounded-circle overflow-hidden">
+                          <img width="30px" src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" alt="">
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="title m-0 fw-bold">
+                          Error API
+                        </p>
+                        <p class="question m-0">
+                          Api untuk login mendapat respon 419 sepertinya terkena cors laravel sanctum
+                        </p>
+
+                        <div class="mt-3">
+                          <p class="student text-primary fs-6">
+                            Samuel - Pelajaran 23 - 2 Bulan lalu
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-1 d-flex flex-column gap-2">
+                        <div>
+                          <span>21</span>
+                          <i class="fas text-primary fa-arrow-alt-circle-up fs-5" style="transform:translate(0%,10%);"></i>                    
+                        </div>
+                        <div>
+                          <span>14</span>
+                          <i class="fas fa-comment-alt fs-5" style="transform:translate(0%,10%);"></i>                    
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -301,6 +444,11 @@
   
     {{-- @include('admin.includes.navbar') --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'editor1' );
+    </script>
     <script>
       function expandNav() {
         document.getElementById("expand-button").style.display = "none";
