@@ -10,7 +10,7 @@
                 Artikel
             </h3>
             <div class="">
-                <a href="{{ url('admin/articles/create') }}" class="border border-info border-2 px-4 py-2 rounded text-info fw-bold" style="background-color: white">
+                <a href="{{ route('articles.create') }}" class="border border-info border-2 px-4 py-2 rounded text-info fw-bold" style="background-color: white">
                     <i class="fas fa-plus-square"></i>
                     Tambah Artikel
                 </a>
@@ -22,38 +22,57 @@
                     <thead>
                         <tr>
                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2 opacity-7">Thumbnail</th>
-                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Judul</th>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Judul</th>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Kategori</th>
                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Konten</th>
                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($articles as $article)
                         <tr>
                             <td>
                                 <div>
-                                    <img src="https://avatars.githubusercontent.com/u/58408947?v=4" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                                    <img src="{{ asset('/storage/'.$article->thumbnail) }}" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
                                 </div>
                             </td>
                             <td>
-                                <p class="text-center text-xs font-weight-bold mb-0">John Michael</p>
+                                <p class="text-xs font-weight-bold mb-0">{{ $article->title }}</p>
                             </td>
                             <td>
-                                <p class="text-center text-xs font-weight-bold mb-0">John Michael John Michael John Michael John Michael</p>
+                                <p class="text-xs font-weight-bold mb-0">{{ $article->articleCategory->name }}</p>
+                            </td>
+                            <td>
+                                <div class="text-xs font-weight-bold mb-0">
+                                    {{ Str::limit($article->content, 70, '...') }}
+                                </div>
                             </td>
                             <td class="align-middle">
                                 <div class="float-end">
-                                    <a href="" class="btn btn-outline-success mb-0">
+                                    <a href="#mymodal"
+                                        data-remote="{{ route('articles.show', $article->id) }}"
+                                        data-toggle="modal"
+                                        data-target="#mymodal"
+                                        data-title="{{ $article->title }}" 
+                                        class="btn btn-outline-success mb-0"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Show Detail">
                                         <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="" class="btn btn-outline-info mb-0">
+                                    <a href="{{ route('articles.edit', $article->id) }}" class="btn btn-outline-info mb-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
                                         <i class="fas fa-pencil"></i>
                                     </a>
-                                    <a href="" class="btn btn-outline-danger mb-0">
-                                        <i class="fas fa-trash"></i>
-                                    </a>
+                                    <form action="{{ route('articles.destroy', $article->id) }}" method="POST" class="d-inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-outline-danger mb-0" 
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete Data">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

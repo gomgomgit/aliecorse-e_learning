@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleCategoryController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FrontPage\HomeController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\InstructorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,12 +51,13 @@ Route::prefix('admin')->group(function () {
         return view('admin.pages.course.create-topic');
     });
 
-    Route::get('/categories', function () {
-        return view('admin.pages.category.index');
-    });
-    Route::get('/categories/create', function () {
-        return view('admin.pages.category.create');
-    })->name('categories.create');
+    Route::resource('/categories', CategoryController::class);
+    // Route::get('/categories', function () {
+    //     return view('admin.pages.category.index');
+    // });
+    // Route::get('/categories/create', function () {
+    //     return view('admin.pages.category.create');
+    // })->name('categories.create');
 
     Route::get('/profile', function () {
         return view('admin.pages.profile.index');
@@ -67,9 +71,7 @@ Route::prefix('admin')->group(function () {
         return view('admin.pages.purchase.index');
     });
 
-    Route::get('/instructors', function () {
-        return view('admin.pages.instructor.index');
-    });
+    Route::resource('/instructors', InstructorController::class);
 
     Route::get('/questions', function () {
         return view('admin.pages.question.index');
@@ -79,9 +81,7 @@ Route::prefix('admin')->group(function () {
         return view('admin.pages.student.index');
     });
 
-    Route::get('/admins', function () {
-        return view('admin.pages.admin.index');
-    });
+    Route::resource('/admins', AdminController::class);
 
     Route::get('/reports', function () {
         return view('admin.pages.report.index');
@@ -97,18 +97,9 @@ Route::prefix('admin')->group(function () {
         return view('admin.pages.certificate.edit');
     });
 
-    Route::get('/articles', function () {
-        return view('admin.pages.article.index');
-    });
-    Route::get('/articles/create', function () {
-        return view('admin.pages.article.create');
-    });
+    Route::resource('/articles', ArticleController::class);
 
-    // Route::get('/category-articles', function () {
-    //     return view('admin.pages.category-article.index');
-    // });
-
-    Route::resource('article-category', ArticleCategoryController::class);
+    Route::resource('/article-categories', ArticleCategoryController::class);
 
     Route::get('/category-articles/create', function () {
         return view('admin.pages.category-article.create');

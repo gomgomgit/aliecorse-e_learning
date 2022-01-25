@@ -6,12 +6,13 @@
             </a>
         </div>
         <div class="collapse navbar-collapse d-flex justify-content-end " id="navbarNav">
-          <ul class="navbar-nav d-flex align-items-center gap-4 me-5">
+          <ul class="navbar-nav d-flex align-items-center gap-4 me-5" 
+              style="font-family: 'Montserrat', sans-serif;  style:normal">
             <li class="nav-item ">
               <a class="nav-link text-decoration-none fs-5 px-3 active" aria-current="page" href="#">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark fs-5 px-3"  href="#">Tentang Kami</a>
+              <a class="nav-link text-dark fs-5 px-3 "  href="#">Tentang Kami</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark fs-5 px-3" href="#">Kursus</a>

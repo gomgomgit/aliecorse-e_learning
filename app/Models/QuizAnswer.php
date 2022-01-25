@@ -10,6 +10,7 @@ class QuizAnswer extends Model
     use HasFactory;
 
     protected $fillable = [
+        'quiz_question_id',
         'format',
         'title',
         'image',

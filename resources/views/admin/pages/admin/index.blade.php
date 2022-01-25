@@ -10,10 +10,10 @@
                 Admin
             </h3>
             <div class="">
-                <a href="" class="border border-info border-2 px-4 py-2 rounded text-info fw-bold" style="background-color: white">
+                <button class="border border-info border-2 px-4 py-2 rounded text-info fw-bold" style="background-color: white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <i class="fas fa-plus-square"></i>
                     Tambah Admin
-                </a>
+                </button>
             </div>
         </div>
         <div class="card p-2">
@@ -31,10 +31,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($admins as $admin)
                         <tr>
                             <td>
                                 <div class="d-flex flex-column justify-content-center">
-                                    <h6 class="mb-0 text-sm">John Michael</h6>
+                                    <h6 class="mb-0 text-sm">{{ $admin->name }}</h6>
                                 </div>
                             </td>
                             <td>
@@ -44,31 +45,83 @@
                                 <p class="text-center text-xs font-weight-bold mb-0">4</p>
                             </td>
                             <td class="align-middle text-center text-sm">
-                                <span class="text-secondary text-xs font-weight-bold">21 September 2021</span>
+                                <span class="text-secondary text-xs font-weight-bold">{{ $admin->created_at->format('d M Y') }}</span>
                             </td>
                             <td class="align-middle text-center">
-                                <p class="text-xs font-weight-bold mb-0">jokoirawan@email.com</p>
+                                <p class="text-xs font-weight-bold mb-0">{{ $admin->email }}</p>
                             </td>
                             <td class="align-middle">
-                                <p class="text-center text-xs font-weight-bold mb-0">0237493824243</p>
+                                <p class="text-center text-xs font-weight-bold mb-0">{{ $admin->phone }}</p>
                             </td>
                             <td class="align-middle">
                                 <div class="text-center">
                                     <a href="" class="btn btn-outline-success mb-0">
                                         <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="" class="btn btn-outline-info mb-0">
-                                        <i class="fas fa-pencil"></i>
+                                    <a href="#mymodal"
+                                        data-remote="{{ route('admins.edit', $admin->id) }}"
+                                        data-toggle="modal"
+                                        data-target="#mymodal"
+                                        data-title="Edit {{$admin->name }}" 
+                                        class="btn btn-outline-info mb-0"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                                        <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="" class="btn btn-outline-danger mb-0">
-                                        <i class="fas fa-trash"></i>
-                                    </a>
+                                    <form action="{{ route('admins.destroy', $admin->id) }}" method="POST" class="d-inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-outline-danger mb-0" 
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete Data">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Create -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Tambah Admin</h5>
+                <button type="button" class="btn fs-5" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+            </div>
+            <form action="{{ route('admins.store') }}" method="POST">
+                @csrf
+                <div class="modal-body">
+                    <div class="input-group input-group-outline mb-2">
+                        <label class="form-label">Nama</label>
+                        <input name="name" type="text" class="form-control">
+                    </div>
+                    <div class="input-group input-group-outline mb-2">
+                        <label class="form-label">Email</label>
+                        <input name="email" type="email" class="form-control">
+                    </div>
+                    <div class="input-group input-group-outline mb-2">
+                        <label class="form-label">No HP</label>
+                        <input name="phone" type="text" class="form-control">
+                    </div>
+                    <div class="input-group input-group-outline mb-2">
+                        <label class="form-label">Password</label>
+                        <input name="password" type="password" class="form-control">
+                    </div>
+                    <input type="hidden" name="role" value="Admin">
+                </div>
+                <div class="modal-footer mx-auto">
+                    <button type="sumbit" class="btn btn-outline-success">
+                        <i class="fas fa-plus-square"></i>
+                        Tambah Admin
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

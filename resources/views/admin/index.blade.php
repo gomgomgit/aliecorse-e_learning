@@ -309,5 +309,62 @@
             </div>
         </div>
     </div>
+    
+    <div class="row mb-4">
+        <div class="col-lg-12 col-md-12 mb-md-0 mb-4">
+            <div class="card">
+                <div class="card-header pb-0">
+                    <h6>Rekomendasi Kursus</h6>
+                </div>
+                <div class="card-body px-4 py-0">
+                    <div class="row">
+                        <div class="col-4 my-3">
+                            <a href="/admin/my-course/1">
+                                <div class="p-2 border border-2 rounded">
+                                    <div class="w-100">
+                                        <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/50/original/material-dashboard.jpg?1634648873" alt="">
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="badge bg-warning">Language</span>
+                                        <h6>Kursus Bahasa Asing</h6>
+                                        <span>12 Pelajaran</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-4 my-3">
+                            <a href="/admin/my-course/1">
+                                <div class="p-2 border border-2 rounded">
+                                    <div class="w-100">
+                                        <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/50/original/material-dashboard.jpg?1634648873" alt="">
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="badge bg-warning">Language</span>
+                                        <h6>Kursus Bahasa Asing</h6>
+                                        <span>12 Pelajaran</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-4 my-3">
+                            <a href="/admin/my-course/1">
+                                <div class="p-2 border border-2 rounded">
+                                    <div class="w-100">
+                                        <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/50/original/material-dashboard.jpg?1634648873" alt="">
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="badge bg-warning">Language</span>
+                                        <h6>Kursus Bahasa Asing</h6>
+                                        <span>12 Pelajaran</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 @endsection

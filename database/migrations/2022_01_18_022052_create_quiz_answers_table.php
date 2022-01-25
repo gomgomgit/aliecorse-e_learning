@@ -15,9 +15,10 @@ class CreateQuizAnswersTable extends Migration
     {
         Schema::create('quiz_answers', function (Blueprint $table) {
             $table->id();
-            $table->string('format');
+            $table->foreignId('quiz_question_id');
             $table->string('title');
             $table->string('image');
+            $table->enum('format', ['Text', 'Gambar', 'Keduanya']);
             $table->timestamps();
         });
     }
