@@ -26,20 +26,109 @@
 </head>
 <body>
     <div class="">
-       <div class="d-flex">
-        <aside id="sidenav" class=" shadow-lg">
-          {{-- <nav class="">
-            <div class="nav nav-tabs " id="nav-tab" role="tablist" >
-              <button class="nav-link active bg-light w-50 text-dark"  
-                id="nav-home-tab" data-bs-toggle="tab" 
-                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Lesson List</button>
-              <button class="nav-link bg-light w-50 text-dark"
-                id="nav-profile-tab" data-bs-toggle="tab" 
-                data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Question & Answer</button>
+        <div class="d-flex">
+          <section id="main" class="" style="width: 75%">
+            <div class="bg-primary w-100 text-white text-center fw-bold d-flex justify-content-between px-3">
+              <div class="d-flex justify-content-center align-items-center " >
+              </div>
+              <div class="d-flex justify-content-center align-items-center " >
+                <i class="fas fa-video"></i>              
+                <p style="transform:translate(5%,30%);">Quiz: The most popular and modern server</p>
+              </div>
+              <div class="d-flex justify-content-center align-items-center " >
+                <button id="expand-button" onclick="expandNav()" class="btn p-0 text-white">
+                  <i class="fas fa-expand"></i>
+                </button>
+                <button id="compress-button" style="display: none" onclick="compressNav()" class="btn p-0 text-white">
+                  <i class="fas fa-compress"></i>
+                </button>
+              </div>
             </div>
-          </nav> --}}
-          <div>
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="d-flex justify-content-center align-items-center px-5 mt-4" >
+              <video width="100%" controls>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+              Your browser does not support the video tag.
+              </video> 
+            </div>
+
+            <div style="margin-top: 50px" class="px-5 mx-auto" >
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Ikhtisar</button>
+                  <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">T&J</button>
+                </div>
+              </nav>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active py-4" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <h4 class="fw-bold">About Lesson</h4>
+                  <p class="w-75">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam non culpa doloremque modi nisi accusamus, fugit, rerum tenetur est nemo dolore amet quia. Quam exercitationem quo expedita assumenda dolore?</p>
+                  <ul>
+                    <li class="d-flex " style="transform: translate(-4%,10%);">
+                      <i class="fas fa-check text-primary mt-1 fw-bold"></i>      
+                      <p class="ms-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, modi unde. Cum nulla vitae ad repellendus, nostrum voluptatum amet aspernatur fuga non repellat saepe nemo nisi dignissimos quaerat. Quisquam, blanditiis!</p>       
+                    </li>
+                    <li class="d-flex " style="transform: translate(-4%,10%);">
+                      <i class="fas fa-check text-primary mt-1 fw-bold"></i>      
+                      <p class="ms-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, modi unde. Cum nulla vitae ad repellendus, nostrum voluptatum amet aspernatur fuga non repellat saepe nemo nisi dignissimos quaerat. Quisquam, blanditiis!</p>       
+                    </li>
+                    <div class="my-5"style="transform: translate(-4%,0%)">
+                      <h4>Exercise Files</h4>
+                      <div class="d-flex justify-content-evenly" style="transform: translate(-7%,0%)">
+                        <a href="#" class="btn d-flex border justify-content-between mt-5" style="width: 40%;">
+                          <div class="d-flex flex-column" style="transform: translate(0%,10%);">
+                            <h5>My.Course.zip</h5>
+                            <p class="text-start">size:15.56kb</p>
+                          </div>
+                          <div class="bg-light shadow rounded-circle d-flex justify-content-center align-items-center ms-4 mt-1" style="width:40px;height:40px;">
+                            <i class="fas fa-cloud-download-alt fs-4 text-primary "></i>                     
+        
+                          </div>
+                        </a>
+                        <a href="#" class="btn d-flex border justify-content-between mt-5" style="width: 40%;">
+                          <div class="d-flex flex-column" style="transform: translate(0%,10%);">
+                            <h5>Assignment_file.zip</h5>
+                            <p class="text-start">size:15.56kb</p>
+                          </div>
+                          <div class="bg-primary shadow rounded-circle d-flex justify-content-center align-items-center ms-4 mt-1" style="width:40px;height:40px;">
+                            <i class="fas fa-cloud-download-alt fs-4 text-white "></i>                     
+        
+                          </div>
+                        </a>
+                      </div>
+                    
+                    </div>
+                  </ul>
+                </div>
+                <div class="tab-pane fade py-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                  <h4 class="fw-bold">Tanya Jawab</h4>
+
+                  <div>
+                    <div class="d-flex gap-3">
+                      <div>
+                        <img width="30px" src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" alt="">
+                      </div>
+                      <div>
+                        <p class="title m-0 fw-bold">
+                          Error API
+                        </p>
+                        <p class="question m-0">
+                          Api untuk login mendapat respon 419 sepertinya terkena cors laravel sanctum
+                        </p>
+                      </div>
+                      <div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+              </div>
+            </div>
+          </section>
+          
+          <aside id="sidenav" class="shadow-lg bg-white" style="position:fixed; right:0%; height:100vh">
+            <div >
               <div class="d-flex justify-content-between align-items-center border border-1 border-bottom border-top-0 border-end-0 border-start-0">
                 <div class="my-2">
                   <p class="text-muted" style="font-size:15px; transform:translate(10%,50%)">Chapter 1</p>
@@ -59,7 +148,7 @@
                     <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
+                      
                     </div>
                   </div>
                 </a>
@@ -73,7 +162,7 @@
                     <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
+                      
                     </div>
                   </div>
                 </a>
@@ -87,7 +176,7 @@
                     <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
+                      
                     </div>
                   </div>
                 </a>
@@ -101,7 +190,7 @@
                     <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
+                      
                     </div>
                   </div>
                 </a>
@@ -115,7 +204,7 @@
                     <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
+                      
                     </div>
                   </div>
                 </a>
@@ -142,7 +231,7 @@
                     <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
+                      
                     </div>
                   </div>
                 </a>
@@ -156,7 +245,7 @@
                     <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
+                      
                     </div>
                   </div>
                 </a>
@@ -170,7 +259,7 @@
                     <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
+                      
                     </div>
                   </div>
                 </a>
@@ -184,7 +273,7 @@
                     <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
+                      
                     </div>
                   </div>
                 </a>
@@ -198,266 +287,15 @@
                     <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
-                    </div>
-                  </div>
-                </a>
-
-              </div>
-
-            </div>
-
-            
-            
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                <div class="d-flex justify-content-between align-items-center border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                <div class="my-2">
-                  <p class="text-muted" style="font-size:15px; transform:translate(10%,50%)">Chapter 1</p>
-                  <h5 class="text-primary ms-3 fs-5">Getting Started</h5>
-                </div>
-                <div class="text-muted" style="transform: translate(-70%,50%)">
-                  <p>3/5</p>
-                </div>
-              </div>
-              <div class="">
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Introduction</p>
-                  </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
-                    </div>
-                  </div>
-                </a>
-                
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">What is React ?</p>
-                  </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Adding the Right React Version to Codepen</p>
-                  </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
-                    </div>
-                  </div>
-                </a>
-                
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Assignment : First React Code</p>
-                  </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Quiz : The most modern server</p>
-                  </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
-                    </div>
-                  </div>
-                </a>
-
-              </div>
-
-              <div class="d-flex justify-content-between align-items-center border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                <div class="my-2">
-                  <p class="text-muted" style="font-size:15px; transform:translate(9%,50%)">Chapter 2</p>
-                  <h5 class="text-primary ms-4 fs-5">Content Marketing Basics</h5>
-                </div>
-                <div class="text-muted" style="transform: translate(-70%,50%)">
-                  <p>3/5</p>
-                </div>
-              </div>
-
-              <div class="">
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Introduction</p>
-                  </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
-                    </div>
-                  </div>
-                </a>
-                
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">What is React ?</p>
-                  </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Adding the Right React Version to Codepen</p>
-                  </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
-                    </div>
-                  </div>
-                </a>
-                
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Assignment : First React Code</p>
-                  </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Quiz : The most modern server</p>
-                  </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                     
+                      
                     </div>
                   </div>
                 </a>
 
               </div>
             </div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
-          </div>
-        </aside>
-        <section id="main" style="width: 75%" class="">
-          <div class="bg-primary w-100 text-white text-center fw-bold d-flex justify-content-between px-3">
-            <div class="d-flex justify-content-center align-items-center " >
-              <button id="expand-button" onclick="expandNav()" class="btn p-0 text-white">
-                <i class="fas fa-expand"></i>
-              </button>
-              <button id="compress-button" style="display: none" onclick="compressNav()" class="btn p-0 text-white">
-                <i class="fas fa-compress"></i>
-              </button>
-            </div>
-            <div class="d-flex justify-content-center align-items-center " >
-              <i class="fas fa-video"></i>              
-              <p style="transform:translate(5%,30%);">Quiz: The most popular and modern server</p>
-            </div>
-            <div class="d-flex justify-content-center align-items-center " >
-            </div>
-          </div>
-          <div class="d-flex justify-content-center align-items-center" style="margin-top: 100px;">
-            <video width="750" height="450" controls>
-              <source src="movie.mp4" type="video/mp4">
-              <source src="movie.ogg" type="video/ogg">
-            Your browser does not support the video tag.
-            </video> 
-          </div>
-
-          <div style="margin-top: 50px; padding: 0 120px;" class="" >
-            <nav>
-              <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Ikhtisar</button>
-                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">T&J</button>
-              </div>
-            </nav>
-            <div class="tab-content" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-              <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
-            </div>
-
-
-            <h4>About Lesson</h4>
-            <p class="w-75">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam non culpa doloremque modi nisi accusamus, fugit, rerum tenetur est nemo dolore amet quia. Quam exercitationem quo expedita assumenda dolore?</p>
-            <ul>
-              <li class="d-flex " style="transform: translate(-4%,10%);">
-                <i class="fas fa-check text-primary mt-1 fw-bold"></i>      
-                <p class="ms-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, modi unde. Cum nulla vitae ad repellendus, nostrum voluptatum amet aspernatur fuga non repellat saepe nemo nisi dignissimos quaerat. Quisquam, blanditiis!</p>       
-               </li>
-               <li class="d-flex " style="transform: translate(-4%,10%);">
-                <i class="fas fa-check text-primary mt-1 fw-bold"></i>      
-                <p class="ms-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, modi unde. Cum nulla vitae ad repellendus, nostrum voluptatum amet aspernatur fuga non repellat saepe nemo nisi dignissimos quaerat. Quisquam, blanditiis!</p>       
-               </li>
-               <div class="my-5"style="transform: translate(-4%,0%)">
-                 <h4>Exercise Files</h4>
-                 <div class="d-flex justify-content-evenly" style="transform: translate(-7%,0%)">
-                  <a href="#" class="btn d-flex border justify-content-between mt-5" style="width: 40%;">
-                    <div class="d-flex flex-column" style="transform: translate(0%,10%);">
-                      <h5>My.Course.zip</h5>
-                      <p class="text-start">size:15.56kb</p>
-                    </div>
-                    <div class="bg-light shadow rounded-circle d-flex justify-content-center align-items-center ms-4 mt-1" style="width:40px;height:40px;">
-                      <i class="fas fa-cloud-download-alt fs-4 text-primary "></i>                     
-  
-                    </div>
-                   </a>
-                   <a href="#" class="btn d-flex border justify-content-between mt-5" style="width: 40%;">
-                    <div class="d-flex flex-column" style="transform: translate(0%,10%);">
-                      <h5>Assignment_file.zip</h5>
-                      <p class="text-start">size:15.56kb</p>
-                    </div>
-                    <div class="bg-primary shadow rounded-circle d-flex justify-content-center align-items-center ms-4 mt-1" style="width:40px;height:40px;">
-                      <i class="fas fa-cloud-download-alt fs-4 text-white "></i>                     
-  
-                    </div>
-                   </a>
-                 </div>
-               
-               </div>
-            </ul>
-          </div>
-        </section>
-       </div>
+          </aside>
+        </div>
      
       </div>
   
@@ -467,13 +305,13 @@
       function expandNav() {
         document.getElementById("expand-button").style.display = "none";
         document.getElementById("compress-button").style.display = "block";
-        document.getElementById("sidenav").style.width = "0%";
+        document.getElementById("sidenav").style.right = "-25%";
         document.getElementById("main").style.width = "100%";
       }
       function compressNav() {
         document.getElementById("expand-button").style.display = "block";
         document.getElementById("compress-button").style.display = "none";
-        document.getElementById("sidenav").style.width = "25%";
+        document.getElementById("sidenav").style.right = "0%";
         document.getElementById("main").style.width = "75%";
       }
     </script>
