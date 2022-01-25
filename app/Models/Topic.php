@@ -12,11 +12,17 @@ class Topic extends Model
     protected $fillable = [
         'name',
         'description',
-        'order'
+        'order',
+        'course_id'
     ];
 
     public function lesson()
     {
         return $this->hasMany(Lesson::class, 'topic_id');
+    }
+
+    public function course()
+    {
+        return $this->belongsTo(Course::class, 'course_id', 'id');
     }
 }

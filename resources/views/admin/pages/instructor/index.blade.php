@@ -39,10 +39,10 @@
                                 </div>
                             </td>
                             <td>
-                                <p class="text-center text-xs font-weight-bold mb-0">4</p>
+                                <p class="text-center text-xs font-weight-bold mb-0">{{ $instructor->course->count() }}</p>
                             </td>
                             <td>
-                                <p class="text-center text-xs font-weight-bold mb-0">4</p>
+                                <p class="text-center text-xs font-weight-bold mb-0">0</p>
                             </td>
                             <td class="align-middle text-center text-sm">
                                 <span class="text-secondary text-xs font-weight-bold">{{ $instructor->created_at->format('d M Y') }}</span>

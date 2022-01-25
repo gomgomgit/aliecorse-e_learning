@@ -22,22 +22,39 @@
                 <div class="col-7 d-flex justify-content-between align-items-center">
                     <div class="d-flex">
                         <div>
-                            <i class="text-warning fas fa-star"></i>
-                            <i class="text-warning fas fa-star"></i>
-                            <i class="text-warning fas fa-star"></i>
-                            <i class="text-warning fas fa-star"></i>
-                            <i class="text-warning far fa-star"></i>
+                            @php 
+                                $sumRating = $course->review->sum('rate');
+                                    if ($course->review->count() >= 1) {
+                                        $countRating = $course->review->count();
+                                        $resRating = $sumRating/$countRating;
+                                    }else{
+                                        $resRating = 0;
+                                    }
+                                $countRate = $resRating;
+                            @endphp  
+                            @for($x = 5; $x > 0; $x--)
+                                @php 
+                                    if($resRating > 0.5){
+                                        echo '<i class="text-warning fas fa-star"></i>';
+                                    }elseif($resRating <= 0 ){
+                                        echo '<i class="text-warning far fa-star"></i>';
+                                    }else{
+                                        echo '<i class="text-warning fas fa-star-half-alt"></i>';
+                                    }
+                                    $resRating--;      
+                                @endphp
+                            @endfor
                         </div>
                         <span class="px-2">
-                            4.0
+                            {{ $countRate }}
                         </span>
                         <div class="d-flex align-items-center ps-3">
                             <i class="material-icons opacity-10">person</i>
-                            <span class="">43</span>
+                            <span class="">{{ $course->studentCourse->count() }}</span>
                         </div>
                     </div>
                     <div class="d-flex">
-                        <span>21 Pelajaran</span>
+                        <span>{{ $course->topic->count() }} Pelajaran</span>
                     </div>
                     <div class="">
                         <a href="{{ route('courses.show', $course->id) }}" class="btn btn-outline-success mb-0">

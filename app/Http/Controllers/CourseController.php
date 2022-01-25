@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\CourseDiscount;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -39,6 +40,7 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'thumbnail' => 'required',
             'name' => 'required',
@@ -56,14 +58,13 @@ class CourseController extends Controller
             // 'status'
         ]);
 
+
         if ($request->file('thumbnail') !== null ) {
             $image = $request->file('thumbnail')->store('assets/course','public');
         }else{
             $image = null;
         }
 
-        // dd($image);
-        
         Course::create([
             'thumbnail' => $image,
             'name' => $request->name,
@@ -80,6 +81,18 @@ class CourseController extends Controller
             'user_id' => 1,
             'status' => 'Active'
         ]);
+
+        $course_id = Course::pluck('id')->last();
+
+        if ($request->discount_price) {
+            CourseDiscount::create([
+                // 'course_id' => $courses->count() <= 0 ? 1 : $courses->last()->id + 1,
+                'course_id' => $course_id != null ? $course_id++ : 1,
+                'discount_price' => $request->discount_price,
+                'date_start' => $request->date_start,
+                'date_end' => $request->date_end
+            ]);
+        }
 
         return redirect()->route('courses.index')->with('success-create', 'berhasil membuat data kursus');
     }
@@ -106,8 +119,9 @@ class CourseController extends Controller
     public function edit($id)
     {
         $categories = Category::get();
+        $courses = Course::findOrFail($id);
 
-        return view('admin.pages.course.create', compact('categories'));
+        return view('admin.pages.course.create', compact('categories', 'courses'));
     }
 
     /**
@@ -120,20 +134,20 @@ class CourseController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'thumbnail' => 'required|image',
+            'thumbnail' => 'required',
             'name' => 'required',
             'description' => 'required',
             'category_id' => 'required',
-            'duration_hour' => 'required|numeric',
-            'duration_minute' => 'required|numeric',
-            'duration_second' => 'required|numeric',
+            'duration_hour' => 'required',
+            'duration_minute' => 'required',
+            'duration_second' => 'required',
             'level' => 'required',
-            'price'=> 'required|numeric',
+            'price'=> 'required',
             'benefits'=> 'required|string',
             'requirements'=> 'required|string',
             'audients'=> 'required|string',
-            'user_id'=> 'required',
-            'status'
+            // 'user_id'=> 'required',
+            // 'status'
         ]);
 
         $data = Course::find($id);
@@ -146,8 +160,8 @@ class CourseController extends Controller
 
         $data->update([
             'thumbnail' => $image,
-            'name' => $request->title,
-            'description' => $request->content,
+            'name' => $request->name,
+            'description' => $request->description,
             'category_id' => $request->category_id,
             'duration_hour' => $request->duration_hour,
             'duration_minute' => $request->duration_minute,
@@ -161,7 +175,18 @@ class CourseController extends Controller
             'status' => 'Active',
         ]);
 
-        return redirect()->route('course.index')->with('success-update', 'berhasil mengedit data kursus');
+        $courseDiscount = CourseDiscount::where('course_id', $id)->get()->first();
+        
+        if ($request->discount_price) {
+            $courseDiscount->update([
+                'course_id' => $id,
+                'discount_price' => $request->discount_price,
+                'date_start' => $request->date_start,
+                'date_end' => $request->date_end
+            ]);
+        }
+
+        return redirect()->route('courses.index')->with('success-update', 'berhasil mengedit data kursus');
     }
 
     /**

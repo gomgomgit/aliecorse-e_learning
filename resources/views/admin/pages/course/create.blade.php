@@ -15,7 +15,11 @@
     <div class="py-4">
         <form action="{{ $route }}" method="POST" enctype="multipart/form-data" class="">
             @csrf
-            @method('POST')
+            @if ($isEdit)
+                @method('PUT')
+            @else
+                @method('POST')
+            @endif
             <h3>{{ $title }}</h3>
             <div class="row">
                 <div class="col-4">
@@ -27,9 +31,9 @@
                 </div>
                 <div class="col-8">
                     <div class="mb-3">
-                        <h6 class="">{{ $isEdit ? '': 'Nama Kursus' }}</h6>
-                        <div class="input-group input-group-outline">
-                            <label class="form-label">Masukkan Nama Kursus</label>
+                        <h6 class="">Nama Kursus</h6>
+                        <div class="input-group input-group-static">
+                            <label>Masukkan Nama Kursus</label>
                             <input name="name" type="text" class="form-control" value="{{ $isEdit ? $courses->name : '' }}">
                         </div>
                     </div>
@@ -38,9 +42,16 @@
                         <div class="input-group input-group-static mb-4">
                             <label for="exampleFormControlSelect1" class="ms-0">Masukkan Jenis Kategori</label>
                             <select name="category_id" class="form-control" id="exampleFormControlSelect1">
-                                @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                @endforeach
+                                @if ($isEdit)
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $courses->category_id }}" {{ $category->id  === $courses->category_id ? 'selected': ''}}>{{ $category->name }}</option>
+                                    @endforeach
+                                @else
+                                    <option selected disabled>Pilih</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                @endif
                             </select>
                         </div>
                     </div>
@@ -48,7 +59,7 @@
             </div>
             <div class="my-4">
                 <h6 class="">Deskripsi</h6>
-                <textarea name="description"></textarea>
+                <textarea name="description">{{ $isEdit ? $courses->description : '' }}</textarea>
             </div>
 
             <h3>Data Tambahan</h3>
@@ -75,17 +86,17 @@
                         <div class="mb-3">
                             <h6 class="">Durasi Kursus</h6>
                             <div class="d-flex">
-                                <div class="input-group input-group-outline">
-                                    <label class="form-label">Durasi Jam</label>
+                                <div class="input-group input-group-static">
+                                    <label>Durasi Jam</label>
                                     <input name="duration_hour" type="number" class="form-control" min="0" value="{{ $isEdit ? $courses->duration_hour : '' }}">
                                 </div>
-                                <div class="input-group input-group-outline mx-2">
-                                    <label class="form-label">Durasi Menit</label>
-                                    <input name="duration_minute" type="number" class="form-control" min="0" max="60" maxlength="2" value="{{ $isEdit ? $courses->duration_minute : '' }}">
+                                <div class="input-group input-group-static mx-2">
+                                    <label>Durasi Menit</label>
+                                    <input name="duration_minute" type="number" class="form-control" min="0" max="60" onKeyDown="if(this.value.length==2 && event.keyCode!=8) return false;" value="{{ $isEdit ? $courses->duration_minute : '' }}">
                                 </div>
-                                <div class="input-group input-group-outline">
-                                    <label class="form-label">Durasi Detik</label>
-                                    <input name="duration_second" type="number" class="form-control" min="0" max="60" maxlength="2" value="{{ $isEdit ? $courses->duration_second : '' }}">
+                                <div class="input-group input-group-static">
+                                    <label>Durasi Detik</label>
+                                    <input name="duration_second" type="number" class="form-control" min="0" max="60" onKeyDown="if(this.value.length==2 && event.keyCode!=8) return false;" value="{{ $isEdit ? $courses->duration_second : '' }}">
                                 </div>
                             </div>
                         </div>
@@ -93,19 +104,27 @@
                             <h6 class="">Level</h6>
                             <div class="d-flex">
                                 <div class="form-check ps-0">
-                                    <input class="form-check-input" type="radio" name="level" value="All" id="allLevel">
+                                    <input class="form-check-input" type="radio" name="level" value="All" id="allLevel"
+                                    {{ $isEdit && $courses->level == 'All' ? 'checked' : '' }}
+                                    >
                                     <label class="custom-control-label" for="allLevel">All Level</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="level" value="Beginner" id="beginner">
+                                    <input class="form-check-input" type="radio" name="level" value="Beginner" id="beginner"
+                                    {{ $isEdit &&  $courses->level == 'Beginner' ? 'checked' : '' }}
+                                    >
                                     <label class="custom-control-label" for="beginner">Beginner</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="level" value="Intermediate" id="intermediate">
+                                    <input class="form-check-input" type="radio" name="level" value="Intermediate" id="intermediate"
+                                    {{ $isEdit && $courses->level == 'Intermediate' ? 'checked' : '' }}
+                                    >
                                     <label class="custom-control-label" for="intermediate">Intermediate</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="level" value="Expert" id="expert">
+                                    <input class="form-check-input" type="radio" name="level" value="Expert" id="expert"
+                                    {{ $isEdit && $courses->level == 'Expert' ? 'checked' : '' }}
+                                    >
                                     <label class="custom-control-label" for="expert">Expert</label>
                                 </div>
                             </div>
@@ -115,31 +134,31 @@
                         <div class="mb-3">
                             <h6 class="">Harga Normal</h6>
                             <div class="d-flex">
-                                <div class="input-group input-group-outline w-50">
-                                    <label class="form-label">Masukkan Harga Normal</label>
+                                <div class="input-group input-group-static w-50">
+                                    <label>Masukkan Harga Normal</label>
                                     <input name="price" type="number" class="form-control" min="0" value="{{ $isEdit ? $courses->price : '' }}">
                                 </div>
-                                <button  onclick="myFunction()" type="button" class="btn btn-success ms-4">
+                                <button  onclick="myFunction()" type="button" class="btn btn-outline-success ms-4">
                                     <i class="fas fa-plus-square"></i>
                                     Tambah Diskon
                                 </button>
                             </div>
                             <p>Biarkan kosong atau 0 untuk gratis</p>
                         </div>
-                        <div class="mb-3"id="myDIV" style="display: none">
+                        <div class="mb-3 "id="myDIV" style="display: {{ $isEdit ? 'block' : 'none'}}">
                             <h6 class="">Harga Diskon</h6>
                             <div class="d-flex">
-                                <div class="input-group input-group-outline">
-                                    <label class="form-label">Masukkan Harga Diskon</label>
-                                    <input type="number" class="form-control" min="0">
+                                <div class="input-group input-group-static">
+                                    <label>Masukkan Harga Diskon</label>
+                                    <input type="number" class="form-control" min="0" name="discount_price" value="{{ $isEdit ? $courses->courseDiscount->discount_price : '' }}">
                                 </div>
                                 <div class="input-group input-group-static mx-2">
                                     <label>Dari Tanggal</label>
-                                    <input type="date" class="form-control">
+                                    <input type="date" class="form-control" name="date_start" value="{{ $isEdit ? $courses->courseDiscount->date_start : '' }}">
                                 </div>
                                 <div class="input-group input-group-static">
                                     <label>Sampai Tanggal</label>
-                                    <input type="date" class="form-control">
+                                    <input type="date" class="form-control" name="date_end" value="{{ $isEdit ? $courses->courseDiscount->date_end : '' }}">
                                 </div>
                             </div>
                         </div>
@@ -148,21 +167,21 @@
                         <div class="mb-3">
                             <h6 class="">Manfaat Kursus</h6>
                             <div class="input-group input-group-dynamic">
-                                <textarea name="benefits" class="form-control" rows="5" placeholder="Tuliskan manfaat yang di dapat dari kursus ini." spellcheck="false">value="{{ $isEdit ? $courses->benefits : '' }}"</textarea>
+                                <textarea name="benefits" class="form-control" rows="5" placeholder="Tuliskan manfaat yang di dapat dari kursus ini." spellcheck="false">{{ $isEdit ? $courses->benefits : '' }}</textarea>
                             </div>
                             <p>Manfaat yang didapat dari kursus, pisahkan dengan enter (Satu per baris)</p>
                         </div>
                         <div class="mb-3">
                             <h6 class="">Persyaratan</h6>
                             <div class="input-group input-group-dynamic">
-                                <textarea name="requirements" class="form-control" rows="5" placeholder="Tuliskan persyaratan mengikuti kursus ini." spellcheck="false">value="{{ $isEdit ? $courses->requirements : '' }}"</textarea>
+                                <textarea name="requirements" class="form-control" rows="5" placeholder="Tuliskan persyaratan mengikuti kursus ini." spellcheck="false">{{ $isEdit ? $courses->requirements : '' }}</textarea>
                             </div>
                             <p>Persyaratan tambahan atau instruksi khusus untuk siswa, pisahkan dengan enter (Satu per baris)</p>
                         </div>
                         <div class="mb-3">
                             <h6 class="">Target audiens</h6>
                             <div class="input-group input-group-dynamic">
-                                <textarea name="audients" class="form-control" rows="5" placeholder="Tuliskan Target audiens dari kursus ini." spellcheck="false">value="{{ $isEdit ? $courses->audients : '' }}"</textarea>
+                                <textarea name="audients" class="form-control" rows="5" placeholder="Tuliskan Target audiens dari kursus ini." spellcheck="false">{{ $isEdit ? $courses->audients : '' }}</textarea>
                             </div>
                             <p>Tentukan audiens target yang akan mendapat manfaat paling banyak dari kursus, pisahkan dengan enter. (Satu per baris)</p>
                         </div>
@@ -231,6 +250,21 @@
         // read the image file as a data URL.
         reader.readAsDataURL(this.files[0]);
         });
+    </script>
+
+    <!-- Alpine -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+    <script>
+        function formdata(){
+            return{
+                // data
+                gamer_in:null,
+                // method
+                gamer(param){
+                this.gamer_in=param;
+                }
+            }
+        }
     </script>
     
 @endpush

@@ -18,6 +18,7 @@ class CreateTopicsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->integer('order');
+            $table->foreignId('course_id');
             $table->timestamps();
         });
     }

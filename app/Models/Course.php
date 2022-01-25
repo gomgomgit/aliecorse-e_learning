@@ -60,4 +60,14 @@ class Course extends Model
     {
         return $this->belongsTo(Category::class, 'category_id', 'id');
     }
+
+    public function topic()
+    {
+        return $this->hasMany(Topic::class, 'course_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 }
