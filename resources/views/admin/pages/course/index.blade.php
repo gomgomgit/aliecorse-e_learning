@@ -6,22 +6,20 @@
 <div class="container-fluid">
     <div class="py-4">
         <h3>Kursus</h3>
-        <div class="border border-2 p-2">
+        @foreach ($courses as $course)
+        <div class="border border-2 p-2 mb-2">
             <div class="row">
                 <div class="col-5">
                     <div class="d-flex align-items-center">
-                        <img class="w-20" src="https://avatars.githubusercontent.com/u/58408947?v=4" alt="">
+                        <img class="w-20" src="{{ asset('/storage/'.$course->thumbnail) }}" alt="">
                         <div class="ps-2">
-                            <span class="p-1 px-2 bg-warning text-white rounded" style="font-size: 12px">Language</span>
-                            <h4 class="mt-2">Kursus bahasa asing</h4>
-                            <span>Rp 300.000</span>
+                            <span class="p-1 px-2 bg-warning text-white rounded" style="font-size: 12px">{{ $course->category->name }}</span>
+                            <h4 class="mt-2">{{ $course->name }}</h4>
+                            <span>Rp {{ number_format($course->price) }}</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-7 d-flex justify-content-between align-items-center">
-                    {{-- <div class="">
-                        <span class="badge bg-success ml-2">Published</span>
-                    </div> --}}
                     <div class="d-flex">
                         <div>
                             <i class="text-warning fas fa-star"></i>
@@ -42,20 +40,25 @@
                         <span>21 Pelajaran</span>
                     </div>
                     <div class="">
-                      
-                        <a href="{{ url('admin/courses/1') }}" class="btn btn-outline-success mb-0">
+                        <a href="{{ route('courses.show', $course->id) }}" class="btn btn-outline-success mb-0">
                             <i class="fas fa-eye"></i>
                         </a>
-                        <a href="" class="btn btn-outline-info mb-0">
+                        <a href="{{ route('courses.edit', $course->id) }}" class="btn btn-outline-info mb-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
                             <i class="fas fa-pencil"></i>
                         </a>
-                        <a href="" class="btn btn-outline-danger mb-0">
-                            <i class="fas fa-trash"></i>
-                        </a>
+                        <form action="{{ route('courses.destroy', $course->id) }}" method="POST" class="d-inline">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-outline-danger mb-0" 
+                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete Data">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
         
     </div>
 </div>

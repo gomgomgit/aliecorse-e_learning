@@ -19,6 +19,17 @@ class CreateCoursesTable extends Migration
             $table->string('name');
             $table->foreignId('category_id');
             $table->text('description');
+            $table->integer('duration_hour');
+            $table->integer('duration_minute');
+            $table->integer('duration_second');
+            $table->enum('level', ['All', 'Beginner', 'Intermediate', 'Expert']);
+            $table->integer('price');
+            $table->text('benefits');
+            $table->text('requirements');
+            $table->text('audients');
+            $table->foreignId('user_id');
+            $table->enum('status', ['Active', 'NotActive'])->default('Active');
+
             $table->timestamps();
         });
     }

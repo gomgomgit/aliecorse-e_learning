@@ -21,7 +21,7 @@
                         4.0 (120 Ratings)
                     </div>
                 </div>
-                <a href="{{ url('admin/courses/create') }}" class="border border-info border-2 px-5 py-2 rounded text-info fw-bold" style="background-color: white">
+                <a href="{{ route('courses.create') }}" class="border border-info border-2 px-5 py-2 rounded text-info fw-bold" style="background-color: white">
                     <i class="fas fa-plus-square"></i>
                     Tambah Kursus
                 </a>

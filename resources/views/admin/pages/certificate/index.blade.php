@@ -7,10 +7,10 @@
     <div class="py-4">
         <h3>Sertifikat</h3>
         <div class="border border-2 rounded">
-            <img src="https://www.ubm.ac.id/wp-content/uploads/2019/02/sertifikat-billy.png" class="img-fluid w-100" alt="sertificate">
+            <img src="{{ $certificate ? asset('/storage/'.$certificate->image) : '' }}" class="img-fluid w-100" alt="sertificate">
         </div>
         <div class="py-4 text-center">
-            <a href="{{ url('admin/certificate/1') }}" class="btn btn-outline-success px-12 py-3 text-md">
+            <a href="{{ route('certificate.edit', $certificate->id) }}" class="btn btn-outline-success px-12 py-3 text-md">
                 <i class="fas fa-edit"></i>
                 Edit Sertifikat
             </a>

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\User;
 use Faker\Factory;
 use Illuminate\Database\Seeder;
 
@@ -18,66 +19,31 @@ class CourseSeeder extends Seeder
     {
         Course::truncate();
         $faker = Factory::create('id_ID');
-        $categories = Category::all()->whereIn('id',1)->first();
-        $categories2 = Category::all()->whereIn('id',2)->first();
-        $categories3 = Category::all()->whereIn('id',3)->first();
+        $categories = Category::pluck('id');
 
-        $courses = [
-            [
-                'thumbnail' => 'https://source.unsplash.com/800x600/?food',
-                'category_id' => $categories->id,
-                'description' => '<p>'.$faker->paragraphs(3,true).'</p>',
-            ],
-
-        ];
-        $courses2 = [
-            [
-                'thumbnail' => 'https://source.unsplash.com/800x600/?food',
-                'category_id' => $categories2->id,
-                'description' => '<p>'.$faker->paragraphs(3,true).'</p>',
-            ],
-
-        ];
-        $courses3 = [
-            [
-                'thumbnail' => 'https://source.unsplash.com/800x600/?food',
-                'category_id' => $categories3->id,
-                'description' => '<p>'.$faker->paragraphs(3,true).'</p>',
-            ],
-
-        ];
-
-        foreach($courses as $course){
-            for($i = 0; $i < 2; $i++){
+        $user = User::find(1);
+        
+        foreach ($categories as $category) {
+            for ($i=0; $i < 3; $i++) {
                 Course::create([
-                    'thumbnail' => $course['thumbnail'],
-                    'name' => $faker->randomElement(['Kursus Bahasa Asing','Belajar Web Developer','Mobile App','Design','Bisnis']),
-                    'category_id' => $course['category_id'],
-                    'description' => $course['description'],
+                    'thumbnail' => 'https://source.unsplash.com/800x600/?food',
+                    'name' => $faker->word(4,true),
+                    'category_id' => $category,
+                    'description' => '<p>'.$faker->paragraphs(2,true).'</p>',
+                    'level' => $faker->randomElement(['All', 'Beginner', 'Intermediate', 'Expert']),
+                    'price' => $faker->numberBetween(10000, 1000000),
+                    'duration_hour' => $faker->randomDigit(),
+                    'duration_minute' => $faker->randomDigit(),
+                    'duration_second' => $faker->randomDigit(),
+                    'benefits' => $faker->word(4,true),
+                    'requirements' => $faker->word(4,true),
+                    'audients' => $faker->word(4,true),
+                    'user_id' => $user->id,
+                    'status' => 'Active'
+
                 ]);
             }
         }
-        foreach($courses2 as $course){
-            for($i = 0; $i < 2; $i++){
-                Course::create([
-                    'thumbnail' => $course['thumbnail'],
-                    'name' => $faker->randomElement(['Kursus Bahasa Asing','Belajar Web Developer','Mobile App','Design','Bisnis']),
-                    'category_id' => $course['category_id'],
-                    'description' => $course['description'],
-                ]);
-            }
-        }
-        foreach($courses3 as $course){
-            for($i = 0; $i < 2; $i++){
-                Course::create([
-                    'thumbnail' => $course['thumbnail'],
-                    'name' => $faker->randomElement(['Kursus Bahasa Asing','Belajar Web Developer','Mobile App','Design','Bisnis']),
-                    'category_id' => $course['category_id'],
-                    'description' => $course['description'],
-                ]);
-            }
-        }
-
 
     }
 }

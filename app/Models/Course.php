@@ -13,7 +13,17 @@ class Course extends Model
         'thumbnail',
         'name',
         'category_id',
-        'description'
+        'description',
+        'duration_hour',
+        'duration_minute',
+        'duration_second',
+        'level',
+        'price',
+        'benefits',
+        'requirements',
+        'audients',
+        'user_id',
+        'status'
     ];
 
     public function review()
