@@ -162,7 +162,7 @@
 
     </style>
 </head>
-<body style="overflow-x: hidden;">
+<body>
         @include('front-page.includes.navbar')
         @include('front-page.includes.script')
         <div class="container-fluid">
@@ -471,21 +471,7 @@
                 </div>
             </div>
 
-            {{-- Image --}}
-            <div class="benner d-flex flex-column align-items-center justify-content-center w-100">
-                
-                <h1 class="text-white text-center lh-base" 
-                    style="font-family: 'Montserrat', sans-serif; width: 28%; font-weight:700; margin-top:100px; ">
-                     Tunggu apalagi ? ayo gabung dengan
-                     alieCOURSE
-                </h1>
-                
-                <div class="box-cyan-lg d-flex justify-content-center align-items-center mt-3" 
-                     style="margin-bottom: 100px; font-family: 'Montserrat', sans-serif; font-weight:700" >
-                    <a class="text-decoration-none text-white" href="#"  >Gabung Sekarang</a>
-                </div>
-
-            </div>
+           
 
             {{-- Slider --}}
             <div class="bg-light " 
@@ -780,61 +766,20 @@
                 </div>
             </div>
             
-            {{-- Event & Blog --}}
-            <div class="bg-light d-flex" style="margin-top: 200px;">
-                <div style="margin-top: 100px;">
-                    <div class="ms-5 lh-base " style="width:55%; ">
-                        <h1 class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700;">Ikuti terus event
-                            dan blog kami
-                        </h1>
-                    </div>
-                    <div class="d-flex justify-content-start ms-5">
-                        <span class="rectangel-red"></span>
-                    </div>
-                    <div class="ms-5 mt-4" style="width: 30%; letter-spacing:1px; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                        <p class="lh-base">Lorem ipsum dolor sit amet
-                            consectetur adipiscing elit,
-                            annuit ceoptis novus ordo
-                            seclorum.
-                        </p>
-                    </div>
-                    <div class="box-cyan-md d-flex justify-content-center align-items-center mt-4 ms-5" style="margin-bottom: 100px; font-family: 'Montserrat', sans-serif; font-weight:700;">
-                        <a class="text-decoration-none text-white" href="#">Selengkapnya</a>
-                    </div>
+            {{-- Image --}}
+            <div class="benner d-flex flex-column align-items-center justify-content-center w-100">
+                
+                <h1 class="text-white text-center lh-base" 
+                    style="font-family: 'Montserrat', sans-serif; width: 28%; font-weight:700; margin-top:100px; ">
+                     Tunggu apalagi ? ayo gabung dengan
+                     alieCOURSE
+                </h1>
+                
+                <div class="box-cyan-lg d-flex justify-content-center align-items-center mt-3" 
+                     style="margin-bottom: 100px; font-family: 'Montserrat', sans-serif; font-weight:700" >
+                    <a class="text-decoration-none text-white" href="#"  >Gabung Sekarang</a>
                 </div>
-                <div class="my-5">
-                    <img src="/assets/ilustrasi-03.png" alt="">
-                </div>
-            </div>
 
-            {{-- Join --}}
-            <div class="to-join">
-                <div class="position-relative">
-                    <div class="position-absolute" style="top: -30px; right:0.1px;">
-                        <img src="/assets/stroke-02.png " alt="">
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <div class="ms-5">
-                        <img src="/assets/ilustrasi-04.png" alt="" style="margin-top:62px;">
-                    </div>
-                    <div style="margin-top:120px;">
-                        <div class="text-end text-white" style="width:70%; margin-left:180px;">
-                            <h1 class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700;">Ayo gabung bersama
-                                alieCOURSE
-                            </h1>
-                        </div>
-                        <div class="d-flex justify-content-end my-3" style="margin-right:90px;">
-                            <span class="border-white-sm"> </span>
-                        </div>
-                        <div class="d-flex justify-content-end" style="margin-right:90px;">
-
-                            <div class="box-cyan-md d-flex justify-content-center align-items-center" style="margin-top:25px; font-family: 'Montserrat', sans-serif; font-weight:700;">
-                                <a class="text-decoration-none text-white" href="#" >Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
             </div>
 
             {{-- footer-header --}}
@@ -907,19 +852,7 @@
            
             <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
             <script>
-                document.addEventListener( 'DOMContentLoaded', function () {
-                    new Splide( '.splide' ).mount();
-                   
-                } );
-                var primarySlider = new Splide( '.splide', {
-    type       : 'fade',
-    heightRatio: 0.5,
-    pagination : false,
-    arrows     : false,
-    cover      : true,
-    pagination : false, // disable pagination
-    arrows     : false // disbale arrows
-} ); 
+               
             </script>
         </div>
 </body>
