@@ -503,17 +503,17 @@
               0/89          
             </p>
           </div>        
-          <div class="d-flex mt-3">
+          <div class="d-flex">
             <p class="card-text w-75">
-              Lessons completed:           
+              Quizzes finished:             
             </p>
             <p class="card-text ms-2">
               1/8         
             </p>
           </div>
-          <div class="d-flex mt-3">
+          <div class="d-flex">
             <p class="card-text w-75">
-              Lessons completed:           
+              Course progress:             
             </p>
             <p class="card-text ms-2">
               

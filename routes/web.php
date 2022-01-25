@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleCategoryController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\FrontPage\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::prefix('/')->group(function(){
+   Route::get('home',[HomeController::class,'index'])->name('home'); 
+});
 
 Route::prefix('admin')->group(function () {
     Route::get('/', function () {

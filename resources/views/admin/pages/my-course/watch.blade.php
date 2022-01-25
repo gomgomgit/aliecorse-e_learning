@@ -14,8 +14,7 @@
      ul {
   list-style-type: none;
 }
-nav-link > button:click{
-  background-color: black;
+
 }
 
     </style>
@@ -29,7 +28,7 @@ nav-link > button:click{
         <aside class="w-25">
           <nav class="">
             <div class="nav nav-tabs " id="nav-tab" role="tablist" >
-              <button class="nav-link w-50 text-dark"  id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fas fa-book-open me-1"></i>Lesson List</button>
+              <button class="nav-link w-50 bg-light text-dark"  id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fas fa-book-open me-1"></i>Lesson List</button>
               <button class="nav-link bg-light w-50 text-dark"  id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Question & Answer</button>
            
             </div>
