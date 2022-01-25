@@ -20,7 +20,6 @@ class CourseSeeder extends Seeder
         Course::truncate();
         $faker = Factory::create('id_ID');
         $categories = Category::pluck('id');
-
         $user = User::find(1);
         
         foreach ($categories as $category) {
@@ -40,10 +39,8 @@ class CourseSeeder extends Seeder
                     'audients' => $faker->word(4,true),
                     'user_id' => $user->id,
                     'status' => 'Active'
-
                 ]);
             }
         }
-
     }
 }

@@ -17,6 +17,7 @@ class QuizAnswerSeeder extends Seeder
     {
         QuizAnswer::truncate();
         $faker = Factory::create('id_ID');
+        
 
         for ($i=1; $i < 4; $i++) { 
             QuizAnswer::create([

@@ -17,6 +17,7 @@ class CreateQuizQuestionsTable extends Migration
             $table->id();
             $table->foreignId('lesson_quiz_id');
             $table->string('question');
+            $table->foreignId('lesson_quiz_id');
             $table->integer('score');
             $table->boolean('need_answer');
             $table->boolean('random_answer');
