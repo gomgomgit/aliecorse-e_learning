@@ -32,21 +32,6 @@
 </head>
 <body>
     <div class="">
-
-       <div class="d-flex">
-        <aside id="sidenav" class=" shadow-lg">
-          <nav class="">
-            <div class="nav nav-tabs " id="nav-tab" role="tablist" >
-              <button class="nav-link w-50 bg-light text-dark"  id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fas fa-book-open me-1"></i>Lesson List</button>
-              <button class="nav-link bg-light w-50 text-dark"  id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Question & Answer</button>
-           
-              <button class="nav-link active bg-light w-50 text-dark"  
-                id="nav-home-tab" data-bs-toggle="tab" 
-                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Lesson List</button>
-              <button class="nav-link bg-light w-50 text-dark"
-                id="nav-profile-tab" data-bs-toggle="tab" 
-                data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Question & Answer</button>
-
         <div class="d-flex">
           <section id="main" class="" style="width: 75%">
             <div class="bg-primary w-100 text-white text-center fw-bold d-flex justify-content-between px-3">
@@ -69,17 +54,20 @@
               <video width="100%" controls>
                 <source src="movie.mp4" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg">
-              Your browser does not support the video tag.
+                Your browser does not support the video tag.
               </video> 
             </div>
 
             <div style="margin-top: 50px" class="px-5 mx-auto" >
+
+              {{-- Nav Tab --}}
               <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Ikhtisar</button>
-                  <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">T&J</button>
+                <div class="nav nav-tabs px-3" id="nav-tab" role="tablist">
+                  <button class="nav-link fw-bold active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Ikhtisar</button>
+                  <button class="nav-link fw-bold" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">T&J</button>
                 </div>
               </nav>
+
               <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active py-4" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                   <h4 class="fw-bold">About Lesson</h4>
@@ -117,7 +105,6 @@
                           </div>
                         </a>
                       </div>
-                    
                     </div>
                   </ul>
                 </div>
@@ -183,11 +170,11 @@
                       <div class="flex-shrink-1 d-flex flex-column gap-2">
                         <div>
                           <span>21</span>
-                          <i class="fas text-primary fa-arrow-alt-circle-up fs-5" style="transform:translate(0%,10%);"></i>                    
+                          <i class="fas text-primary fa-arrow-alt-circle-up fs-5"></i>                    
                         </div>
                         <div>
                           <span>14</span>
-                          <i class="fas fa-comment-alt fs-5" style="transform:translate(0%,10%);"></i>                    
+                          <i class="fas fa-comment-alt fs-5"></i>                    
                         </div>
                       </div>
                     </div>
@@ -214,11 +201,11 @@
                       <div class="flex-shrink-1 d-flex flex-column gap-2">
                         <div>
                           <span>21</span>
-                          <i class="fas text-primary fa-arrow-alt-circle-up fs-5" style="transform:translate(0%,10%);"></i>                    
+                          <i class="fas text-primary fa-arrow-alt-circle-up fs-5"></i>                    
                         </div>
                         <div>
                           <span>14</span>
-                          <i class="fas fa-comment-alt fs-5" style="transform:translate(0%,10%);"></i>                    
+                          <i class="fas fa-comment-alt fs-5"></i>                    
                         </div>
                       </div>
                     </div>
@@ -245,11 +232,11 @@
                       <div class="flex-shrink-1 d-flex flex-column gap-2">
                         <div>
                           <span>21</span>
-                          <i class="fas text-primary fa-arrow-alt-circle-up fs-5" style="transform:translate(0%,10%);"></i>                    
+                          <i class="fas text-primary fa-arrow-alt-circle-up fs-5"></i>                    
                         </div>
                         <div>
                           <span>14</span>
-                          <i class="fas fa-comment-alt fs-5" style="transform:translate(0%,10%);"></i>                    
+                          <i class="fas fa-comment-alt fs-5"></i>                    
                         </div>
                       </div>
                     </div>
@@ -276,11 +263,11 @@
                       <div class="flex-shrink-1 d-flex flex-column gap-2">
                         <div>
                           <span>21</span>
-                          <i class="fas text-primary fa-arrow-alt-circle-up fs-5" style="transform:translate(0%,10%);"></i>                    
+                          <i class="fas text-primary fa-arrow-alt-circle-up fs-5"></i>                    
                         </div>
                         <div>
                           <span>14</span>
-                          <i class="fas fa-comment-alt fs-5" style="transform:translate(0%,10%);"></i>                    
+                          <i class="fas fa-comment-alt fs-5"></i>                    
                         </div>
                       </div>
                     </div>
@@ -303,72 +290,67 @@
                 </div>
               </div>
               <div class="">
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Introduction</p>
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0 p-3">
+                  <div class="d-flex justify-content-center gap-3">
+                    <i class="fas fa-video fs-5"></i>                    
+                    <p class="m-0 text-muted" style="font-size:15px;">Introduction</p>
                   </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                  <div class="d-flex gap-3">
+                    <p class="m-0 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                      
                     </div>
                   </div>
                 </a>
                 
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">What is React ?</p>
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0 p-3">
+                  <div class="d-flex justify-content-center gap-3">
+                    <i class="fas fa-file-alt fs-5"></i>                    
+                    <p class="m-0 text-muted" style="font-size:15px;">What is React ?</p>
                   </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                  <div class="d-flex gap-3">
+                    <p class="m-0 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                      
                     </div>
                   </div>
                 </a>
 
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Adding the Right React Version to Codepen</p>
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0 p-3">
+                  <div class="d-flex justify-content-center gap-3">
+                    <i class="fas fa-file-alt fs-5"></i>                    
+                    <p class="m-0 text-muted" style="font-size:15px;">Adding the Right React Version to Codepen</p>
                   </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                  <div class="d-flex gap-3">
+                    <p class="m-0 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                      
                     </div>
                   </div>
                 </a>
                 
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Assignment : First React Code</p>
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0 p-3">
+                  <div class="d-flex justify-content-center gap-3">
+                    <i class="fas fa-video fs-5"></i>                    
+                    <p class="m-0 text-muted" style="font-size:15px;">Assignment : First React Code</p>
                   </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                  <div class="d-flex gap-3">
+                    <p class="m-0 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                      
                     </div>
                   </div>
                 </a>
 
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Quiz : The most modern server</p>
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0 p-3">
+                  <div class="d-flex justify-content-center gap-3">
+                    <i class="fas fa-video fs-5"></i>                    
+                    <p class="m-0 text-muted" style="font-size:15px;">Quiz : The most modern server</p>
                   </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                  <div class="d-flex gap-3">
+                    <p class="m-0 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                      
                     </div>
                   </div>
                 </a>
@@ -386,72 +368,67 @@
               </div>
 
               <div class="">
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Introduction</p>
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0 p-3">
+                  <div class="d-flex justify-content-center gap-3">
+                    <i class="fas fa-video fs-5"></i>                    
+                    <p class="m-0 text-muted" style="font-size:15px;">Introduction</p>
                   </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                  <div class="d-flex gap-3">
+                    <p class="m-0 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                      
                     </div>
                   </div>
                 </a>
                 
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">What is React ?</p>
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0 p-3">
+                  <div class="d-flex justify-content-center gap-3">
+                    <i class="fas fa-file-alt fs-5"></i>                    
+                    <p class="m-0 text-muted" style="font-size:15px;">What is React ?</p>
                   </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                  <div class="d-flex gap-3">
+                    <p class="m-0 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                      
                     </div>
                   </div>
                 </a>
 
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-lock fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Adding the Right React Version to Codepen</p>
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0 p-3">
+                  <div class="d-flex justify-content-center gap-3">
+                    <i class="fas fa-file-alt fs-5"></i>                    
+                    <p class="m-0 text-muted" style="font-size:15px;">Adding the Right React Version to Codepen</p>
                   </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                  <div class="d-flex gap-3">
+                    <p class="m-0 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                      
                     </div>
                   </div>
                 </a>
                 
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Assignment : First React Code</p>
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0 p-3">
+                  <div class="d-flex justify-content-center gap-3">
+                    <i class="fas fa-video fs-5"></i>                    
+                    <p class="m-0 text-muted" style="font-size:15px;">Assignment : First React Code</p>
                   </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                  <div class="d-flex gap-3">
+                    <p class="m-0 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                      
                     </div>
                   </div>
                 </a>
 
-                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0">
-                  <div class="d-flex justify-content-center ms-3 mt-3">
-                    <i class="fas fa-video fs-5" style="transform:translate(0%,10%);"></i>                    
-                    <p class="ms-2 text-muted" style="font-size:15px;">Quiz : The most modern server</p>
+                <a href="#" class="text-decoration-none d-flex justify-content-between border border-1 border-bottom border-top-0 border-end-0 border-start-0 p-3">
+                  <div class="d-flex justify-content-center gap-3">
+                    <i class="fas fa-video fs-5"></i>                    
+                    <p class="m-0 text-muted" style="font-size:15px;">Quiz : The most modern server</p>
                   </div>
-                  <div class="d-flex me-2 mt-3">
-                    <p class="me-2 text-muted" style="font-size:15px;">1:10</p>
+                  <div class="d-flex gap-3">
+                    <p class="m-0 text-muted" style="font-size:15px;">1:10</p>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-                      
                     </div>
                   </div>
                 </a>
