@@ -107,9 +107,8 @@ class CourseController extends Controller
     public function show($id)
     {
         $course = Course::findOrFail($id);
-        $topics = Topic::where('course_id', $id)->get();
 
-        return view('admin.pages.course.detail', compact('course', 'topics'));
+        return view('admin.pages.course.detail', compact('course'));
     }
 
     /**

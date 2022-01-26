@@ -21,7 +21,7 @@
             <x-laravel-blade-sortable::sortable
                 as="div"
             >
-                @foreach ($topics as $topic)
+                @foreach ($course->topic as $topic)
                 <x-laravel-blade-sortable::sortable-item
                     as="div"
                     sort-key="2" {{-- this is important. set a key for each entry --}}
@@ -35,12 +35,6 @@
                                 <button class="btn btn-outline-success mb-0">
                                     <i class="fas fa-eye"></i>
                                 </button>
-                                {{-- <a href='/admin/courses/1/topic' class="btn btn-outline-warning mb-0">
-                                    <i class="fas fa-pen"></i>
-                                </a>
-                                <button class="btn btn-outline-danger mb-0">
-                                    <i class="fas fa-trash"></i>
-                                </button> --}}
                                 <a href="{{ route('topics.edit', [$course->id, $topic->id]) }}" class="btn btn-outline-info mb-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
                                     <i class="fas fa-pencil"></i>
                                 </a>

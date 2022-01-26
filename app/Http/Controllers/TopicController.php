@@ -25,7 +25,6 @@ class TopicController extends Controller
      */
     public function create($id)
     {
-        // $topics = Topic::where('course_id', $id)->get();
         $course = Course::findOrFail($id);
         
         return view('admin.pages.course.create-topic', compact( 'course'));
