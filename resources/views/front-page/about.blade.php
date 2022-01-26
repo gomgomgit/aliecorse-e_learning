@@ -46,29 +46,6 @@
             margin-right:55px;
             margin-top:15px;
         }
-
-        .box-cyan-sm {
-            width: 142px;
-            height: 36px;
-            font-size: 26px;
-            color:#fff;
-            text-decoration: none;
-            font-weight: 700;
-            background: #52B69A;
-            border-radius: 20px;
-        }
-
-        .box-cyan-md {
-            width: 270px;
-            height: 48px;
-            color:#fff;
-            text-decoration: none;
-            background: #52B69A;
-            border-radius: 10px;
-            font-size: 26px;
-            font-weight: 700;
-        }
-        
         .box-cyan-lg {
             color:#fff;
             text-decoration: none;
@@ -80,7 +57,7 @@
             background: #52B69A;
             border-radius: 39px;
         }
-        
+
         .border-login {
             padding:3px 10px;
             border: 3px solid #9B1029;
@@ -106,373 +83,310 @@
             background: #FFFFFF;
         }
 
-        .box-white {
-            width: 900px;
-            height: 214px;
-            background: #FFFFFF;
-            box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
-            border-radius: 20px 0px 0px 20px;
-        }
-
-        .offer {
-            margin-top: 200px;
-            width: 100%;
-            height: 924px;
-            right:0px;
-            background: linear-gradient(159.23deg, #C62117 6.02%, #9B1029 100.1%);
-        }
-
-        .offer-card {
-            width: 320px;
-            height: 417px;
-            background: #FFFFFF;
-            border-radius: 20px;
+        
+        .jumbotron{
+            
+            height: 616px;
+            background: linear-gradient(0deg, 
+                      rgba(8, 78, 58, 0.21),
+                      rgba(8, 78, 58, 0.21)), 
+                      url('/assets/learn.jpg');
+            background-repeat: no-repeat;
+            background-position: center;            
         }
 
         .benner {
-            background-image: url('/assets/image.png');
+            background-image: url('/assets/learn.jpg');
             background-color:linear-gradient(0deg, rgba(28, 31, 30, 0.38) rgba(28, 31, 30, 0.38));
             background-repeat: no-repeat;            
             width: 100px;
         }
 
-        .to-join {
-\           width: 100%;
-            height: 512px;
-            background: #9B1029;
-            margin-top: 200px;
+       
+
+        .visi li {
+        list-style-type:none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size:19px;
+        margin-left: -100px;
         }
 
-        .splide__pagination__page {
+        .splide__pagination__page{
+            display: none;
+        }
+
+
+        .visi ::before {
+            content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color:  #52B69A;; /* Change the color */
+            font-weight: bold; /* If you want it to be bold */
+            font-size:50px;
+            display: inline;
+            flex-direction: row;
+            line-height: 40px;
+            justify-content: center;
+            align-items: center; /* Needed to add space between the bullet and the text */
+            width: 30px; /* Also needed for space (tweak if needed) */
+            margin-bottom:7px; 
+        }
+
+        .splide__arrow {
+            width: 50px;
+            height: 50px;
+            background: #FFFFFF;
+            box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+        }
+
+        .cards {
+            width: 251px;
+            height: 350px;
+            background: #FFFFFF;
+            box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.15);
+            border-radius: 15px;
+        }
+        #slider2 .splide__pagination__page {
             border:2px solid #C62117;
             background-color: #FFFFFF;
         }
 
-        .splide__pagination__page.active {
+        #slider2 .splide__pagination__page.active {
             border:2px solid #C62117;
             background-color: red;
         }
 
-        .splide__pagination__page:focus {
+        #slider2 .splide__pagination__page:focus {
             background-color: red;
         }
-        .splide__arrow {
+         #slider2 .splide__arrow {
             display: none;
         }
 
+        
+        .stroke{
+            width: 251px;
+            height: 2px;
+            background: #F0F0F0;
+        }
     </style>
 </head>
 <body>
         @include('front-page.includes.navbar')
         @include('front-page.includes.script')
-        <div class="container-fluid">
-            
+        <div>
             {{-- Jumbotron --}}
-            <div class="d-flex">
-                
-                <div class="ms-5 mt-5 d-block">
-                    <img src="/assets/ilustrasi.png" alt="ilustrasi.png">
-                </div>
-
-                <div class="position-relative">
-                    <h1 class="w-75 text-end fw-bold lh-base" 
-                        style="margin-top:120px; margin-left:140px; 
-                               font-family: 'Montserrat', sans-serif;
-                               ">
-                               Siap sukses dimasa depan bersama 
-                               <span style="color:#9B1029">alieCOURSE</span>
-                    </h1>
-                    <div class="d-flex justify-content-end">
-                        <span class="rectangel-red"></span>
+            <div class="jumbotron d-flex flex-column justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <h1 class="text-white" style="font-family: 'Montserrat', sans-serif; font-weight:700;">Tentang Kami</h1>
                     </div>
-                    <div class="d-flex justify-content-end mt-4 me-5">
-                        <div class="box-cyan-md d-flex justify-content-center align-items-center"
-                             style="font-family: 'Montserrat', sans-serif; font-weight:700">
-                            <a>Gabung Sekarang</a>
-                        </div>
-                    </div>
-                    <div class="box-white shadow p-4 position-absolute" 
-                         style="font-family: 'Montserrat', sans-serif; left:-100px;top:490px;">
-                        <div class="d-flex justify-content-around">
-                            <div class="d-flex flex-column justify-content-center align-items-center">
-                                <img src="/assets/user.png" alt="user.png">
-                                <h2 class="fw-bold mt-2">30,000</h2>
-                                <div class="border-cyan my-2"></div>
-                                <h4 class="fw-bold">Telah Lulus</h4>
-                            </div>
-                            <div class="d-flex flex-column justify-content-center align-items-center">
-                                <img src="/assets/icon-02.png" alt="user.png">
-                                <h2 class="fw-bold mt-2">50</h2>
-                                <div class="border-cyan my-2"></div>
-                                <h4 class="fw-bold">Pengajar</h4>
-                            </div>
-                            <div class="d-flex flex-column justify-content-center align-items-center">
-                                <img src="/assets/user.png" alt="user.png">
-                                <h2 class="fw-bold mt-2">100,000+</h2>
-                                <div class="border-cyan my-2"></div>
-                                <h4 class="fw-bold">Pengguna</h4>
-                            </div>
-                        </div>
+                    <div class="d-flex my-4">
+                        <span class="border-white-sm"> </span>
                     </div>
                 </div>
-
             </div>
-            
-            {{-- Notice --}}
-            <div class="d-flex bg-light" 
-                 style="margin-top:300px;">
-                <div>
-                    <h1 class="text-start fw-bold ms-5 lh-base" 
-                        style="font-family: 'Montserrat', sans-serif; margin-top:100px; width:60%;">
-                        Masa Depan Cerah Bersama 
-                        <span style="color:#9B1029">alieCOURSE</span>
-                    </h1>
-                    <div class="d-flex justify-content-start ms-5">
-                        <span class="rectangel-red"></span>
-                    </div>
-                    <p class="ms-5 my-4 lh-base"
-                       style="font-family:'Montserrat', sans-serif; width:30%;">
-                        Lorem ipsum dolor sit amet
-                        consectetur adipiscing elit,
-                        annuit ceoptis novus ordo
-                        seclorum.
-                    </p>
-                    <div class="d-flex justify-content-start mt-4 ms-5">
-                        <div class="box-cyan-md d-flex justify-content-center align-items-center"
-                             style="font-family: 'Montserrat', sans-serif; font-weight:700;">
-                            <a class="text-decoration-none text-white" href="#">Selengkapnya</a>
+
+            {{-- Visi Misi --}}
+            <div class="bg-light" style="margin-top: 100px;">
+                <div class="d-flex justify-content-start align-items-center">
+                    <div style="margin-top:100px; margin-left:30px;">
+                        <div class="ms-5 lh-base " style="width:55%; ">
+                            <h1 class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700;">
+                                Apa itu <span style="color:#9B1029">alieCOURSE</span>
+                            </h1>
+                        </div>
+                        <div class="d-flex justify-content-start ms-5">
+                            <span class="rectangel-red"></span>
+                        </div>
+                        <div class="ms-5 mt-4" style="width: 40%; font-family: 'Montserrat', sans-serif; font-weight:400;">
+                            <p class="lh-base"> 
+                                Lorem ipsum dolor sit amet consectetur 
+                                adipiscing elit, annuit ceoptis novus ordo 
+                                seclorum. Sivis pacem para belleum
+                            </p>
+                            <p class="lh-base">
+                                Lorem ipsum dolor sit amet consectetur 
+                                adipiscing elit, annuit ceoptis novus ordo 
+                                seclorum. Sivis pacem para belleum
+                            </p>
                         </div>
                     </div>
-                </div>
-
-                <div class="my-5">
-                    <img src="/assets/ilustrasi-02.png" alt="">
-                </div>
-              
-            </div>
-            
-            {{-- Offer --}}
-            <div class="offer position-relative">
-                
-                <div class="position-absolute" 
-                    style="top:-150px; right:0px;">
-                    <img src="/assets/setting.png" alt="setting.png">
-                </div>
-                
-                <div>
-                   <div class="d-flex flex-column">
-                    <div class="d-flex justify-content-center" 
-                         style="margin-top:100px; font-family: 'Montserrat', sans-serif;"
-                         >
-                        <h2 class="text-center text-white fw-bold lh-sm" style="width:20%;">Kursus yang kami tawarkan</h1>
+                    <div style="margin-top:80px; margin-right:70px;">
+                        <img src="/assets/image-md.jpg" alt="">
                     </div>
-                    <div class="d-flex justify-content-center" style="margin-top:30px;">
-                        <span class="border-white-md"> </span>
-                    </div>
+                </div>
+                <div class="d-flex align-items-center" style="margin-top:90px;  ">
+                   <div style="margin-left:30px; margin-bottom:70px;">
+                        <div class="ms-5 lh-base" 
+                             style="width:55%; ">
+                            <h2 class="lh-base" 
+                                style="font-family: 'Montserrat', sans-serif; font-weight:700;">
+                                Visi Kami
+                            </h2>
+                        </div>
+                        <div class="d-flex justify-content-start ms-5">
+                            <span class="rectangel-red"></span>
+                        </div>
+                        <div class="ms-5 mt-4" 
+                             style="width:50%; font-family: 'Montserrat', sans-serif; font-weight:400;">
+                            <p class="lh-lg" style="font-size: 18px;"> 
+                                Lorem ipsum dolor sit amet consectetur 
+                                adipiscing elit, annuit ceoptis novus ordo 
+                                seclorum. Sivis pacem para belleum
+                            </p>
+                            <ul class="visi d-flex flex-column justify-content-center align-items-center " style="margin-right:50px;">
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                            </ul>
+                        </div>
                    </div>
+                  
+                   <div style="margin-left:120px; margin-bottom:70px;" >
+                        <div class="ms-5 lh-base" 
+                             style="width:55%; ">
+                            <h2 class="lh-base" 
+                                style="font-family: 'Montserrat', sans-serif; font-weight:700;">
+                                Visi Kami
+                            </h2>
+                        </div>
+                        <div class="d-flex justify-content-start ms-5">
+                            <span class="rectangel-red"></span>
+                        </div>
+                        <div class="ms-5 mt-4" 
+                             style="width:50%; font-family: 'Montserrat', sans-serif; font-weight:400;">
+                            <p class="lh-lg" style="font-size: 18px;"> 
+                                Lorem ipsum dolor sit amet consectetur 
+                                adipiscing elit, annuit ceoptis novus ordo 
+                                seclorum. Sivis pacem para belleum
+                            </p>
+                            <ul class="visi d-flex flex-column justify-content-center align-items-center " style="margin-right:50px;">
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                            </ul>
+                        </div>
+                   </div>
+                  
+                  
+                  
                 </div>
-               
-                <div class="d-flex justify-content-center gap-5 mt-5">
-                    <div class="offer-card d-flex flex-column justify-content-center align-items-center">
-                        <img src="/assets/dollar.png" alt="">
-                        <h3 class="mt-4 mb-3 fw-bolder" 
-                            style="font-family:'Montserrat', sans-serif;">
-                            Perpajakan
-                        </h3>
-                        <p class="text-center lh-base" 
-                           style="width:50%; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                            Lorem ipsum dolor
-                            sit amet adipiscing
-                            consectetur
-                        </p>
-                        <div class=""
-                             style="font-family: 'Montserrat', sans-serif; font-weight:700;">
-                            <a class="d-flex justify-content-center align-items-center box-cyan-sm mt-3 text-decoration-none text-white" href="">
-                                Detail
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="offer-card d-flex flex-column justify-content-center align-items-center">
-                        <img src="/assets/science.png" alt="">
-                        <h3 class="mt-4 mb-3 fw-bolder"
-                            style="font-family:'Montserrat', sans-serif;">
-                            Data Science
-                        </h3>
-                        <p class="text-center lh-base" 
-                           style="width:50%; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                            Lorem ipsum dolor
-                            sit amet adipiscing
-                            consectetur
-                        </p>
-                        <div class=""
-                             style="font-family: 'Montserrat', sans-serif; font-weight:700;">
-                            <a class="d-flex justify-content-center align-items-center box-cyan-sm mt-3 text-decoration-none text-white" href="">
-                                Detail
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="offer-card d-flex flex-column justify-content-center align-items-center">
-                        <img src="/assets/dollar.png" alt="">
-                        <h3 class="mt-4 mb-3 fw-bolder"
-                            style="font-family:'Montserrat', sans-serif;">
-                            Akuntasi
-                        </h3>
-                        <p class="text-center lh-base" 
-                           style="width:50%; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                         Lorem ipsum dolor
-                         sit amet adipiscing
-                         consectetur
-                        </p>
-                        <div class=""
-                             style="font-family: 'Montserrat', sans-serif; font-weight:700;">
-                            <a class="d-flex justify-content-center align-items-center box-cyan-sm mt-3 text-decoration-none text-white" href="">
-                                Detail
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="offer-card d-flex flex-column justify-content-center align-items-center">
-                        <img src="/assets/dollar.png" alt="">
-                        <h3 class="mt-4 mb-3 fw-bolder"
-                            style="font-family:'Montserrat', sans-serif;">
-                            Office Perkantoran
-                        </h3>
-                        <p class="text-center lh-base" 
-                           style="width:50%; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                         Lorem ipsum dolor
-                         sit amet adipiscing
-                         consectetur
-                        </p>
-                        <div class=""
-                             style="font-family: 'Montserrat', sans-serif; font-weight:700;">
-                            <a class="d-flex justify-content-center align-items-center box-cyan-sm mt-3 text-decoration-none text-white" href="">
-                                Detail
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="position-absolute" 
-                     style="bottom:-30px; left:70px;">
-                    <img src="/assets/stroke.png" alt="stroke.png">
-                </div>
-
             </div>
 
-            {{-- Why alieCOURSE --}}
-            <div class="bg-light d-flex" style="margin-top:90px;">
-                
-                <div class="d-flex flex-wrap w-100 gap-5 ms-3" 
-                     style="margin-top: 160px; margin-bottom:200px;">
+            {{-- Instruktur --}}
+            <div class="" 
+                 style="width:100%; height:700px; margin-top:110px;">
+                <div class="">
                     
-                    <div class="d-flex flex-column justify-content-center align-items-center text-center mt-4" 
-                        style="width:30%;">
-                        <img src="/assets/book.png" alt="">
-                        <h3 class="my-3 lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700; width:80%;">Lorem ipsum
-                            dolor sit amet
-                        </h3>
-                        <p class="lh-base" style="width:70%;font-family: 'Montserrat', sans-serif; font-weight:400;">
-                            Lorem ipsum dolor sit
-                            amet constectetur adi
-                            piscing elit eves annuit
-                        </p>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div>
+                            <h2 class="" style="font-family: 'Montserrat', sans-serif; font-weight:700;">Pengajar Favorit Kami</h2>
+                        </div>
+                        <div class="d-flex" style="margin-left:31px;">
+                            <span class="rectangel-red"> </span>
+                        </div>
                     </div>
 
-                    <div class="d-flex flex-column justify-content-center align-items-center text-center mt-4"  style="width:30%;">
-                        <img src="/assets/graduated.png" alt="">
-                        <h3 class="my-3 lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700; width:80%;">Lorem ipsum
-                            dolor sit amet
-                        </h3>
-                        <p class="lh-base" style="width:70%;font-family: 'Montserrat', sans-serif; font-weight:400;">
-                            Lorem ipsum dolor sit
-                            amet constectetur adi
-                            piscing elit eves annuit
-                        </p>
-                    </div>
+                    <div id="slider" class="splide me-4">
+                        <div class="splide__arrows">
+                            <button class="splide__arrow splide__arrow--prev">
+                                <img src="/assets/arrow-l.png" alt="">
+                            </button>
+                            <button class="splide__arrow splide__arrow--next">
+                                <img src="/assets/arrow-r.png" alt="">
+                            </button>
+                        </div>
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <div>
+                                        <div class="d-flex justify-content-center gap-5 mb-5" style="margin-top:110px; ">
+                                            <div class="cards d-flex flex-column justify-content-center align-items-center me-3">
+                                                <img src="/assets/student.png" alt="">
+                                                <div class="d-flex flex-column align-items-center justify-content-center">
+                                                    <h4 class="mt-3" style="font-family: 'Montserrat', sans-serif; font-weight:700;">Jeany doe</h4>
+                                                    <h6 class="mt-2" style="font-family: 'Montserrat', sans-serif; font-weight:400;">Data Science</h6>
+                                                    <div class="mt-1">
+                                                        <i class="text-warning fas fa-star"></i>
+                                                        <i class="ps-2 text-warning fas fa-star"></i>
+                                                        <i class="ps-2 text-warning fas fa-star"></i>
+                                                        <i class="ps-2 text-warning fas fa-star"></i>
+                                                    </div>
+                                                    <div class="mt-4 stroke"></div>
+                                                </div>
+                                            </div>
+                                            <div class="cards d-flex flex-column justify-content-center align-items-center me-3">
+                                                <img src="/assets/student.png" alt="">
+                                                <div class="d-flex flex-column align-items-center justify-content-center ">
+                                                    <h4 class="mt-3" style="font-family: 'Montserrat', sans-serif; font-weight:700;">Jeany doe</h4>
+                                                    <h6 class="mt-2" style="font-family: 'Montserrat', sans-serif; font-weight:400;">Data Science</h6>
+                                                    <div class="mt-1">
+                                                        <i class="text-warning fas fa-star"></i>
+                                                        <i class="ps-2 text-warning fas fa-star"></i>
+                                                        <i class="ps-2 text-warning fas fa-star"></i>
+                                                        <i class="ps-2 text-warning fas fa-star"></i>
+                                                    </div>
+                                                    <div class="mt-4 stroke"></div>
 
-                    <div class="d-flex flex-column justify-content-center align-items-center text-center mt-4"  style="width:30%;">
-                        <img src="/assets/brain.png" alt="">
-                         <h3 class="my-3 lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700; width:80%;">Lorem ipsum
-                            dolor sit amet
-                        </h3>
-                        <p class="lh-base" style="width:70%;font-family: 'Montserrat', sans-serif; font-weight:400;">
-                            Lorem ipsum dolor sit
-                            amet constectetur adi
-                            piscing elit eves annuit
-                        </p>
-                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cards d-flex flex-column justify-content-center align-items-center me-3" >
+                                                <img src="/assets/student.png" alt="">
+                                                <div class="d-flex flex-column align-items-center justify-content-center">
+                                                    <h4 class="mt-3" style="font-family: 'Montserrat', sans-serif; font-weight:700;">Jeany doe</h4>
+                                                    <h6 class="mt-2" style="font-family: 'Montserrat', sans-serif; font-weight:400;">Data Science</h6>
+                                                    <div class="mt-1">
+                                                        <i class="text-warning fas fa-star"></i>
+                                                        <i class="ps-2 text-warning fas fa-star"></i>
+                                                        <i class="ps-2 text-warning fas fa-star"></i>
+                                                        <i class="ps-2 text-warning fas fa-star"></i>
+                                                    </div>
+                                                    <div class="mt-4 stroke"></div>
 
-                    <div class="d-flex flex-column justify-content-center align-items-center text-center mt-4"  style="width:30%;">
-                        <img src="/assets/achievement.png" alt="">
-                         <h3 class="my-3 lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700; width:80%;">Lorem ipsum
-                            dolor sit amet
-                        </h3>
-                        <p class="lh-base" style="width:70%;font-family: 'Montserrat', sans-serif; font-weight:400;">
-                            Lorem ipsum dolor sit
-                            amet constectetur adi
-                            piscing elit eves annuit
-                        </p>
-                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cards d-flex flex-column justify-content-center align-items-center">
+                                                <img src="/assets/student.png" alt="">
+                                                <div class="d-flex flex-column align-items-center justify-content-center">
+                                                    <h4 class="mt-3" style="font-family: 'Montserrat', sans-serif; font-weight:700;">Jeany doe</h4>
+                                                    <h6 class="mt-2" style="font-family: 'Montserrat', sans-serif; font-weight:400;">Data Science</h6>
+                                                    <div class="mt-1">
+                                                        <i class="text-warning fas fa-star"></i>
+                                                        <i class="ps-2 text-warning fas fa-star"></i>
+                                                        <i class="ps-2 text-warning fas fa-star"></i>
+                                                        <i class="ps-2 text-warning fas fa-star"></i>
+                                                    </div>
+                                                    <div class="mt-4 stroke"></div>
 
-                    <div class="d-flex flex-column justify-content-center align-items-center text-center mt-4"  style="width:30%;">
-                        <img src="/assets/labor.png" alt="">
-                         <h3 class="my-3 lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700; width:80%;">Lorem ipsum
-                            dolor sit amet
-                        </h3>
-                        <p class="lh-base" style="width:70%;font-family: 'Montserrat', sans-serif; font-weight:400;">
-                            Lorem ipsum dolor sit
-                            amet constectetur adi
-                            piscing elit eves annuit
-                        </p>
-                    </div>
-
-                    <div class="d-flex flex-column justify-content-center align-items-center text-center mt-4" style="width:30%;">
-                        <img src="/assets/video.png" alt="">
-                         <h3 class="my-3 lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700; width:80%;">Lorem ipsum
-                            dolor sit amet
-                        </h3>
-                        <p class="lh-base" style="width:70%;font-family: 'Montserrat', sans-serif; font-weight:400;">
-                            Lorem ipsum dolor sit
-                            amet constectetur adi
-                            piscing elit eves annuit
-                        </p>
-                    </div>
-
-                </div>
-                <div class="flex-shrink-2" style="margin-top:190px;">
-                    <h1 class="text-end lh-base" 
-                        style="margin-right:64px; font-family: 'Montserrat', sans-serif; font-weight: 700">
-                        Mengapa belajar di 
-                        <span style="color:#9B1029">
-                            alieCOURSE
-                        </span>
-                    </h1>
-                    <div class="d-flex justify-content-end" style="margin-right:14px;">
-                        <span class="rectangel-red"></span>
-                    </div>
-                    <div class="d-flex justify-content-end mt-4" style="margin-right:66px;">
-                        <p class="text-end lh-base" 
-                        style="width:55%; font-family: 'Montserrat', sans-serif; font-weight:400">
-                            Lorem ipsum dolor sit amet
-                            consectetur adipiscing elit,
-                            annuit ceoptis novus ordo
-                            seclorum.
-                        </p>
-                    </div>
-                    <div class="d-flex justify-content-end mt-4" style="margin-right: 70px;">
-                        <div class="box-cyan-md d-flex justify-content-center align-items-center"
-                             style="font-family: 'Montserrat', sans-serif; font-weight:700;">
-                            <a class="text-decoration-none text-white" href="#">Selengkapnya</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                   
+                                </li>
+                                <li class="splide__slide">
+                                   
+                                </li>
+                                <li class="splide__slide">
+                                   
+                                </li>
+                                <li class="splide__slide">
+                                   
+                                </li>
+                              
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
-           
-
+            
             {{-- Slider --}}
             <div class="bg-light " 
                  style="width:100%; height:700px; margin-top:110px;">
@@ -491,10 +405,18 @@
                         </div>
                     </div>
 
-                    <div class="splide me-4">
+                    <div id="slider2" class="splide me-4">
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
+                                    <button
+                                    class="splide__pagination__page is-active"
+                                    type="button"
+                                    aria-controls="splide01-slide01"
+                                    aria-label="Go to slide 1"
+                                    aria-current="true"
+                                  >
+                                  </button>
                                     <div class="d-flex justify-content-center" 
                                          style="margin-top:90px; margin-bottom:100px;">
                                         <div class="d-flex flex-column justify-content-center align-items-center">
@@ -548,165 +470,14 @@
                                     </div>
                                 </li>
                                 <li class="splide__slide">
-                                    <div class="d-flex justify-content-center" 
-                                         style="margin-top:90px; margin-bottom:100px;">
-                                        <div class="d-flex flex-column justify-content-center align-items-center">
-                                            <img src="/assets/mask.png" alt="" style="width:25%">
-                                            <div class="text-center lh-base mt-3" style="width: 60%; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                <p>Lorem ipsum dolor sit amet consectetur
-                                                   adipiscing elit eves annuit ceoptis
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center align-items-center">
-                                                <h2  
-                                                    style="font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                    John Doe
-                                                </h2>
-                                                <h3 style="font-family: 'Montserrat', sans-serif; font-weight:700;">Karyawan Swasta</h3>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="d-flex flex-column justify-content-center align-items-center">
-                                            <img src="/assets/mask.png" alt="" style="width:25%">
-                                            <div class="text-center lh-base mt-3" style="width: 60%; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                <p>Lorem ipsum dolor sit amet consectetur
-                                                   adipiscing elit eves annuit ceoptis
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center align-items-center">
-                                                <h2  
-                                                    style="font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                    John Doe
-                                                </h2>
-                                                <h3 style="font-family: 'Montserrat', sans-serif; font-weight:700;">Karyawan Swasta</h3>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="d-flex flex-column justify-content-center align-items-center">
-                                            <img src="/assets/mask.png" alt="" style="width:25%">
-                                            <div class="text-center lh-base mt-3" style="width: 60%; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                <p>Lorem ipsum dolor sit amet consectetur
-                                                   adipiscing elit eves annuit ceoptis
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center align-items-center">
-                                                <h2  
-                                                    style="font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                    John Doe
-                                                </h2>
-                                                <h3 style="font-family: 'Montserrat', sans-serif; font-weight:700;">Karyawan Swasta</h3>
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="d-flex justify-content-center" 
-                                         style="margin-top:90px; margin-bottom:100px;">
-                                        <div class="d-flex flex-column justify-content-center align-items-center">
-                                            <img src="/assets/mask.png" alt="" style="width:25%">
-                                            <div class="text-center lh-base mt-3" style="width: 60%; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                <p>Lorem ipsum dolor sit amet consectetur
-                                                   adipiscing elit eves annuit ceoptis
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center align-items-center">
-                                                <h2  
-                                                    style="font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                    John Doe
-                                                </h2>
-                                                <h3 style="font-family: 'Montserrat', sans-serif; font-weight:700;">Karyawan Swasta</h3>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="d-flex flex-column justify-content-center align-items-center">
-                                            <img src="/assets/mask.png" alt="" style="width:25%">
-                                            <div class="text-center lh-base mt-3" style="width: 60%; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                <p>Lorem ipsum dolor sit amet consectetur
-                                                   adipiscing elit eves annuit ceoptis
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center align-items-center">
-                                                <h2  
-                                                    style="font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                    John Doe
-                                                </h2>
-                                                <h3 style="font-family: 'Montserrat', sans-serif; font-weight:700;">Karyawan Swasta</h3>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="d-flex flex-column justify-content-center align-items-center">
-                                            <img src="/assets/mask.png" alt="" style="width:25%">
-                                            <div class="text-center lh-base mt-3" style="width: 60%; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                <p>Lorem ipsum dolor sit amet consectetur
-                                                   adipiscing elit eves annuit ceoptis
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center align-items-center">
-                                                <h2  
-                                                    style="font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                    John Doe
-                                                </h2>
-                                                <h3 style="font-family: 'Montserrat', sans-serif; font-weight:700;">Karyawan Swasta</h3>
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="d-flex justify-content-center" 
-                                         style="margin-top:90px; margin-bottom:100px;">
-                                        <div class="d-flex flex-column justify-content-center align-items-center">
-                                            <img src="/assets/mask.png" alt="" style="width:25%">
-                                            <div class="text-center lh-base mt-3" style="width: 60%; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                <p>Lorem ipsum dolor sit amet consectetur
-                                                   adipiscing elit eves annuit ceoptis
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center align-items-center">
-                                                <h2  
-                                                    style="font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                    John Doe
-                                                </h2>
-                                                <h3 style="font-family: 'Montserrat', sans-serif; font-weight:700;">Karyawan Swasta</h3>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="d-flex flex-column justify-content-center align-items-center">
-                                            <img src="/assets/mask.png" alt="" style="width:25%">
-                                            <div class="text-center lh-base mt-3" style="width: 60%; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                <p>Lorem ipsum dolor sit amet consectetur
-                                                   adipiscing elit eves annuit ceoptis
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center align-items-center">
-                                                <h2  
-                                                    style="font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                    John Doe
-                                                </h2>
-                                                <h3 style="font-family: 'Montserrat', sans-serif; font-weight:700;">Karyawan Swasta</h3>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="d-flex flex-column justify-content-center align-items-center">
-                                            <img src="/assets/mask.png" alt="" style="width:25%">
-                                            <div class="text-center lh-base mt-3" style="width: 60%; font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                <p>Lorem ipsum dolor sit amet consectetur
-                                                   adipiscing elit eves annuit ceoptis
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center align-items-center">
-                                                <h2  
-                                                    style="font-family: 'Montserrat', sans-serif; font-weight:400;">
-                                                    John Doe
-                                                </h2>
-                                                <h3 style="font-family: 'Montserrat', sans-serif; font-weight:700;">Karyawan Swasta</h3>
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
+                                    <button
+                                    class="splide__pagination__page is-active"
+                                    type="button"
+                                    aria-controls="splide01-slide01"
+                                    aria-label="Go to slide 1"
+                                    aria-current="true"
+                                  >
+                                  </button>
                                     <div class="d-flex justify-content-center" 
                                          style="margin-top:90px; margin-bottom:100px;">
                                         <div class="d-flex flex-column justify-content-center align-items-center">
@@ -760,12 +531,13 @@
                                     </div>
                                 </li>
                               
+                              
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             {{-- Image --}}
             <div class="benner d-flex flex-column align-items-center justify-content-center w-100">
                 
@@ -850,10 +622,27 @@
                 <p class="text-center mt-3" style="font-family: 'Montserrat', sans-serif; font-weight:400;"> alieCOURSE 2021.All right reserved</p>
             </div>
            
-            <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
+              <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
             <script>
-               
+            document.addEventListener( 'DOMContentLoaded', function() {
+            var splide = new Splide( '#slider' );
+            splide.mount();
+             } );
+             
+            document.addEventListener( 'DOMContentLoaded', function() {
+            var splide = new Splide( '#slider2' );
+            splide.mount();
+             } );
+
+             new Splide( '#splider2', {
+  type   : 'loop',
+  pagination : 'true',
+perPage: 3,
+} );
             </script>
+    
+
+              
         </div>
 </body>
 </html>
