@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\ArticleCategory;
 use Illuminate\Http\Request;
 
@@ -99,8 +100,10 @@ class ArticleCategoryController extends Controller
     public function destroy($id)
     {
         $data = ArticleCategory::findOrFail($id);
-
         $data->delete();
+
+        Article::where('category_article_id', $id)->delete();
+
         return back()->with('success-delete', 'berhasil menghapus data kategori');
     }
 }

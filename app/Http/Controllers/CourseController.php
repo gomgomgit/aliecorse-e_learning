@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Course;
 use App\Models\CourseDiscount;
+use App\Models\Topic;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -106,8 +107,9 @@ class CourseController extends Controller
     public function show($id)
     {
         $course = Course::findOrFail($id);
+        $topics = Topic::where('course_id', $id)->get();
 
-        return view('admin.pages.course.detail', compact('course'));
+        return view('admin.pages.course.detail', compact('course', 'topics'));
     }
 
     /**
@@ -197,8 +199,14 @@ class CourseController extends Controller
      */
     public function destroy($id)
     {
-        Course::findOrFail($id)->delete();
-
+        $data = Course::findOrFail($id);
+        $data->delete();
+        $data->topic->delete();
+        $data->courseDiscount->delete();
+        $data->review->delete();
+        $data->order->delete();
+        $data->question->delete();
+        
         return back()->with('success-delete', 'berhasil menghapus data kursus');
     }
 }

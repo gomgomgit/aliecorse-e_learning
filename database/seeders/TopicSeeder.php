@@ -30,7 +30,7 @@ class TopicSeeder extends Seeder
                         'iya mungkin bisa aja bergitu',
                         'tapi kita harus berusaha untuk tahu tentang itu'
                     ]),
-                    'order' => $faker->randomElement([1,2,3,4,5,6,7,8,9]),
+                    'order' => $i,
                     'course_id' => $course,
 
                 ]);

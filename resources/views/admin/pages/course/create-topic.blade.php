@@ -1,13 +1,21 @@
+@php
+    $isEdit = isset($topics);
+    
+    $title = $isEdit ? 'Edit Data Topik' : 'Tambah Data Topik';
+    $route = $isEdit ? route('topics.update', [$course->id, $topics->id]) : route('topics.store', $course->id);
+    $button = $isEdit ? 'Update' : 'Create';
+@endphp
+
 @extends('admin.layouts.app')
 
-@section('title', 'Kursus Saya | bla bla bla')
+@section('title', $title)
     
 @section('content')
 <div class="container-fluid">
     <div class="py-4">
         <div class="d-flex justify-content-between">
             <div class="">
-                <h3>Latihan berkaca pada dirimu sendiri</h3>
+                <h3>{{ $course->name }}</h3>
             </div>
             <div class="">
                 <a href="{{ url()->previous() }}" class="btn btn-outline-success w-100">
@@ -16,29 +24,36 @@
                 </a>
             </div>
         </div>
-        <div class="py-4 border-bottom border-2">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="mb-3 w-50">
-                    <h6 class="">Topik</h6>
-                    <div class="input-group input-group-outline">
-                        <label class="form-label">Masukkan Nama Topik</label>
-                        <input type="text" class="form-control">
+        <form action="{{ $route }}" method="POST">
+            @csrf
+            @method('POST')
+            {{-- <input type="hidden" name="course_id" value="{{ $course->id }}">
+            <input type="hidden" name="order" value="{{ $course->id }}"> --}}
+            <div class="py-4 border-bottom border-2">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-3 w-50">
+                        <h6 class="">Topik</h6>
+                        <div class="input-group input-group-static">
+                            <label>Masukkan Nama Topik</label>
+                            <input name="name" type="text" class="form-control" value="{{ $isEdit ? $topics->name : '' }}">
+                        </div>
+                    </div>
+                    <div class="">
+                        <button class="btn btn-outline-success mb-0" onclick="myFunction()" type="button">
+                            <i class="fas fa-plus-square"></i>
+                            Tambah Deskripsi
+                        </button>
                     </div>
                 </div>
-                <div class="">
-                    <button class="btn btn-outline-success mb-0" onclick="myFunction()" type="button">
-                        <i class="fas fa-plus-square"></i>
-                        Tambah Deskripsi
-                    </button>
+                <div class="my-2" id="myDIV" style="display: {{ $isEdit ? 'block' : 'none'}}">
+                    <h6 class="">Deskripsi</h6>
+                    <div class="input-group input-group-dynamic">
+                        <textarea name="description" class="form-control" rows="5" placeholder="Tuliskan deskripsi dari topik ini." spellcheck="false">{{ $isEdit ? $topics->description : '' }}</textarea>
+                    </div>
                 </div>
             </div>
-            <div class="my-2" id="myDIV" style="display: none">
-                <h6 class="">Deskripsi</h6>
-                <div class="input-group input-group-dynamic">
-                    <textarea class="form-control" rows="5" placeholder="Tuliskan deskripsi dari topik ini." spellcheck="false"></textarea>
-                </div>
-            </div>
-        </div>
+            <button class="d-none" id="createTopic1"></button>
+        </form>
         <div class="py-4">
             <h6>Pelajaran</h6>
             
@@ -136,9 +151,9 @@
                 </button>
             </div>
             <div class="d-grid mt-5">
-                <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+                <button id="createTopic" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
                     <i class="fas fa-plus-square"></i>
-                    Simpan Topik
+                    {{ $button }} Topik
                 </button>
             </div>
         </div>
@@ -167,8 +182,8 @@
                     </select>
                 </div>
                 <h6 class="mt-2 mb-0">Video Link / Embed</h6>
-                <div class="input-group input-group-outline">
-                    <label class="form-label">Masukkan Video Link / Embed</label>
+                <div class="input-group input-group-static">
+                    {{-- <label class="form-label">Masukkan Video Link / Embed</label> --}}
                     <textarea type="text" class="form-control"> </textarea>
                 </div>
             </div>
@@ -560,6 +575,10 @@
 
         $('#add-img').click(function(){
             $('#add-img2').click();
+        });
+
+        $('#createTopic').click(function(){
+            $('#createTopic1').click();
         });
     </script>
     <script>

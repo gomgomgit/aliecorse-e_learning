@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CertificateSettingController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\TopicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,9 +42,14 @@ Route::prefix('admin')->group(function () {
     });
 
     Route::resource('/courses', CourseController::class);
-    Route::get('/courses/{id}/topic', function () {
-        return view('admin.pages.course.create-topic');
-    });
+    Route::get('/courses/{id}/topics/create', [TopicController::class, 'create'])->name('topics.create');
+    Route::post('/courses/{id}/topics/create', [TopicController::class, 'store'])->name('topics.store');
+    Route::get('/courses/{course_id}/topics/{topic_id}', [TopicController::class, 'edit'])->name('topics.edit');
+    Route::post('/courses/{course_id}/topics/{topic_id}', [TopicController::class, 'update'])->name('topics.update');
+    Route::delete('/courses/topics/{topic_id}', [TopicController::class, 'destroy'])->name('topics.destroy');
+    // Route::get('/courses/{id}/topic', function () {
+    //     return view('admin.pages.course.create-topic');
+    // });
 
     Route::resource('/categories', CategoryController::class);
     // Route::get('/categories', function () {
