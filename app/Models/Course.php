@@ -13,7 +13,17 @@ class Course extends Model
         'thumbnail',
         'name',
         'category_id',
-        'description'
+        'description',
+        'duration_hour',
+        'duration_minute',
+        'duration_second',
+        'level',
+        'price',
+        'benefits',
+        'requirements',
+        'audients',
+        'user_id',
+        'status'
     ];
 
     public function review()
@@ -49,5 +59,15 @@ class Course extends Model
     public function category()
     {
         return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
+
+    public function topic()
+    {
+        return $this->hasMany(Topic::class, 'course_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }

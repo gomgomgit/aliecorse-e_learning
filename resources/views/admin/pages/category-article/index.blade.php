@@ -21,7 +21,7 @@
             <div class="d-flex justify-content-between align-items-center border border-2 rounded p-2 mb-2">
                 <div class="w-40 d-flex justify-content-between">
                     <span class="fw-bold">{{ $articleCategory->name }}</span>
-                    <span>23 Kursus</span>
+                    <span>{{ $articleCategory->article->count() }} Kursus</span>
                 </div>
                 <div class="">
                     <button class="btn btn-outline-success mb-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Lihat Detail">

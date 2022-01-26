@@ -7,6 +7,9 @@ use App\Http\Controllers\FrontPage\HomeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FrontPage\AboutController;
 use App\Http\Controllers\FrontPage\CourseController;
+
+use App\Http\Controllers\CertificateSettingController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\InstructorController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,15 +45,7 @@ Route::prefix('admin')->group(function () {
         return view('admin.index_dashboard');
     });
 
-    Route::get('/courses', function () {
-        return view('admin.pages.course.index');
-    });
-    Route::get('/courses/create', function () {
-        return view('admin.pages.course.create');
-    });
-    Route::get('/courses/{id}', function () {
-        return view('admin.pages.course.detail');
-    });
+    Route::resource('/courses', CourseController::class);
     Route::get('/courses/{id}/topic', function () {
         return view('admin.pages.course.create-topic');
     });
@@ -94,12 +89,9 @@ Route::prefix('admin')->group(function () {
         return view('admin.pages.report.detail');
     });
 
-    Route::get('/certificate', function () {
-        return view('admin.pages.certificate.index');
-    });
-    Route::get('/certificate/{id}', function () {
-        return view('admin.pages.certificate.edit');
-    });
+    Route::get('/certificate', [CertificateSettingController::class, 'index'])->name('certificate.index');
+    Route::get('/certificate/{id}', [CertificateSettingController::class, 'edit'])->name('certificate.edit');
+    Route::post('/certificate/{id}', [CertificateSettingController::class, 'update'])->name('certificate.update');
 
     Route::resource('/articles', ArticleController::class);
 
