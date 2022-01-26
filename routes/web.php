@@ -9,7 +9,7 @@ use App\Http\Controllers\FrontPage\AboutController;
 use App\Http\Controllers\FrontPage\CourseController;
 
 use App\Http\Controllers\CertificateSettingController;
-use App\Http\Controllers\CourseController;
+use App\Http\Controllers\AdminCourseController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\LessonFileController;
@@ -50,7 +50,7 @@ Route::prefix('admin')->group(function () {
         return view('admin.index_dashboard');
     });
 
-    Route::resource('/courses', CourseController::class);
+    Route::resource('/courses', AdminCourseController::class);
     Route::get('/courses/{id}/topics/create', [TopicController::class, 'create'])->name('topics.create');
     Route::post('/courses/{id}/topics/create', [TopicController::class, 'store'])->name('topics.store');
     Route::get('/courses/{course_id}/topics/{topic_id}', [TopicController::class, 'edit'])->name('topics.edit');

@@ -11,7 +11,7 @@ use App\Models\Review;
 use App\Models\Topic;
 use Illuminate\Http\Request;
 
-class CourseController extends Controller
+class AdminCourseController extends Controller
 {
     /**
      * Display a listing of the resource.
