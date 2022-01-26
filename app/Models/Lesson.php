@@ -12,7 +12,7 @@ class Lesson extends Model
     protected $fillable = [
         'topic_id',
         'type',
-        'is_priview',
+        'is_preview',
         'order'
     ];
 

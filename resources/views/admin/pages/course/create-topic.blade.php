@@ -18,7 +18,7 @@
                 <h3>{{ $course->name }}</h3>
             </div>
             <div class="">
-                <a href="{{ url()->previous() }}" class="btn btn-outline-success w-100">
+                <a href="{{ route('courses.show', $course->id) }}" class="btn btn-outline-success w-100">
                     <i class="fas fa-arrow-left"></i>
                     Kembali
                 </a>
@@ -60,81 +60,102 @@
             <x-laravel-blade-sortable::sortable
                 as="div"
             >
+                @foreach ($topics->lesson as $lesson)
                 <x-laravel-blade-sortable::sortable-item
                     as="div"
                     sort-key="1" {{-- this is important. set a key for each entry --}}
                 >
                     <div class="d-flex align-items-center border border-2 rounded p-2 mb-1">
                         <span class="flex-shrink-0 ps-2 pe-3"><i class="fas fa-sort"></i></span>
+                        {{-- @foreach ($lesson as $item) --}}
                         <div class="w-100 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold">
-                                <span class="badge bg-info ml-2">Video</span>
-                                <span class="mr-2">
-                                    Video pengembangan Diri
-                                </span>
-                            </span>
-                            
-                            <div>
-                                <button class="btn btn-outline-info mb-0">
-                                    <i class="fas fa-pen"></i>
-                                </button>
-                                <button class="btn btn-outline-danger mb-0">
-                                    <i class="fas fa-trash"></i>
-                                </button>
+                            <div class="fw-bold d-flex justify-content-between align-items-center w-100">
+                                <div class="">
+                                    <span class="badge
+                                        @if ($lesson->type == 'File')
+                                            bg-success
+                                        @elseif($lesson->type == 'Quiz')
+                                            bg-info
+                                        @else
+                                            bg-warning
+                                        @endif
+                                        ml-2">{{ $lesson->type }}
+                                    </span>
+                                </div>
+                                <div class="mr-2 w-100">
+                                    @if ($lesson->type == 'File')
+                                        @foreach ($lesson->lessonFile as $item)
+                                            <div class="d-flex justify-content-between align-items-center w-100 px-2">
+                                                {{ $item->name }}
+                                                <a href="#mymodal"
+                                                    data-remote="{{ route('lessons.file-edit', $item->id) }}"
+                                                    data-toggle="modal"
+                                                    data-target="#mymodal"
+                                                    data-title="Edit" 
+                                                    class="btn btn-outline-info mb-0"
+                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                            </div>
+                                        @endforeach
+                                    @elseif ($lesson->type == 'Quiz')
+                                        @foreach ($lesson->lessonQuiz as $item)
+                                            <div class="d-flex justify-content-between align-items-center w-100 px-2">
+                                                {{ $item->name }}
+                                                <a href="#mymodal"
+                                                    data-remote="{{ route('lessons.quiz-edit', $item->id) }}"
+                                                    data-toggle="modal"
+                                                    data-target="#mymodal"
+                                                    data-title="Edit" 
+                                                    class="btn btn-outline-info mb-0"
+                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                            </div>
+                                        @endforeach
+                                    @else
+                                        @foreach ($lesson->lessonVideo as $item)
+                                            <div class="d-flex justify-content-between align-items-center w-100 px-2">
+                                                {{ $item->name }}
+                                                <a href="#mymodal"
+                                                    data-remote="{{ route('lessons.video-edit', $item->id) }}"
+                                                    data-toggle="modal"
+                                                    data-target="#mymodal"
+                                                    data-title="Edit" 
+                                                    class="btn btn-outline-info mb-0"
+                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                </div>
                             </div>
+                                
+                            <div>
+                                {{-- <a href="#mymodal"
+                                    data-remote="{{ route('lessons.file-edit', $lesson->id) }}"
+                                    data-toggle="modal"
+                                    data-target="#mymodal"
+                                    data-title="Edit" 
+                                    class="btn btn-outline-info mb-0"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                                    <i class="fas fa-edit"></i>
+                                </a> --}}
+                                <form action="{{ route('lessons.destroy', $lesson->id) }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-outline-danger mb-0" 
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete Data">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        {{-- @endforeach --}}
                         </div>
                     </div>
                 </x-laravel-blade-sortable::sortable-item>
-                <x-laravel-blade-sortable::sortable-item
-                    as="div"
-                    sort-key="3" {{-- this is important. set a key for each entry --}}
-                >
-                    <div class="d-flex align-items-center border border-2 rounded p-2 mb-1">
-                        <span class="flex-shrink-0 ps-2 pe-3"><i class="fas fa-sort"></i></span>
-                        <div class="w-100 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold">
-                                <span class="badge bg-success ml-2">File</span>
-                                <span class="mr-2">
-                                    Struktur dasar pengambangan diri
-                                </span>
-                            </span>
-                            
-                            <div>
-                                <button class="btn btn-outline-info mb-0">
-                                    <i class="fas fa-pen"></i>
-                                </button>
-                                <button class="btn btn-outline-danger mb-0">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </x-laravel-blade-sortable::sortable-item>
-                <x-laravel-blade-sortable::sortable-item
-                    as="div"
-                    sort-key="2" {{-- this is important. set a key for each entry --}}
-                >
-                    <div class="d-flex align-items-center border border-2 rounded p-2 mb-1">
-                        <span class="flex-shrink-0 ps-2 pe-3"><i class="fas fa-sort"></i></span>
-                        <div class="w-100 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold">
-                                <span class="badge bg-warning ml-2">Quiz</span>
-                                <span class="mr-2">
-                                    Quiz satu
-                                </span>
-                            </span>
-                            
-                            <div>
-                                <button class="btn btn-outline-info mb-0">
-                                    <i class="fas fa-pen"></i>
-                                </button>
-                                <button class="btn btn-outline-danger mb-0">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </x-laravel-blade-sortable::sortable-item>
+                @endforeach
             </x-laravel-blade-sortable::sortable>
             <div class="mt-4">
                 <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -168,31 +189,34 @@
                 <h5 class="modal-title" id="staticBackdropLabel">Tambah Video</h5>
                 <button type="button" class="btn fs-5" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
-            <div class="modal-body">
-                <h6 class="mt-2 mb-0">Nama</h6>
-                <div class="input-group input-group-outline">
-                    <label class="form-label">Masukkan Nama Video</label>
-                    <input type="text" class="form-control">
+            <form action="{{ route('lessons.video-store', $topics) }}" method="POST">
+                @csrf
+                <div class="modal-body">
+                    <h6 class="mt-2 mb-0">Nama</h6>
+                    <div class="input-group input-group-outline">
+                        <label class="form-label">Masukkan Nama Video</label>
+                        <input name="name" type="text" class="form-control">
+                    </div>
+                    <h6 class="mt-2 mb-0">Tipe Video</h6>
+                    <div class="input-group input-group-static">
+                        <select name="type" class="form-control" id="tipeVideo">
+                            <option value="Youtube">Youtube</option>
+                            <option value="Embed">Embed Video</option>
+                        </select>
+                    </div>
+                    <h6 class="mt-2 mb-0">Video Link / Embed</h6>
+                    <div class="input-group input-group-static">
+                        {{-- <label class="form-label">Masukkan Video Link / Embed</label> --}}
+                        <textarea name="link" type="text" class="form-control"></textarea>
+                    </div>
                 </div>
-                <h6 class="mt-2 mb-0">Tipe Video</h6>
-                <div class="input-group input-group-static">
-                    <select class="form-control" id="tipeVideo">
-                        <option>Youtube</option>
-                        <option>Embed Video</option>
-                    </select>
+                <div class="modal-footer mx-auto">
+                    <button type="sumbit" class="btn btn-outline-success">
+                        <i class="fas fa-plus-square"></i>
+                        Tambah Video
+                    </button>
                 </div>
-                <h6 class="mt-2 mb-0">Video Link / Embed</h6>
-                <div class="input-group input-group-static">
-                    {{-- <label class="form-label">Masukkan Video Link / Embed</label> --}}
-                    <textarea type="text" class="form-control"> </textarea>
-                </div>
-            </div>
-            <div class="modal-footer mx-auto">
-                <button type="sumbit" class="btn btn-outline-success">
-                    <i class="fas fa-plus-square"></i>
-                    Tambah Video
-                </button>
-            </div>
+            </form>
         </div>
     </div>
 </div>
@@ -205,28 +229,31 @@
                 <h5 class="modal-title" id="staticBackdrop1Label">Tambah File</h5>
                 <button type="button" class="btn fs-5" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
-            <div class="modal-body">
-                <h6>Nama</h6>
-                <div class="input-group input-group-outline">
-                    <label class="form-label">Masukkan Nama</label>
-                    <input type="text" class="form-control">
+            <form action="{{ route('lessons.file-store', $topics) }}" method="POST">
+                @csrf
+                <div class="modal-body">
+                    <h6>Nama</h6>
+                    <div class="input-group input-group-outline">
+                        <label class="form-label">Masukkan Nama</label>
+                        <input name="name" type="text" class="form-control">
+                    </div>
+                    <h6 class="mt-2 mb-0">Deskripsi</h6>
+                    <div class="input-group input-group-dynamic">
+                        <textarea name="description" class="form-control" rows="5" placeholder="Masukkan Deskripsi" spellcheck="false"></textarea>
+                    </div>
+                    <h6 class="mt-2 mb-0">Upload File</h6>
+                    <div class="input-group input-group-static">
+                        <label>Pilih File</label>
+                        <input name="file" type="file" class="form-control">
+                    </div>
                 </div>
-                <h6 class="mt-2 mb-0">Deskripsi</h6>
-                <div class="input-group input-group-dynamic">
-                    <textarea class="form-control" rows="5" placeholder="Masukkan Deskripsi" spellcheck="false"></textarea>
+                <div class="modal-footer mx-auto">
+                    <button type="sumbit" class="btn btn-outline-success">
+                        <i class="fas fa-plus-square"></i>
+                        Tambah File
+                    </button>
                 </div>
-                <h6 class="mt-2 mb-0">Upload File</h6>
-                <div class="input-group input-group-static">
-                    <label>Pilih File</label>
-                    <input type="file" class="form-control">
-                </div>
-            </div>
-            <div class="modal-footer mx-auto">
-                <button type="sumbit" class="btn btn-outline-success">
-                    <i class="fas fa-plus-square"></i>
-                    Tambah File
-                </button>
-            </div>
+            </form>
         </div>
     </div>
 </div>
