@@ -9,7 +9,7 @@
           <ul class="navbar-nav d-flex align-items-center gap-4 me-5" 
               style="font-family: 'Montserrat', sans-serif;  style:normal">
             <li class="nav-item ">
-              <a class="nav-link text-decoration-none fs-5 px-3 active" aria-current="page" href="#">Beranda</a>
+              <a class="nav-link text-decoration-none fs-5 px-3 is-active" aria-current="page" href="#">Beranda</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark fs-5 px-3 "  href="#">Tentang Kami</a>

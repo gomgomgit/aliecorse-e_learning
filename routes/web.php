@@ -6,7 +6,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FrontPage\HomeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FrontPage\AboutController;
-use App\Http\Controllers\FrontPage\CourseController;
+use App\Http\Controllers\FrontPage\MyCourseController;
 
 use App\Http\Controllers\CertificateSettingController;
 use App\Http\Controllers\CourseController;
@@ -34,7 +34,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('/')->group(function(){
    Route::get('home',[HomeController::class,'index'])->name('home'); 
    Route::get('about',[AboutController::class,'index'])->name('about'); 
-   Route::get('course',[CourseController::class,'index'])->name('course'); 
+   Route::get('course',[MyCourseController::class,'index'])->name('course'); 
 });
 
 Route::prefix('admin')->group(function () {

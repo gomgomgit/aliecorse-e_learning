@@ -31,7 +31,7 @@
         background: #0b72e7; //changed from default bg-color to blue
         }
 
-        .active {
+        .is-active {
             background: #C62117;
             box-sizing: border-box;
             border-radius: 26px;
@@ -83,6 +83,16 @@
             background: #52B69A;
             border-radius: 39px;
         }
+        .box-cyan-md {
+            width: 270px;
+            height: 48px;
+            color:#fff;
+            text-decoration: none;
+            background: #52B69A;
+            border-radius: 10px;
+            font-size: 26px;
+            font-weight: 700;
+        }
      
         .jumbotron{
             
@@ -92,7 +102,8 @@
                       rgba(8, 78, 58, 0.21)), 
                       url('/assets/learn.jpg');
             background-repeat: no-repeat;
-            background-position: center;            
+            background-position: center;     
+            width: 100%;       
         }
 
         .benner {
@@ -171,6 +182,71 @@
             height: 2px;
             background: #F0F0F0;
         }
+
+        .nav-tabs{
+            border-bottom:none;
+        }
+        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+            border:none;
+            background-color: none;
+            color:none;
+        }
+
+        .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+            border: none;
+        }
+
+        .search-category {
+            width: 237px;
+            height: 40px;
+            background: #FFFFFF;
+            box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+        }
+
+        .search-course {
+            width: 237px;
+            height: 40px;
+            background: #FFFFFF;
+            box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+        }
+        .search-course-icon{
+            width: 40px;
+            height: 40px;
+            background: #52B69A;
+            border-radius: 0px 10px 10px 0px;
+        }
+        .stroke{
+            width: 1000px;
+            height: 3px;
+            background: #E5E5E5;
+            transform: matrix(1, 0, 0, -1, 0, 0);
+        }
+        .stroke-sm {
+            width: 319px;
+            height: 3px;
+            background: #E5E5E5;
+            transform: matrix(1, 0, 0, -1, 0, 0);
+            transform: translate(-5%,0%);
+        }
+        
+        .box {
+            width: 50px;
+            height: 50px;
+            background: #FFFFFF;
+            box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+        ..form-check-input{
+            border-color: #52B69A;
+        }
+        .form-check-input:checked {
+    background-color: #52B69A;
+    border-color: #52B69A;
+}
+
     </style>
 </head>
 <body>
@@ -188,12 +264,863 @@
                     </div>
                 </div>
             </div>
-
             
+            {{-- My-Course --}}
+            <div class="d-flex flex-column justify-content-center align-items-center" style="margin-top:150px;">
+                <h2 style="font-family: 'Montserrat', sans-serif; font-weight:700;">Kursus Kami</h2>
+                <div class="rectangel-red ms-5"></div>
+                <p class="mt-4 lh-lg text-center" 
+                   style="width:25%; font-family: 'Montserrat', sans-serif; font-weight:400; margin-bottom:100px;">
+                    Lorem ipsum dolor sit amet consectetur
+                    adipiscing elit annuit ceoptis
+                </p>
+            </div>
+            
+            <div class="d-flex justify-content-center aling-items-center">
+               <div class="w-75">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item ms-5" role="presentation">
+                      <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                          <img src="/assets/box.png" alt="">
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                        <img src="/assets/menu.png" alt="">
+                    </button>
+                    </li>
+                    <div class="d-flex gap-3" 
+                         style="margin-top:10px; margin-left:250px;">
+                        <div 
+                            class="input-group mb-3"
+                            style="width:50%;"
+                        >
+                            <input 
+                                    type="text" 
+                                    class="form-control search-course"
+                                    style="width:10%;"
+                                    placeholder="Category" 
+                                    aria-label="Category" 
+                                    aria-describedby="basic-addon2">
+                           
+                        </div>
+
+                        <div class="input-group mb-3"
+                             style="width:50%;"
+                        >
+                            <input 
+                                    type="text" 
+                                    class="form-control search-course"
+                                    style="width:10%;"
+                                    placeholder="Cari Kursus" 
+                                    aria-label="Cari Kursus" 
+                                    aria-describedby="basic-addon2">
+                            <span class="search-course-icon shadow" 
+                                  id="basic-addon2">
+                                <a href="#" 
+                                   class="">
+                                    <img src="/assets/search.png" 
+                                         alt="" 
+                                         class="mt-2 ms-1">
+                                </a>
+                            </span>
+                        </div>
+    
+                    </div>
+                </ul>
+                <div class="stroke my-3" style="margin-left:65px;">
+
+                </div>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show " id="home" role="tabpanel" aria-labelledby="home-tab">
+                     <div>
+                            <div class="d-flex flex-wrap gap-1">
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card ms-5 mb-2 my-3" style="width: 20rem; height: 31.50rem; border-radius: 15px;">
+                                <img src="/assets/study.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight:400; color:#C4C4C4;">Perpajakan</h5>
+                                    <h3 class="card-title w-75" style="font-family: 'Montserrat', sans-serif; font-weight:700; ">
+                                    Lorem ipsum
+                                    dolor sit amet
+                                    </h3>
+                                    <div class="my-3 d-flex justify-content-start align-items-center">
+                                        <img src="/assets/buku.png" alt="">
+                                        <p class="card-text ms-2" style="margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-start align-items-center">
+                                        <img src="/assets/circle.png" alt="">
+                                        <p class="card-text ms-2" style=" margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">10 Bab materi</p>
+                                    </div>
+                                    <div class="stroke-sm mt-4"></div>
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        <img src="/assets/userr.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center me-4">
+                                        <img src="/assets/chat.png" alt="">
+                                        <p class="" style=" margin-top:13px; margin-left:8px; font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 18px;">547</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            
+                            
+                            </div>
+                            <div class="d-flex gap-4 mb-4" style="margin-left: 70px;">
+                            <div class="box d-flex justify-content-center align-items-center">
+                                <a href="#">
+                                    <img src="/assets/arrow-r.png" alt="">
+                                </a>
+                            </div>
+                            <div class="box d-flex justify-content-center align-items-center">
+                                <a href="#">
+                                    <img src="/assets/arrow-l.png" alt="">
+                                </a>
+                            </div>
+                            </div>
+                     </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div>
+                            <div>
+                                <div class="mt-5 d-flex">
+                                    <img src="/assets/study.png" alt="" style="margin-left:60px; border-radius:15px; width:500px; height:350px;" >
+                                    <div class="">
+                                        <div class="ms-4 lh-base " style="width:60%; ">
+                                            <h4 class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700;">
+                                                Lorem ipsum dolor sit amet consectetur adipsicing
+                                            </h4>
+                                        </div>
+                                        <div class="d-flex justify-content-start ms-4">
+                                            <span class="rectangel-red"></span>
+                                        </div>
+                                        <div class="w-50 ms-4 mt-4">
+                                            <p class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:400;">Lorem ipsum dolor sit amet adipiscing consec
+                                                tetur elit annuit ceoptis novus ordo seclorum
+                                                sivis pacem parabelleum
+                                            </p>
+                                        </div>
+                                               <div class="d-flex justify-content-start gap-5">
+                                                    <div class="ms-4 d-flex flex-column justify-content-start ">
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/buku.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/circle.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                    
+                                                    </div>
+                                                    <div class="ms-4 d-flex flex-column justify-content-start ">
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/userr.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/chat.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                    
+                                                    </div>
+                                               </div>
+                                                
+                                            <div>
+
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="mt-5 d-flex">
+                                    <img src="/assets/study.png" alt="" style="margin-left:60px; border-radius:15px; width:500px; height:350px;" >
+                                    <div class="">
+                                        <div class="ms-4 lh-base " style="width:60%; ">
+                                            <h4 class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700;">
+                                                Lorem ipsum dolor sit amet consectetur adipsicing
+                                            </h4>
+                                        </div>
+                                        <div class="d-flex justify-content-start ms-4">
+                                            <span class="rectangel-red"></span>
+                                        </div>
+                                        <div class="w-50 ms-4 mt-4">
+                                            <p class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:400;">Lorem ipsum dolor sit amet adipiscing consec
+                                                tetur elit annuit ceoptis novus ordo seclorum
+                                                sivis pacem parabelleum
+                                            </p>
+                                        </div>
+                                               <div class="d-flex justify-content-start gap-5">
+                                                    <div class="ms-4 d-flex flex-column justify-content-start ">
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/buku.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/circle.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                    
+                                                    </div>
+                                                    <div class="ms-4 d-flex flex-column justify-content-start ">
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/userr.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/chat.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                    
+                                                    </div>
+                                               </div>
+                                                
+                                            <div>
+
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="mt-5 d-flex">
+                                    <img src="/assets/study.png" alt="" style="margin-left:60px; border-radius:15px; width:500px; height:350px;" >
+                                    <div class="">
+                                        <div class="ms-4 lh-base " style="width:60%; ">
+                                            <h4 class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700;">
+                                                Lorem ipsum dolor sit amet consectetur adipsicing
+                                            </h4>
+                                        </div>
+                                        <div class="d-flex justify-content-start ms-4">
+                                            <span class="rectangel-red"></span>
+                                        </div>
+                                        <div class="w-50 ms-4 mt-4">
+                                            <p class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:400;">Lorem ipsum dolor sit amet adipiscing consec
+                                                tetur elit annuit ceoptis novus ordo seclorum
+                                                sivis pacem parabelleum
+                                            </p>
+                                        </div>
+                                               <div class="d-flex justify-content-start gap-5">
+                                                    <div class="ms-4 d-flex flex-column justify-content-start ">
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/buku.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/circle.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                    
+                                                    </div>
+                                                    <div class="ms-4 d-flex flex-column justify-content-start ">
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/userr.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/chat.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                    
+                                                    </div>
+                                               </div>
+                                                
+                                            <div>
+
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="mt-5 d-flex">
+                                    <img src="/assets/study.png" alt="" style="margin-left:60px; border-radius:15px; width:500px; height:350px;" >
+                                    <div class="">
+                                        <div class="ms-4 lh-base " style="width:60%; ">
+                                            <h4 class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700;">
+                                                Lorem ipsum dolor sit amet consectetur adipsicing
+                                            </h4>
+                                        </div>
+                                        <div class="d-flex justify-content-start ms-4">
+                                            <span class="rectangel-red"></span>
+                                        </div>
+                                        <div class="w-50 ms-4 mt-4">
+                                            <p class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:400;">Lorem ipsum dolor sit amet adipiscing consec
+                                                tetur elit annuit ceoptis novus ordo seclorum
+                                                sivis pacem parabelleum
+                                            </p>
+                                        </div>
+                                               <div class="d-flex justify-content-start gap-5">
+                                                    <div class="ms-4 d-flex flex-column justify-content-start ">
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/buku.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/circle.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                    
+                                                    </div>
+                                                    <div class="ms-4 d-flex flex-column justify-content-start ">
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/userr.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/chat.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                    
+                                                    </div>
+                                               </div>
+                                                
+                                            <div>
+
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="mt-5 d-flex">
+                                    <img src="/assets/study.png" alt="" style="margin-left:60px; border-radius:15px; width:500px; height:350px;" >
+                                    <div class="">
+                                        <div class="ms-4 lh-base " style="width:60%; ">
+                                            <h4 class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700;">
+                                                Lorem ipsum dolor sit amet consectetur adipsicing
+                                            </h4>
+                                        </div>
+                                        <div class="d-flex justify-content-start ms-4">
+                                            <span class="rectangel-red"></span>
+                                        </div>
+                                        <div class="w-50 ms-4 mt-4">
+                                            <p class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:400;">Lorem ipsum dolor sit amet adipiscing consec
+                                                tetur elit annuit ceoptis novus ordo seclorum
+                                                sivis pacem parabelleum
+                                            </p>
+                                        </div>
+                                               <div class="d-flex justify-content-start gap-5">
+                                                    <div class="ms-4 d-flex flex-column justify-content-start ">
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/buku.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/circle.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                    
+                                                    </div>
+                                                    <div class="ms-4 d-flex flex-column justify-content-start ">
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/userr.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                        <span class="d-flex align-items-center">
+                                                            <img src="/assets/chat.png" alt="">
+                                                            <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size:18px; margin-top:13px; margin-left:10px;">10 Bab materi</p>
+                                                        </span>
+                                                    
+                                                    </div>
+                                               </div>
+                                                
+                                            <div>
+
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                    </div>
+                  </div>
+                 
+                </div>
+               
+               <div class="w-25">
+                <div class="cards me-3 mt-1" style="width:23rem; height:38rem; border-radius: 15px;">
+                    <div>
+                        <h3 class="ms-5 pt-5" style="font-family: 'Montserrat', sans-serif; font-weight:700;">Kategori Khusus</h3>
+                        <div class="form-check mt-4 ms-5">
+                            <input class="form-check-input fs-5" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label fs-5" for="flexRadioDefault2" style="font-family: 'Montserrat', sans-serif; font-weight:400;">
+                               Populer ( 21 )
+                            </label>
+                        </div>
+                        <div class="form-check mt-4 ms-5">
+                            <input class="form-check-input fs-5" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label fs-5" for="flexRadioDefault2" style="font-family: 'Montserrat', sans-serif; font-weight:400;">
+                               Perpustakaan ( 21 )
+                            </label>
+                        </div>
+                        <div class="form-check mt-4 ms-5">
+                            <input class="form-check-input fs-5" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label fs-5" for="flexRadioDefault2" style="font-family: 'Montserrat', sans-serif; font-weight:400;">
+                               Data Science ( 21 )
+                            </label>
+                        </div>
+                        <div class="form-check mt-4 ms-5">
+                            <input class="form-check-input fs-5" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label fs-5" for="flexRadioDefault2" style="font-family: 'Montserrat', sans-serif; font-weight:400;">
+                               Akuntasi ( 21 )
+                            </label>
+                        </div>
+                        <div class="form-check mt-4 ms-5">
+                            <input class="form-check-input fs-5" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label fs-5" for="flexRadioDefault2" style="font-family: 'Montserrat', sans-serif; font-weight:400;">
+                               Office Perkantoran ( 21 )
+                            </label>
+                        </div>
+                        <div class="form-check mt-4 ms-5">
+                            <input class="form-check-input fs-5" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label fs-5" for="flexRadioDefault2" style="font-family: 'Montserrat', sans-serif; font-weight:400;">
+                               UI UX ( 21 )
+                            </label>
+                        </div>
+                        <div class="form-check mt-4 ms-5">
+                            <input class="form-check-input fs-5" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label fs-5" for="flexRadioDefault2" style="font-family: 'Montserrat', sans-serif; font-weight:400;">
+                               Web Design ( 21 )
+                            </label>
+                        </div>
+                      
+                        
+                        <div class="box-cyan-md d-flex justify-content-center align-items-center mt-5 ms-5" style="margin-bottom: 50px; font-family: 'Montserrat', sans-serif; font-weight:700;">
+                            <a class="text-decoration-none text-white" href="#">Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="ms-2 mt-4 lh-base " style="width:55%; ">
+                        <h4 class="lh-base" style="font-family: 'Montserrat', sans-serif; font-weight:700;">
+                            Event Terbaru
+                            
+                        </h4>
+                    </div>
+                    <div class="d-flex justify-content-start ms-2">
+                        <span class="rectangel-red"></span>
+                    </div>
+                    <div class="mt-4">
+                        <div class="my-2">
+                            <img src="/assets/study.png" alt="" style="border-radius: 15px; width:310px; height: 170px;">
+                            <h4 class="w-75 mt-3" style="font-family: 'Montserrat', sans-serif; font-weight:700;">Lorem ipsum dolor sit amet annuit ceoptis</h4>
+                        </div>
+                        <div class="my-2">
+                            <img src="/assets/study.png" alt="" style="border-radius: 15px; width:310px; height: 170px;">
+                            <h4 class="w-75 mt-3" style="font-family: 'Montserrat', sans-serif; font-weight:700;">Lorem ipsum dolor sit amet annuit ceoptis</h4>
+                        </div>
+                        <div class="my-2">
+                            <img src="/assets/study.png" alt="" style="border-radius: 15px; width:310px; height: 170px;">
+                            <h4 class="w-75 mt-3" style="font-family: 'Montserrat', sans-serif; font-weight:700;">Lorem ipsum dolor sit amet annuit ceoptis</h4>
+                        </div>
+                       
+                    </div>
+                </div>
+               </div>
+              
+                  
+            </div>
             
            
             {{-- footer-header --}}
-            <div class="bg-light w-100 d-flex">
+            <div class="bg-light w-100 d-flex mt-5">
                 <div class="ms-5">
                     <div class="d-flex flex-column justify-content-start me-5" style="margin-top:80px;">
                         <img class="ms-5" src="/assets/logo.png" alt="">
