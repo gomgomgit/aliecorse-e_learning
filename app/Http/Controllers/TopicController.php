@@ -83,7 +83,7 @@ class TopicController extends Controller
         $course = Course::findOrFail($course_id);
         $topics = Topic::findOrFail($topic_id);
 
-        return view('admin.pages.course.create-topic', compact('course', 'topics'));
+        return view('admin.pages.course.edit-topic', compact('course', 'topics'));
     }
 
     /**

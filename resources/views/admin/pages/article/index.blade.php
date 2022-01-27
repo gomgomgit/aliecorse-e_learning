@@ -59,7 +59,7 @@
                                         <i class="fas fa-eye"></i>
                                     </a>
                                     <a href="{{ route('articles.edit', $article->id) }}" class="btn btn-outline-info mb-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
-                                        <i class="fas fa-pencil"></i>
+                                        <i class="fas fa-edit"></i>
                                     </a>
                                     <form action="{{ route('articles.destroy', $article->id) }}" method="POST" class="d-inline">
                                         @csrf
