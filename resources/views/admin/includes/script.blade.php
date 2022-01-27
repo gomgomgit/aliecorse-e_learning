@@ -285,7 +285,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title"></h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">&times;</button>
+                <button type="button" class="btn fs-5" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
                 <i class="fa fa-spinner fa-spin"></i>
