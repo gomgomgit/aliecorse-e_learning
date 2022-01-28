@@ -17,7 +17,7 @@ class CreateLessonsTable extends Migration
             $table->id();
             $table->foreignId('topic_id');
             $table->enum('type',['Video','File','Quiz']);
-            $table->boolean('is_priview');
+            $table->boolean('is_preview');
             $table->integer('order');
             $table->timestamps();
         });

@@ -5,9 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Course;
 use App\Models\CourseDiscount;
+use App\Models\Order;
+use App\Models\Question;
+use App\Models\Review;
+use App\Models\Topic;
 use Illuminate\Http\Request;
 
-class CourseController extends Controller
+class AdminCourseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -197,8 +201,15 @@ class CourseController extends Controller
      */
     public function destroy($id)
     {
-        Course::findOrFail($id)->delete();
+        $data = Course::findOrFail($id);
+        $data->delete();
 
+        Topic::where('course_id', $id)->delete();
+        CourseDiscount::where('course_id', $id)->delete();
+        Review::where('course_id', $id)->delete();
+        Order::where('course_id', $id)->delete();
+        Question::where('course_id', $id)->delete();
+        
         return back()->with('success-delete', 'berhasil menghapus data kursus');
     }
 }

@@ -22,7 +22,7 @@ class TopicSeeder extends Seeder
         $courses = Course::pluck('id');
 
         foreach($courses as $course){
-            for($i = 0; $i < 3; $i++){
+            for($i = 1; $i < 3; $i++){
                 Topic::create([
                     'name' => $faker->randomElement(['Latihan Menggambar1','Install Laravel','Tutorial Penthol']),
                     'description' => $faker->randomElement([
@@ -30,7 +30,7 @@ class TopicSeeder extends Seeder
                         'iya mungkin bisa aja bergitu',
                         'tapi kita harus berusaha untuk tahu tentang itu'
                     ]),
-                    'order' => $faker->randomElement([1,2,3,4,5,6,7,8,9]),
+                    'order' => $i,
                     'course_id' => $course,
 
                 ]);

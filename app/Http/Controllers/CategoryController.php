@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Course;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -99,8 +100,10 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $data = Category::findOrFail($id);
-
         $data->delete();
+
+        Course::where('category_id', $id)->delete();
+
         return back()->with('success-delete', 'berhasil menghapus data kategori');
     }
 }

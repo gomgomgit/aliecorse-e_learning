@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="d-flex">
-                        <span>{{ $course->topic->count() }} Pelajaran</span>
+                        <span>{{ $course->topic->count() }} Topik Pelajaran</span>
                     </div>
                     <div class="">
                         <a href="{{ route('courses.show', $course->id) }}" class="btn btn-outline-success mb-0">

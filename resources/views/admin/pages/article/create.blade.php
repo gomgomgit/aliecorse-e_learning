@@ -34,8 +34,8 @@
                 <div class="col-8">
                     <div class="mb-3">
                         <h6 class="">Judul</h6>
-                        <div class="input-group input-group-outline">
-                            <label class="form-label">{{ $isEdit ? '': 'Masukkan Judul Artikel' }}</label>
+                        <div class="input-group input-group-static">
+                            <label>Masukkan Judul Artikel</label>
                             <input name="title" type="text" class="form-control" value="{{ $isEdit ? $articles->title : '' }}">
                         </div>
                     </div>

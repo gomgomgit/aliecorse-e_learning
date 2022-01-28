@@ -7,10 +7,16 @@ use App\Http\Controllers\FrontPage\HomeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FrontPage\AboutController;
 use App\Http\Controllers\FrontPage\MyCourseController;
+use App\Http\Controllers\FrontPage\DetailMyCourseController;
 
 use App\Http\Controllers\CertificateSettingController;
-use App\Http\Controllers\CourseController;
+use App\Http\Controllers\AdminCourseController;
 use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\LessonController;
+use App\Http\Controllers\LessonFileController;
+use App\Http\Controllers\LessonQuizController;
+use App\Http\Controllers\LessonVideoController;
+use App\Http\Controllers\TopicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +41,7 @@ Route::prefix('/')->group(function(){
    Route::get('home',[HomeController::class,'index'])->name('home'); 
    Route::get('about',[AboutController::class,'index'])->name('about'); 
    Route::get('course',[MyCourseController::class,'index'])->name('course'); 
+   Route::get('course-detail',[DetailMyCourseController::class,'index'])->name('course'); 
 });
 
 Route::prefix('admin')->group(function () {
@@ -45,18 +52,28 @@ Route::prefix('admin')->group(function () {
         return view('admin.index_dashboard');
     });
 
-    Route::resource('/courses', CourseController::class);
-    Route::get('/courses/{id}/topic', function () {
-        return view('admin.pages.course.create-topic');
-    });
+    Route::resource('/courses', AdminCourseController::class);
+    Route::get('/courses/{id}/topics/create', [TopicController::class, 'create'])->name('topics.create');
+    Route::post('/courses/{id}/topics/create', [TopicController::class, 'store'])->name('topics.store');
+    Route::get('/courses/{course_id}/topics/{topic_id}', [TopicController::class, 'edit'])->name('topics.edit');
+    Route::post('/courses/{course_id}/topics/{topic_id}', [TopicController::class, 'update'])->name('topics.update');
+    Route::delete('/courses/topics/{topic_id}', [TopicController::class, 'destroy'])->name('topics.destroy');
 
+    Route::delete('lesson/{id}', [LessonController::class, 'destroy'])->name('lessons.destroy');
+
+    Route::post('lesson/file/create/{topic_id}', [LessonFileController::class, 'store'])->name('lessons.file-store');
+    Route::get('lesson/file/{id}', [LessonFileController::class, 'edit'])->name('lessons.file-edit');
+    Route::post('lesson/file/{id}', [LessonFileController::class, 'update'])->name('lessons.file-update');
+
+    Route::post('lesson/video/create/{topic_id}', [LessonVideoController::class, 'store'])->name('lessons.video-store');
+    Route::get('lesson/video/{id}', [LessonVideoController::class, 'edit'])->name('lessons.video-edit');
+    Route::post('lesson/video/{id}', [LessonVideoController::class, 'update'])->name('lessons.video-update');
+
+    Route::post('lesson/quiz/create/{topic_id}', [LessonQuizController::class, 'store'])->name('lessons.quiz-store');
+    Route::get('lesson/quiz/{id}', [LessonQuizController::class, 'edit'])->name('lessons.quiz-edit');
+    Route::post('lesson/quiz/{id}', [LessonQuizController::class, 'update'])->name('lessons.quiz-update');
+    
     Route::resource('/categories', CategoryController::class);
-    // Route::get('/categories', function () {
-    //     return view('admin.pages.category.index');
-    // });
-    // Route::get('/categories/create', function () {
-    //     return view('admin.pages.category.create');
-    // })->name('categories.create');
 
     Route::get('/profile', function () {
         return view('admin.pages.profile.index');
